@@ -1,15 +1,16 @@
 import time
 import threading
 import wave
+import sys
 from array import array
 from queue import Queue, Full
 import pyaudio
 audio = pyaudio.PyAudio()
 FORMAT = pyaudio.paInt16
 CHANNELS = 2
-RATE = 16000
-CHUNK_SIZE=1024
-MIN_VOLUME=500
+RATE=int(sys.argv[1])
+CHUNK_SIZE=int(sys.argv[2])
+MIN_VOLUME=int(sys.argv[3])
 WAVE_OUTPUT_FILENAME = "./wav/test"
 def main():
 	stopped=threading.Event()
@@ -32,7 +33,7 @@ def main():
 		record_t.join()
 
 def record(stopped, q):
-	i=0
+	i=1
 	start=0
 	t=start
 	k=0
