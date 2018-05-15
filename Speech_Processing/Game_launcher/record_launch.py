@@ -5,13 +5,15 @@ import sys
 from array import array
 from queue import Queue, Full
 import pyaudio
+import os
 audio = pyaudio.PyAudio()
 FORMAT = pyaudio.paInt16
-CHANNELS = 2
+CHANNELS = 1
 RATE=int(sys.argv[1])
 CHUNK_SIZE=int(sys.argv[2])
 MIN_VOLUME=int(sys.argv[3])
 WAVE_OUTPUT_FILENAME = "./wav/test"
+lock=threading.Lock()
 def main():
 	stopped=threading.Event()
 	q=Queue()
@@ -56,7 +58,7 @@ def record(stopped, q):
 				frames.append(chunk)
 				k=k+1
 			t=int(round(time.time()))
-			if(int(t-start)>=6) and start>0:
+			if(int(t-start)>=3) and start>0:
 				string=WAVE_OUTPUT_FILENAME+str(i)+".wav"
 				waveFile = wave.open(string, 'wb')
 				waveFile.setnchannels(CHANNELS)
@@ -67,6 +69,9 @@ def record(stopped, q):
 				i=i+1
 				del frames[:]
 				k=0
+				with lock:
+					os.system("./launch.sh "+ sys.argv[1]+ " "+ sys.argv[2])
+				
 			
 def listen(stopped, q):
 	global stream

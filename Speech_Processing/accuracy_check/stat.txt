@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+
+
+A   START STOP HANGMAN SPEAK  (test1)
+*** ***   O    H       A      (test1)
+Words: 5 Correct: 0 Errors: 5 Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
+Insertions: 0 Deletions: 2 Substitutions: 3
+TOTAL Words: 5 Correct: 0 Errors: 5
+TOTAL Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
+TOTAL Insertions: 0 Deletions: 2 Substitutions: 3
+
+START STOP HANGMAN SPEAK  (test1)
+***   O    H       A      (test1)
+Words: 4 Correct: 0 Errors: 4 Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
+Insertions: 0 Deletions: 1 Substitutions: 3
+TOTAL Words: 4 Correct: 0 Errors: 4
+TOTAL Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
+TOTAL Insertions: 0 Deletions: 1 Substitutions: 3
+
+START STOP HANGMAN SPEAK  (test1)
+***   O    H       A      (test1)
+Words: 4 Correct: 0 Errors: 4 Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
+Insertions: 0 Deletions: 1 Substitutions: 3
+TOTAL Words: 4 Correct: 0 Errors: 4
+TOTAL Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
+TOTAL Insertions: 0 Deletions: 1 Substitutions: 3
+
+START stop hangman SPEAK  (test1)
+R     stop hangman G      (test1)
+Words: 4 Correct: 2 Errors: 2 Percent correct = 50.00% Error = 50.00% Accuracy = 50.00%
+Insertions: 0 Deletions: 0 Substitutions: 2
+TOTAL Words: 4 Correct: 2 Errors: 2
+TOTAL Percent correct = 50.00% Error = 50.00% Accuracy = 50.00%
+TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
+
