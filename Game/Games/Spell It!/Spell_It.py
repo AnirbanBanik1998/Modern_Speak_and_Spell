@@ -21,15 +21,16 @@ with lock:
 	os.system("./echo.sh "+str(len(column[randcolumn[0]])))
 f=open("./file.txt", "r+")
 word=f.read().split(" ")
-string += [ word[i] for i in range(0, len(word))]
-if word==column[randcolumn[0]]:
+string = ""
+for i in range(0, len(word)):
+	string=string + word[i]
+if string==column[randcolumn[0]]:
 	subprocess.call(["espeak","-s","150"," Good!"])
 
 else:
-	arr=f.read().split(" ")
 	subprocess.call(["espeak","-s","150"," No you are wrong...the answer will be "])
-	for i in range(0, len(arr)):
-		subprocess.call(["espeak","-s","100", arr[i]])
-answer=(subprocess.call(["espeak","-s","150"," Options are 1: Quit or 2: Resume"]))
+	for i in range(0, len(column[randcolumn[0]])):
+		subprocess.call(["espeak","-s","100", column[randcolumn[0]][i]])
+subprocess.call(["espeak","-s","150"," Options are 1: Quit or 2: Resume"])
 os.system("truncate -s 0 file.txt")
 	
