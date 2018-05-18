@@ -19,23 +19,25 @@ def main():
 	q=Queue()
 	global frames
 	frames = []
+	#global listen_t
+	#global record_t
 	listen_t=threading.Thread(target=listen, args=(stopped, q))
 	listen_t.start()
 	record_t=threading.Thread(target=record, args=(stopped, q))
 	record_t.start()
 	
 	try:
-		while True:
+		while record.flag==0:
 			listen_t.join(0.1)
 			record_t.join(0.1)
-	except KeyboardInterrupt:
+	except :
 		stopped.set()
 		
 		listen_t.join()
 		record_t.join()
-
-def record(stopped, q):
 	
+def record(stopped, q):
+	record.flag=0
 	start=0
 	t=start
 	k=0
@@ -73,7 +75,7 @@ def record(stopped, q):
 					os.system("./decoder.sh "+ sys.argv[1]+ " "+ sys.argv[2])
 				if sys.argv[4]==str(record.i):
 					stopped.set()
-					print("Stopped")
+					record.flag=1
 				else:
 					print("You may again start recording...")
 record.i=0
