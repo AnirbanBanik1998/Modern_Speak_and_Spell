@@ -4,7 +4,7 @@ import subprocess
 import time
 import os
 lock=threading.Lock()
-f= open("./Wordlist.csv",'r')
+f= open("../Wordlist.csv",'r')
 rows=f.read().split("\n")
 k=0
 j=0
