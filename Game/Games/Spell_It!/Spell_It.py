@@ -31,6 +31,6 @@ else:
 	subprocess.call(["espeak","-s","150"," No you are wrong...the answer will be "])
 	for i in range(0, len(column[randcolumn[0]])):
 		subprocess.call(["espeak","-s","100", column[randcolumn[0]][i]])
-subprocess.call(["espeak","-s","150"," Options are 1: Quit or 2: Resume"])
+subprocess.call(["espeak","-s","125"," Options are 1: Resume and 2: Start another game"])
 os.system("truncate -s 0 file.txt")
 	

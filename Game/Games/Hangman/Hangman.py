@@ -60,4 +60,4 @@ while k<20:
 			subprocess.call(["espeak","The answer is "+column[randcolumn[0]]])
 		print(" Answer is: "+column[randcolumn[0]])
 	
-subprocess.call(["espeak","-s","150"," Options are 1: Quit or 2: Resume"])
+subprocess.call(["espeak","-s","125"," Options are 1: Resume and 2: Start another game"])
