@@ -28,15 +28,18 @@ if start==1:
 		elif arr[i] in ("HANGMAN", "hangman"):
 			with lock:
 				cwd=os.getcwd()
-				os.chdir("../Games/Spell_It!/")
-				os.system("python3 Spell_It.py")
+				os.chdir("../Games/Hangman/")
+				os.system("python3 Hangman.py")
+				os.chdir(cwd)
+			break
+		elif arr[i] in ("ENCRYPTER", "encrypter"):
+			with lock:
+				cwd=os.getcwd()
+				os.chdir("../Games/Encrypter/")
+				os.system("python3 Enrypter.py")
 				os.chdir(cwd)
 			break
 			'''
-		elif arr[i] in ("ENCRYPTER", "encrypter"):
-			#with lock:
-				#os.system("python3 ../Games/Encrypter.py")
-			break
 		elif arr[i] in ("CROSSWORD", "crossword"):
 			#with lock:
 				#os.system("python3 ../Games/Crossword.py")
@@ -55,13 +58,16 @@ elif resume==1:
 	elif ar[0] in ("HANGMAN", "hangman"):
 		with lock:
 			cwd=os.getcwd()
-			os.chdir("../Games/Spell_It!/")
-			os.system("python3 Spell_It.py")
+			os.chdir("../Games/Hangman/")
+			os.system("python3 Hangman.py")
+			os.chdir(cwd)
+	elif ar[0] in ("ENCRYPTER", "encrypter"):
+		with lock:
+			cwd=os.getcwd()
+			os.chdir("../Games/Encrypter/")
+			os.system("python3 Encrypter.py")
 			os.chdir(cwd)
 			'''
-	#elif ar[0] in ("ENCRYPTER", "encrypter"):
-		#with lock:
-			#os.system("python3 ../Games/Encrypter/Encrypter.py")
 	#elif ar[0] in ("CROSSWORD", "crossword"):
 		#with lock:
 			#os.system("python3 ../Games/Crossword/Crossword.py")

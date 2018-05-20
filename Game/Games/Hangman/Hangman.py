@@ -40,7 +40,8 @@ while k<20:
 	arr=r.read().split(" ")
 	letter=arr[0]
 	print(letter)
-	lt=letter.lower()				
+	lt=letter.lower()
+	r.close()				
 	try:
 		string=str(check(str1,lt))
 						
@@ -61,3 +62,4 @@ while k<20:
 		print(" Answer is: "+column[randcolumn[0]])
 	
 subprocess.call(["espeak","-s","125"," Options are 1: Resume and 2: Start another game"])
+f.close()

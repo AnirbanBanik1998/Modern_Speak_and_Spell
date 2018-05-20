@@ -19,8 +19,8 @@ column[randcolumn[0]]=column[randcolumn[0]].strip()
 subprocess.call(["espeak","-s","100"," Spell "+column[randcolumn[0]]])
 with lock:
 	os.system("./echo.sh "+str(len(column[randcolumn[0]])))
-f=open("./file.txt", "r+")
-word=f.read().split(" ")
+r=open("./file.txt", "r+")
+word=r.read().split(" ")
 string = ""
 for i in range(0, len(word)):
 	string=string + word[i]
@@ -33,4 +33,5 @@ else:
 		subprocess.call(["espeak","-s","100", column[randcolumn[0]][i]])
 subprocess.call(["espeak","-s","125"," Options are 1: Resume and 2: Start another game"])
 os.system("truncate -s 0 file.txt")
-	
+f.close()
+r.close()
