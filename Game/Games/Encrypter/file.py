@@ -1,0 +1,6 @@
+f=open("file.txt", "a+")
+g=open("test.hyp", "r")
+arr=g.read().split(" ")
+f.write(arr[0]+ " ")
+f.close()
+g.close()
