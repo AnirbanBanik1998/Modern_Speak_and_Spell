@@ -35,7 +35,6 @@ def main():
 		record_t.join()
 
 def record(stopped, q):
-	i=1
 	start=0
 	t=start
 	k=0
@@ -59,14 +58,13 @@ def record(stopped, q):
 				k=k+1
 			t=int(round(time.time()))
 			if(int(t-start)>=3) and start>0:
-				string=WAVE_OUTPUT_FILENAME+str(i)+".wav"
+				string=WAVE_OUTPUT_FILENAME+"1"+".wav"
 				waveFile = wave.open(string, 'wb')
 				waveFile.setnchannels(CHANNELS)
 				waveFile.setsampwidth(audio.get_sample_size(FORMAT))
 				waveFile.setframerate(RATE)
 				waveFile.writeframes(b''.join(frames))
 				waveFile.close()
-				i=i+1
 				del frames[:]
 				k=0
 				with lock:
