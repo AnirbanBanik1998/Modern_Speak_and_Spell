@@ -34,5 +34,5 @@ Generates the **test.fileids** and **test.transcription** files for use in decod
 ### `word_align.pl`
 
 Perl script to generate accuracy statistics data..comparing the transcription and hypothesis files.
-
+Taken from the sphinxbase library of CMU Sphinx.
 
