@@ -30,7 +30,7 @@ def main():
 		while record.flag==0:
 			listen_t.join(0.1)
 			record_t.join(0.1)
-	except :
+	except :	#Stops the entire process if the recording has been done the required number of times.
 		stopped.set()
 		
 		listen_t.join()
@@ -45,7 +45,7 @@ def record(stopped, q):
 		
 		if stopped.wait(timeout=0):
 			break
-		chunk=q.get()
+		chunk=q.get()	#Extracts a chunk out of the queue
 		vol=max(chunk)
 		if vol >=MIN_VOLUME:
 			if len(frames)>0:
@@ -57,9 +57,12 @@ def record(stopped, q):
 		elif len(frames)>0:
 			print("-"),
 			if k==0:
-				frames.append(chunk)
+				frames.append(chunk)	#Appends one chunk of silence to help recognize the words more clearly
 				k=k+1
 			t=int(round(time.time()))
+			
+			#If silence duration is more than 1 second... writes the frames to an audio file.
+			
 			if(int(t-start)>=1) and start>0:
 				string=WAVE_OUTPUT_FILENAME+"1"+".wav"
 				waveFile = wave.open(string, 'wb')
@@ -71,8 +74,14 @@ def record(stopped, q):
 				record.i += 1
 				del frames[:]
 				k=0
+				
+				#Pauses the recording process for further operations on the audio file generated
+				
 				with lock:
 					os.system("./decode.sh "+ sys.argv[1]+ " "+ sys.argv[2])
+				
+				#Checking if recording has been done.
+				
 				if record.i==1:
 					stopped.set()
 					record.flag=1
