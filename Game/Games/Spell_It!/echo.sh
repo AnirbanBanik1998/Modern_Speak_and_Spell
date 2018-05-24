@@ -13,5 +13,5 @@ then
 else
 	mkdir wav
 fi
-python3 record_cont.py 16000 1024 800 $1
+python3 record_cont.py 16000 1024 1600 $1
 

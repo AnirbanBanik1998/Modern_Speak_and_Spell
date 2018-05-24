@@ -4,7 +4,7 @@ then
 	output="$(ls wav | wc -l)"
 	if [ "${output}" -gt 0 ]
 	then
-		rm -rf "./wav/"
+		rm -rf ./wav/
 		mkdir wav
 	else
 		echo "wav directory already empty"

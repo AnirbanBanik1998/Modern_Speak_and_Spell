@@ -40,3 +40,37 @@ TOTAL Words: 4 Correct: 2 Errors: 2
 TOTAL Percent correct = 50.00% Error = 50.00% Accuracy = 50.00%
 TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
 
+start hangman  (test1)
+start hangman  (test1)
+Words: 2 Correct: 2 Errors: 0 Percent correct = 100.00% Error = 0.00% Accuracy = 100.00%
+Insertions: 0 Deletions: 0 Substitutions: 0
+TOTAL Words: 2 Correct: 2 Errors: 0
+TOTAL Percent correct = 100.00% Error = 0.00% Accuracy = 100.00%
+TOTAL Insertions: 0 Deletions: 0 Substitutions: 0
+
+HANGMAN SPELL speak  (test1)
+N       N     speak  (test1)
+Words: 3 Correct: 1 Errors: 2 Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
+Insertions: 0 Deletions: 0 Substitutions: 2
+TOTAL Words: 3 Correct: 1 Errors: 2
+TOTAL Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
+TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
+
+
+
+SPELL SPEAK hangman  (test1)
+N     B     hangman  (test1)
+Words: 3 Correct: 1 Errors: 2 Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
+Insertions: 0 Deletions: 0 Substitutions: 2
+TOTAL Words: 3 Correct: 1 Errors: 2
+TOTAL Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
+TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
+
+START SPEAK hangman  (test1)
+R     P     hangman  (test1)
+Words: 3 Correct: 1 Errors: 2 Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
+Insertions: 0 Deletions: 0 Substitutions: 2
+TOTAL Words: 3 Correct: 1 Errors: 2
+TOTAL Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
+TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
+
