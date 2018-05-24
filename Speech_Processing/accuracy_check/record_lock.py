@@ -28,7 +28,7 @@ def main():
 		while True:
 			listen_t.join(0.1)
 			record_t.join(0.1)
-	except KeyboardInterrupt:
+	except KeyboardInterrupt:	#Stops the entire process if Keyboard Interrupt is pressed.
 		stopped.set()
 		
 		listen_t.join()
@@ -42,7 +42,7 @@ def record(stopped, q):
 		
 		if stopped.wait(timeout=0):
 			break
-		chunk=q.get()
+		chunk=q.get()	#Extracts a chunk out of the queue
 		vol=max(chunk)
 		if vol >=MIN_VOLUME:
 			if len(frames)>0:
@@ -54,9 +54,12 @@ def record(stopped, q):
 		elif len(frames)>0:
 			print("-"),
 			if k==0:
-				frames.append(chunk)
+				frames.append(chunk)	#Appends one chunk of silence to help recognize the words more clearly
 				k=k+1
 			t=int(round(time.time()))
+			
+			#If silence duration is more than 3 seconds... writes the frames to an audio file.
+			
 			if(int(t-start)>=3) and start>0:
 				string=WAVE_OUTPUT_FILENAME+"1"+".wav"
 				waveFile = wave.open(string, 'wb')
@@ -67,6 +70,9 @@ def record(stopped, q):
 				waveFile.close()
 				del frames[:]
 				k=0
+				
+				#Pauses the recording process for further operations on the audio file generated
+				
 				with lock:
 					os.system("./lock.sh "+ sys.argv[1]+ " "+ sys.argv[2])
 				print("You may again start recording...")
