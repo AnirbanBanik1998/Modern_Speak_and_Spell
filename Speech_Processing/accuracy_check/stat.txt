@@ -1,76 +1,80 @@
+start start ***  start start START START start start START start start start START START start start START START start START START start START START START START start start start start start start START start START start start start start START start START start start start START START  (START)
+start start STOP start start STOP  STOP  start start STOP  start start start SPELL STOP  start start STOP  STOP  start STOP  STOP  start STOP  SPELL SPEAK STOP  start start start start start start STOP  start STOP  start start start start STOP  start STOP  start start start SPELL STOP   (START)
+Words: 47 Correct: 28 Errors: 20 Percent correct = 59.57% Error = 42.55% Accuracy = 57.45%
+Insertions: 1 Deletions: 0 Substitutions: 19
+TOTAL Words: 47 Correct: 28 Errors: 20
+TOTAL Percent correct = 59.57% Error = 42.55% Accuracy = 57.45%
+TOTAL Insertions: 1 Deletions: 0 Substitutions: 19
 
+encrypter encrypter encrypter encrypter encrypter encrypter encrypter ***  encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter ENCRYPTER encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter ENCRYPTER encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter  (ENCRYPTER)
+encrypter encrypter encrypter encrypter encrypter encrypter encrypter STOP encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter SPEAK     encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter SPEAK     encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter encrypter  (ENCRYPTER)
+Words: 47 Correct: 45 Errors: 3 Percent correct = 95.74% Error = 6.38% Accuracy = 93.62%
+Insertions: 1 Deletions: 0 Substitutions: 2
+TOTAL Words: 47 Correct: 45 Errors: 3
+TOTAL Percent correct = 95.74% Error = 6.38% Accuracy = 93.62%
+TOTAL Insertions: 1 Deletions: 0 Substitutions: 2
 
+QUIT quit quit quit quit quit quit QUIT      quit quit quit QUIT  quit quit quit quit quit quit quit quit QUIT  quit QUIT  QUIT  quit QUIT  quit quit QUIT  QUIT  quit quit quit QUIT  quit quit quit QUIT  quit quit QUIT quit quit quit quit quit quit  (QUIT)
+***  quit quit quit quit quit quit CROSSWORD quit quit quit SPEAK quit quit quit quit quit quit quit quit SPELL quit SPEAK SPEAK quit SPEAK quit quit SPEAK SPEAK quit quit quit SPEAK quit quit quit SPEAK quit quit STOP quit quit quit quit quit quit  (QUIT)
+Words: 47 Correct: 35 Errors: 12 Percent correct = 74.47% Error = 25.53% Accuracy = 74.47%
+Insertions: 0 Deletions: 1 Substitutions: 11
+TOTAL Words: 47 Correct: 35 Errors: 12
+TOTAL Percent correct = 74.47% Error = 25.53% Accuracy = 74.47%
+TOTAL Insertions: 0 Deletions: 1 Substitutions: 11
 
+speak speak speak speak speak speak speak SPEAK speak speak speak SPEAK speak SPEAK SPEAK SPEAK speak speak speak speak speak SPEAK speak speak SPEAK speak speak speak SPEAK SPEAK SPEAK speak speak SPEAK speak speak SPEAK SPEAK SPEAK speak SPEAK speak SPEAK SPEAK speak speak speak  (SPEAK)
+speak speak speak speak speak speak speak SPELL speak speak speak START speak SPELL SPELL STOP  speak speak speak speak speak SPELL speak speak SPELL speak speak speak START SPELL SPELL speak speak START speak speak SPELL START STOP  speak QUIT  speak START SPELL speak speak speak  (SPEAK)
+Words: 47 Correct: 30 Errors: 17 Percent correct = 63.83% Error = 36.17% Accuracy = 63.83%
+Insertions: 0 Deletions: 0 Substitutions: 17
+TOTAL Words: 47 Correct: 30 Errors: 17
+TOTAL Percent correct = 63.83% Error = 36.17% Accuracy = 63.83%
+TOTAL Insertions: 0 Deletions: 0 Substitutions: 17
 
+crossword crossword crossword crossword crossword ***  ***        crossword crossword crossword crossword crossword crossword crossword crossword crossword ***      ***  crossword crossword crossword ***  crossword CROSSWORD crossword crossword CROSSWORD CROSSWORD CROSSWORD crossword crossword crossword CROSSWORD CROSSWORD crossword crossword CROSSWORD crossword crossword crossword crossword CROSSWORD CROSSWORD CROSSWORD  CROSSWORD CROSSWORD crossword crossword crossword crossword CROSSWORD crossword  (CROSSWORD)
+crossword crossword crossword crossword crossword QUIT SCOREBOARD crossword crossword crossword crossword crossword crossword crossword crossword crossword GENERATE QUIT crossword crossword crossword STOP crossword ENCRYPTER crossword crossword ENCRYPTER QUIT      QUIT      crossword crossword crossword SPELL     SPELL     crossword crossword RESUME    crossword crossword crossword crossword RESUME    SPELL     SCOREBOARD RESUME    SPELL     crossword crossword crossword crossword RESUME    crossword  (CROSSWORD)
+Words: 47 Correct: 34 Errors: 18 Percent correct = 72.34% Error = 38.30% Accuracy = 61.70%
+Insertions: 5 Deletions: 0 Substitutions: 13
+TOTAL Words: 47 Correct: 34 Errors: 18
+TOTAL Percent correct = 72.34% Error = 38.30% Accuracy = 61.70%
+TOTAL Insertions: 5 Deletions: 0 Substitutions: 13
 
+spell spell spell spell spell spell ***   SPELL SPELL spell spell SPELL  SPELL spell spell spell SPELL spell spell SPELL   spell SPELL   SPELL SPELL SPELL spell spell spell spell spell SPELL  spell spell spell spell spell spell spell spell spell SPELL SPELL spell SPELL spell spell spell spell  (SPELL)
+spell spell spell spell spell spell SPEAK START SPEAK spell spell RESUME SPEAK spell spell spell SPEAK spell spell HANGMAN spell HANGMAN SPEAK SPEAK SPEAK spell spell spell spell spell RESUME spell spell spell spell spell spell spell spell spell START SPEAK spell SPEAK spell spell spell spell  (SPELL)
+Words: 47 Correct: 33 Errors: 15 Percent correct = 70.21% Error = 31.91% Accuracy = 68.09%
+Insertions: 1 Deletions: 0 Substitutions: 14
+TOTAL Words: 47 Correct: 33 Errors: 15
+TOTAL Percent correct = 70.21% Error = 31.91% Accuracy = 68.09%
+TOTAL Insertions: 1 Deletions: 0 Substitutions: 14
 
+HANGMAN HANGMAN HANGMAN hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman HANGMAN  hangman hangman hangman hangman  (HANGMAN)
+***     ***     ***     hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman hangman GENERATE hangman hangman hangman hangman  (HANGMAN)
+Words: 47 Correct: 43 Errors: 4 Percent correct = 91.49% Error = 8.51% Accuracy = 91.49%
+Insertions: 0 Deletions: 3 Substitutions: 1
+TOTAL Words: 47 Correct: 43 Errors: 4
+TOTAL Percent correct = 91.49% Error = 8.51% Accuracy = 91.49%
+TOTAL Insertions: 0 Deletions: 3 Substitutions: 1
 
+generate ***     generate generate generate ***     GENERATE  generate generate generate generate GENERATE GENERATE GENERATE  GENERATE generate GENERATE generate generate generate GENERATE generate GENERATE GENERATE generate generate GENERATE generate generate generate generate generate GENERATE generate generate generate generate generate GENERATE generate generate generate generate generate generate generate generate generate generate  (GENERATE)
+generate HANGMAN generate generate generate HANGMAN ENCRYPTER generate generate generate generate HANGMAN  SPEAK    CROSSWORD HANGMAN  generate HANGMAN  generate generate generate HANGMAN  generate HANGMAN  HANGMAN  generate generate SPEAK    generate generate generate generate generate HANGMAN  generate generate generate generate generate HANGMAN  generate generate generate generate generate generate generate generate generate generate  (GENERATE)
+Words: 47 Correct: 35 Errors: 14 Percent correct = 74.47% Error = 29.79% Accuracy = 70.21%
+Insertions: 2 Deletions: 0 Substitutions: 12
+TOTAL Words: 47 Correct: 35 Errors: 14
+TOTAL Percent correct = 74.47% Error = 29.79% Accuracy = 70.21%
+TOTAL Insertions: 2 Deletions: 0 Substitutions: 12
 
+scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard ***   scoreboard scoreboard scoreboard scoreboard scoreboard ***    ***       ***   ***     ***     SCOREBOARD scoreboard SCOREBOARD scoreboard scoreboard scoreboard SCOREBOARD SCOREBOARD scoreboard scoreboard SCOREBOARD SCOREBOARD scoreboard scoreboard scoreboard scoreboard SCOREBOARD SCOREBOARD scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard  (SCOREBOARD)
+scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard SPEAK scoreboard scoreboard scoreboard scoreboard scoreboard RESUME ENCRYPTER START HANGMAN HANGMAN CROSSWORD  scoreboard SPELL      scoreboard scoreboard scoreboard START      QUIT       scoreboard scoreboard SPELL      HANGMAN    scoreboard scoreboard scoreboard scoreboard GENERATE   ENCRYPTER  scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard scoreboard  (SCOREBOARD)
+Words: 47 Correct: 39 Errors: 14 Percent correct = 82.98% Error = 29.79% Accuracy = 70.21%
+Insertions: 6 Deletions: 0 Substitutions: 8
+TOTAL Words: 47 Correct: 39 Errors: 14
+TOTAL Percent correct = 82.98% Error = 29.79% Accuracy = 70.21%
+TOTAL Insertions: 6 Deletions: 0 Substitutions: 8
 
-
-A   START STOP HANGMAN SPEAK  (test1)
-*** ***   O    H       A      (test1)
-Words: 5 Correct: 0 Errors: 5 Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
-Insertions: 0 Deletions: 2 Substitutions: 3
-TOTAL Words: 5 Correct: 0 Errors: 5
-TOTAL Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
-TOTAL Insertions: 0 Deletions: 2 Substitutions: 3
-
-START STOP HANGMAN SPEAK  (test1)
-***   O    H       A      (test1)
-Words: 4 Correct: 0 Errors: 4 Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
-Insertions: 0 Deletions: 1 Substitutions: 3
-TOTAL Words: 4 Correct: 0 Errors: 4
-TOTAL Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
-TOTAL Insertions: 0 Deletions: 1 Substitutions: 3
-
-START STOP HANGMAN SPEAK  (test1)
-***   O    H       A      (test1)
-Words: 4 Correct: 0 Errors: 4 Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
-Insertions: 0 Deletions: 1 Substitutions: 3
-TOTAL Words: 4 Correct: 0 Errors: 4
-TOTAL Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
-TOTAL Insertions: 0 Deletions: 1 Substitutions: 3
-
-START stop hangman SPEAK  (test1)
-R     stop hangman G      (test1)
-Words: 4 Correct: 2 Errors: 2 Percent correct = 50.00% Error = 50.00% Accuracy = 50.00%
-Insertions: 0 Deletions: 0 Substitutions: 2
-TOTAL Words: 4 Correct: 2 Errors: 2
-TOTAL Percent correct = 50.00% Error = 50.00% Accuracy = 50.00%
-TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
-
-start hangman  (test1)
-start hangman  (test1)
-Words: 2 Correct: 2 Errors: 0 Percent correct = 100.00% Error = 0.00% Accuracy = 100.00%
-Insertions: 0 Deletions: 0 Substitutions: 0
-TOTAL Words: 2 Correct: 2 Errors: 0
-TOTAL Percent correct = 100.00% Error = 0.00% Accuracy = 100.00%
-TOTAL Insertions: 0 Deletions: 0 Substitutions: 0
-
-HANGMAN SPELL speak  (test1)
-N       N     speak  (test1)
-Words: 3 Correct: 1 Errors: 2 Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
-Insertions: 0 Deletions: 0 Substitutions: 2
-TOTAL Words: 3 Correct: 1 Errors: 2
-TOTAL Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
-TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
-
-
-
-SPELL SPEAK hangman  (test1)
-N     B     hangman  (test1)
-Words: 3 Correct: 1 Errors: 2 Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
-Insertions: 0 Deletions: 0 Substitutions: 2
-TOTAL Words: 3 Correct: 1 Errors: 2
-TOTAL Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
-TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
-
-START SPEAK hangman  (test1)
-R     P     hangman  (test1)
-Words: 3 Correct: 1 Errors: 2 Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
-Insertions: 0 Deletions: 0 Substitutions: 2
-TOTAL Words: 3 Correct: 1 Errors: 2
-TOTAL Percent correct = 33.33% Error = 66.67% Accuracy = 33.33%
-TOTAL Insertions: 0 Deletions: 0 Substitutions: 2
+stop ***   stop stop stop STOP  stop STOP  stop STOP  stop stop stop stop STOP  STOP  stop stop stop stop stop STOP  STOP  stop STOP  stop stop stop stop STOP  stop stop stop stop stop stop STOP  STOP  stop STOP  STOP  STOP stop stop stop stop stop stop  (STOP)
+stop SPELL stop stop stop SPELL stop START stop START stop stop stop stop SPELL SPELL stop stop stop stop stop SPELL SPELL stop SPELL stop stop stop stop SPELL stop stop stop stop stop stop SPELL START stop SPELL SPELL QUIT stop stop stop stop stop stop  (STOP)
+Words: 47 Correct: 33 Errors: 15 Percent correct = 70.21% Error = 31.91% Accuracy = 68.09%
+Insertions: 1 Deletions: 0 Substitutions: 14
+TOTAL Words: 47 Correct: 33 Errors: 15
+TOTAL Percent correct = 70.21% Error = 31.91% Accuracy = 68.09%
+TOTAL Insertions: 1 Deletions: 0 Substitutions: 14
 
