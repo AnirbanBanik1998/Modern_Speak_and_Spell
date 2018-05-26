@@ -1,0 +1,69 @@
+Language model created by QuickLM on Fri May 25 08:39:33 EDT 2018
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 11 sentences and 13 words
+
+\data\
+ngram 1=13
+ngram 2=22
+ngram 3=11
+
+\1-grams:
+-0.7782 </s> -0.3010
+-0.7782 <s> -0.2218
+-1.8195 CROSSWORD -0.2218
+-1.8195 ENCRYPTER -0.2218
+-1.8195 GENERATE -0.2218
+-1.8195 HANGMAN -0.2218
+-1.8195 QUIT -0.2218
+-1.8195 RESUME -0.2218
+-1.8195 SCOREBOARD -0.2218
+-1.8195 SPEAK -0.2218
+-1.8195 SPELL -0.2218
+-1.8195 START -0.2218
+-1.8195 STOP -0.2218
+
+\2-grams:
+-1.3424 <s> CROSSWORD 0.0000
+-1.3424 <s> ENCRYPTER 0.0000
+-1.3424 <s> GENERATE 0.0000
+-1.3424 <s> HANGMAN 0.0000
+-1.3424 <s> QUIT 0.0000
+-1.3424 <s> RESUME 0.0000
+-1.3424 <s> SCOREBOARD 0.0000
+-1.3424 <s> SPEAK 0.0000
+-1.3424 <s> SPELL 0.0000
+-1.3424 <s> START 0.0000
+-1.3424 <s> STOP 0.0000
+-0.3010 CROSSWORD </s> -0.3010
+-0.3010 ENCRYPTER </s> -0.3010
+-0.3010 GENERATE </s> -0.3010
+-0.3010 HANGMAN </s> -0.3010
+-0.3010 QUIT </s> -0.3010
+-0.3010 RESUME </s> -0.3010
+-0.3010 SCOREBOARD </s> -0.3010
+-0.3010 SPEAK </s> -0.3010
+-0.3010 SPELL </s> -0.3010
+-0.3010 START </s> -0.3010
+-0.3010 STOP </s> -0.3010
+
+\3-grams:
+-0.3010 <s> CROSSWORD </s>
+-0.3010 <s> ENCRYPTER </s>
+-0.3010 <s> GENERATE </s>
+-0.3010 <s> HANGMAN </s>
+-0.3010 <s> QUIT </s>
+-0.3010 <s> RESUME </s>
+-0.3010 <s> SCOREBOARD </s>
+-0.3010 <s> SPEAK </s>
+-0.3010 <s> SPELL </s>
+-0.3010 <s> START </s>
+-0.3010 <s> STOP </s>
+
+\end\
