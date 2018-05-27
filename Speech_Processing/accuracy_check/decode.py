@@ -1,5 +1,5 @@
 import os
-os.chdir("./wav")
+os.chdir("./audio")
 arr=os.listdir()
 for wave in arr:
 	filename, ext = os.path.splitext(wave)
@@ -12,6 +12,6 @@ for wave in arr:
 		f.write("("+filename+")")
 		f.close()
 		os.chdir("..")
-		os.system("./decoder.sh "+ "./wav")
-		os.chdir("./wav")
+		os.system("./decoder.sh "+ "./audio")
+		os.chdir("./audio")
 os.chdir("..")
