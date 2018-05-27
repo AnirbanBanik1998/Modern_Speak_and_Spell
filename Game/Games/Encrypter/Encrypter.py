@@ -17,7 +17,7 @@ arr=r.read().split(" ")
 letter=arr[0]
 r.close()
 print(letter)
-if letter==str(1):
+if letter=="A":
 	s=rand()
 	hint=shift("Anirban", s)
 	with lock:
@@ -30,7 +30,7 @@ if letter==str(1):
 	with lock:
 		os.system("./endec.sh "+str(len(column[randcolumn[0]])))
 	files(encode)
-elif letter==str(2):
+elif letter=="B":
 	s=rand()
 	hint=shift("Anirban", s)
 	with lock:
@@ -46,7 +46,7 @@ elif letter==str(2):
 	
 	
 	
-elif letter==str(3):
+elif letter=="3":
 	s=rand()
 	encode=shift(column[randcolumn[0]], s)
 	for k in range(10):
