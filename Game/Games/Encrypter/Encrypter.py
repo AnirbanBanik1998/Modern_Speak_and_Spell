@@ -9,7 +9,7 @@ my_randoms=random.sample(range(0, len(rows)), 1)
 column=rows[my_randoms[0]].split(",")
 randcolumn=random.sample(range(0, (len(column)-1)), 1)
 column[randcolumn[0]]=column[randcolumn[0]].strip()
-subprocess.call(["espeak"," Choose your option 1 Encode 2 Decode 3 Guess "])
+subprocess.call(["espeak"," Choose your option A Encode B Decode C Guess "])
 with lock:
 	os.system("./choose.sh")
 r=open('./test.hyp','r')					

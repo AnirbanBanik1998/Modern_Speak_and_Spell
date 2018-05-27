@@ -6,4 +6,4 @@ else
 fi
 
 python3 ../../edit.py 1
-pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm "../9731.lm" -dict "../9731.dic" -samprate $1 -nfft $2 -hyp test.hyp
+pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm "../../../Language_Models/characters.lm" -dict "../../../Language_Models/characters.dic" -samprate $1 -nfft $2 -hyp test.hyp
