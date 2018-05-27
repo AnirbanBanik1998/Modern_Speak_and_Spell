@@ -9,7 +9,7 @@ for i in range(len(words)):
 g.close()
 f.close()
 '''
-f=open("a.txt", "r")
+f=open("a.txt", "r")	#Contains the required words or letters in a sorted order
 words=f.read().split("\n")
 directory=os.listdir()
 for word in words:
@@ -24,7 +24,8 @@ for word in words:
 				filename, ext = os.path.splitext(fi)
 				if ext==".wav" and filename==word:
 					os.chdir("..")
-					os.system("./run.sh "+word+".hyp "+word+" "+d)
+					#Running the decoder script
+					os.system("./runner.sh "+word+".hyp "+word+" "+d)
 					os.chdir(d)
 			os.chdir("..")
 f.close()
