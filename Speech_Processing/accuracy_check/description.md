@@ -14,6 +14,18 @@ $./run.sh
 $./lock.sh
 ```
 
+## For automating the process for the audio files in the samples
+
+```
+$./dict.sh
+```
+
+## For merging all the audio files with same name and then running the accuracy scripts....automating the whole process.
+
+```
+$./merge.sh
+```
+
 ## Documentation
 
 ### `record_lock.py`
@@ -35,4 +47,37 @@ Generates the **test.fileids** and **test.transcription** files for use in decod
 
 Perl script to generate accuracy statistics data..comparing the transcription and hypothesis files.
 Taken from the sphinxbase library of CMU Sphinx.
+
+**The files below are mainly to create the accuracy statistics of the provided audio.**
+
+### `dictionary.py`
+
+A script to help start the decoding process for the accuracy detection of the audio files given in samples.zip
+
+### `append.py`
+
+Creates the dictionary from the hypothesis files.
+
+### `translate.py`
+
+For creating the test.transcription and test.fileids files and also for updating the hypothesis files.
+
+### `final.py`
+
+To truncate the dictionary files for each words so that no repetitions are there.
+
+### `make.py`
+
+To make the final phonetic dictionary based on the results obtained.
+
+**For working on the merged audio.**
+
+### `merge.py`
+
+To merge all the audio with the same name along with intervals of silence in between them
+
+### `decode.py`
+
+For decoding the merged audio and generating accuracy stats.
+
 
