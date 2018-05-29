@@ -1,5 +1,5 @@
 import os
-f=open("a.txt", "r")
+f=open("c.txt", "r")
 lines=f.read().split("\n")
 data=os.listdir()
 for line in lines:

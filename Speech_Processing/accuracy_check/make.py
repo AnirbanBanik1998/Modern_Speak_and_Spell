@@ -1,5 +1,5 @@
 import os
-dictionary=open("phonetic.dic", "w+")
+dictionary=open("phonetic.csv", "w+")
 d=os.listdir()
 d.sort()
 for di in d:
@@ -11,11 +11,22 @@ for di in d:
 			p=1
 		if ext==".dic" and p:
 			f=open(di, "r")
-			words=f.read().split("\n")
+			lines=f.read().split("\n")
 			f.close()
-			k=1
-			for i in range(len(words)):
-				if len(words[i])>0:
-					dictionary.write(filename+"("+str(k)+")	"+ words[i]+"\n")
-					k=k+1
+			#k=1
+			dictionary.write(filename+",")
+			for i in range(len(lines)):
+				words=lines[i].split(" ")
+				if len(words[0])>0 and int(words[len(words)-1])>0:
+					#dictionary.write(filename+"("+str(k)+")	"+ words[i]+"\n")
+					#k=k+1
+					for j in range(len(words)-1):
+						dictionary.write(words[j]+" ")
+						dictionary.write(",")
+				elif filename in words[:]:
+					for j in range(len(words)-1):
+						dictionary.write(words[j]+" ")
+						dictionary.write(",")
+				
+			dictionary.write("\n")
 dictionary.close()

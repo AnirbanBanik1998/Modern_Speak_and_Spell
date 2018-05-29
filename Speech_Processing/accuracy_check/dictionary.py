@@ -9,12 +9,12 @@ for i in range(len(words)):
 g.close()
 f.close()
 '''
-f=open("a.txt", "r")	#Contains the required words or letters in a sorted order
+f=open("c.txt", "r")	#Contains the required words or letters in a sorted order
 words=f.read().split("\n")
 directory=os.listdir()
 for word in words:
 	os.system("touch "+word+".hyp")
-	with open("test.fileids","w") as r:
+	with open("test.fileids","w+") as r:
 		r.write(word)
 	for d in directory:
 		if os.path.isdir(d):
@@ -25,7 +25,10 @@ for word in words:
 				if ext==".wav" and filename==word:
 					os.chdir("..")
 					#Running the decoder script
-					os.system("./runner.sh "+word+".hyp "+word+" "+d)
+					try:
+						os.system("./runner.sh "+word+".hyp "+word+" "+d)
+					except Exception as e:
+						print(e)
 					os.chdir(d)
 			os.chdir("..")
 f.close()
