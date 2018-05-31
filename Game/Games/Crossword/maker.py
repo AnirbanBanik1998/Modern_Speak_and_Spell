@@ -9,26 +9,26 @@ word2=""
 word3=""
 word4=""
 k=1
-#print(str(row)+ " " +str(column))
 def find(w, c, r):
 	for i in range(0, len(lines)):
-		if w[r]==lines[i][c]:
-			return lines[i]
+		g=lines[i].split(",")
+		if w[r]==g[0][c]:
+			return g[0]
 	return ""
 
 def find_inv(x, y, p):
-	#print(p)
 	for i in range(0, len(lines)):
-		if lines[i][p]==x and lines[i][p+2]==y:
-			return lines[i]
+		g=lines[i].split(",")
+		if g[0][p]==x and g[0][p+2]==y:
+			return g[0]
 	return ""
 
 while k:
 	wordlist = []
 	my_randoms=random.randint(0,len(lines)-1)
-	word1=lines[my_randoms]
+	g=lines[my_randoms].split(",")
+	word1=g[0]
 	wordlist.append(word1)
-	#print(word1)
 	try:
 		word2=find(word1, row, column)
 		wordlist.append(word2)
