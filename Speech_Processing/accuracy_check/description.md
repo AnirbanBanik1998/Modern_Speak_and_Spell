@@ -68,7 +68,11 @@ To truncate the dictionary files for each words so that no repetitions are there
 
 ### `make.py`
 
-To make the final phonetic dictionary based on the results obtained.
+To make the final phonetic dictionary based on the results obtained, if not already made previously.
+
+### `add.py`
+
+To append to the already made final phonetic dictionary.
 
 **For working on the merged audio.**
 
