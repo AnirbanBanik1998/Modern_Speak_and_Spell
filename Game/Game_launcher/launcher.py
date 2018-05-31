@@ -39,12 +39,13 @@ if start==1:
 				os.system("python3 Enrypter.py")
 				os.chdir(cwd)
 			break
-			'''
 		elif arr[i] in ("CROSSWORD", "crossword"):
-			#with lock:
-				#os.system("python3 ../Games/Crossword.py")
+			with lock:
+				cwd=os.getcwd()
+				os.chdir("../Games/Crossword/")
+				os.system("python3 Crossword.py")
+				os.chdir(cwd)
 			break
-			'''
 elif resume==1:
 	g=open("./previous.txt", "r+")
 	ar=g.read().split(" ")
@@ -67,8 +68,9 @@ elif resume==1:
 			os.chdir("../Games/Encrypter/")
 			os.system("python3 Encrypter.py")
 			os.chdir(cwd)
-			'''
-	#elif ar[0] in ("CROSSWORD", "crossword"):
-		#with lock:
-			#os.system("python3 ../Games/Crossword/Crossword.py")
-	'''
+	elif ar[0] in ("CROSSWORD", "crossword"):
+		with lock:
+			cwd=os.getcwd()
+			os.chdir("../Games/Crossword/")
+			os.system("python3 Crossword.py")
+			os.chdir(cwd)
