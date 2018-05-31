@@ -18,6 +18,7 @@ python3 Hangman.py
 ### `Hangman.py`
 
 Main program...the user has to decipher the entire word in a limited amount of trials.
+* `check(str1,l)`: Checks if the input letter matches with any letter of the word or not.
 
 ### `input.sh`
 
