@@ -1,6 +1,6 @@
-f=open("../Wordlist.csv", "r")
-g=open("./statistics.txt", "w+")
-w=open("./words.txt", "w+")
+f=open("../../Wordlist.csv", "r")
+g=open("../statistics.txt", "w+")
+w=open("../words.txt", "w+")
 rows=f.read().split("\n")
 words = []
 for i in range(0, len(rows)):
