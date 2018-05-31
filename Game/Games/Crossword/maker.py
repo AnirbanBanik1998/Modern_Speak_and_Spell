@@ -1,5 +1,6 @@
 import random
-f=open("./words.txt", "r")
+import os
+f=open("./words.csv", "r")
 lines=f.read().split("\n")
 
 row=random.randint(0,1)
@@ -50,11 +51,11 @@ while k:
 		except:
 			word4=""
 			k=1
-
+'''
 print("Row "+str(row+1)+" " + word1)
 print("Row "+str(row+3)+" " + word4)
 print("Column "+str(column+1)+" " + word2)
 print("Column "+str(column+3)+" " + word3)
-
-	
+'''
+os.system("python3 Crossword.py"+ word1+ " "+ word2+ " "+ word3+ " "+ word4+ " "+ str(row)+ " "+ str(column))
 
