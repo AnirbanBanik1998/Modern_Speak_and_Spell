@@ -11,7 +11,7 @@ def meaning(w):
 		for line in r:
 			word=line[:len(line)-1].split(",")
 			if word[0]==w:
-				return word[1]
+				return word[1:]
 		return
 mean = []
 for i in range(1,5):

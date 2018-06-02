@@ -12,9 +12,8 @@ with open("../words.txt", "r") as r:
 				for i in range(len(value)):
 					words=value[i].split(" ")
 					if line not in words:
-						temp.write(value[i]+",")
+						temp.write(value[i].replace(","," ")+",")
 						break
-				break
 		except Exception as e:
 			print(e)
 		temp.write("\n")
