@@ -57,5 +57,5 @@ print("Row "+str(row+3)+" " + word4)
 print("Column "+str(column+1)+" " + word2)
 print("Column "+str(column+3)+" " + word3)
 '''
-os.system("python3 maker.py"+ word1+ " "+ word2+ " "+ word3+ " "+ word4+ " "+ str(row)+ " "+ str(column))
+os.system("python3 maker.py "+ word1+ " "+ word2+ " "+ word3+ " "+ word4+ " "+ str(row)+ " "+ str(column))
 
