@@ -50,6 +50,10 @@ Taken from the sphinxbase library of CMU Sphinx.
 
 **The files below are mainly to create the accuracy statistics of the provided audio.**
 
+#### `convert.py`
+
+A script to convert all the .mp3 files to .wav files for further operations. 
+
 ### `dictionary.py`
 
 A script to help start the decoding process for the accuracy detection of the audio files given in samples.zip
