@@ -50,7 +50,7 @@ Taken from the sphinxbase library of CMU Sphinx.
 
 **The files below are mainly to create the accuracy statistics of the provided audio.**
 
-#### `convert.py`
+### `convert.py`
 
 A script to convert all the .mp3 files to .wav files for further operations. 
 
@@ -77,6 +77,14 @@ To make the final phonetic dictionary based on the results obtained, if not alre
 ### `add.py`
 
 To append to the already made final phonetic dictionary.
+
+### `new_dict.py`
+
+Script to make a new dictionary merging data from phonetic.csv and the old dictionary.
+
+### `dict_sort.py`
+
+Simple script to sort the new dictionary to make it more proper.
 
 **For working on the merged audio.**
 

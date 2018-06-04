@@ -14,7 +14,7 @@ for line in arr:
 		print(e)
 	for h in hyp[:len(hyp)-1]:
 		if len(h)>1:
-			w.write(hyp[0]+"("+str(i+1)+")"+"	"+h+"\n")
+			w.write(hyp[0]+"("+str(i+2)+")"+"	"+h+"\n")
 			i=i+1
 f.close()
 g.close()
