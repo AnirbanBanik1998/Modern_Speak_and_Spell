@@ -10,7 +10,7 @@ with open('phonetic.csv', 'r') as r:
 			for i in range(len(lines)):
 				arr=lines[i].split(" ")
 				string=""
-				if len(arr[0])>0 and int(arr[len(arr)-1])>0:
+				if len(arr[0])>0 and int(arr[len(arr)-1])>2:
 					#dictionary.write(filename+"("+str(k)+")	"+ words[i]+"\n")
 					#k=k+1
 					for j in range(len(arr)-1):

@@ -17,7 +17,7 @@ for di in d:
 			dictionary.write(filename+",")
 			for i in range(len(lines)):
 				words=lines[i].split(" ")
-				if len(words[0])>0 and int(words[len(words)-1])>0:
+				if len(words[0])>0 and int(words[len(words)-1])>2:
 					#dictionary.write(filename+"("+str(k)+")	"+ words[i]+"\n")
 					#k=k+1
 					for j in range(len(words)-1):
