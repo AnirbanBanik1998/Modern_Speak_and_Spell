@@ -2,7 +2,7 @@ import shutil
 temp =open('temp.csv', 'w+')
 with open('phonetic.csv', 'r') as r:
 	for line in r:
-		words=line.split(",")
+		words=line[:len(line)-1].split(",")
 		if len(words[0])>0:
 			f=open((words[0]+".dic"), "r")
 			lines=f.read().split("\n")
