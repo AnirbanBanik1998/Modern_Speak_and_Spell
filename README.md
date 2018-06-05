@@ -14,7 +14,7 @@ This is besically a project to rebrain the original Speak and Spell by Texas Ins
 2. Sample audio files - Two types of processes take place here, firstly just the audio files themselves...just convert from .mp3 to .wav and process them...and secondly, combining the audio files speaking out the same transcription into bigger files with intervals of silence in between them.
 
 For more information go to "./Speech_Processing/accuracy_check"
-[Documentation](./Speech_Processing/description.md)
+[Documentation](./Speech_Processing/accuracy_check/description.md)
 
 * Game Launcher - Code for voice-launching the games. For more information go to "./Game/Game_launcher"
 [Documentation](./Game/Game_launcher/launcher.md)
@@ -31,5 +31,4 @@ For more information go to "./Game/Games"
 ### Further Improvements to be done
 
 * Generating scoreboard after completion of every game.
-* Working on the statistics of the combined audio files.
 * Generating UI using pygame.
