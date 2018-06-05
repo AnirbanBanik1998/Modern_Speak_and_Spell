@@ -48,6 +48,10 @@ Generates the **test.fileids** and **test.transcription** files for use in decod
 Perl script to generate accuracy statistics data..comparing the transcription and hypothesis files.
 Taken from the sphinxbase library of CMU Sphinx.
 
+### `rename.py`
+
+Script to rename the test.hyp file.
+
 **The files below are mainly to create the accuracy statistics of the provided audio.**
 
 ### `convert.py`
