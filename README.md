@@ -14,13 +14,17 @@ This is besically a project to rebrain the original Speak and Spell by Texas Ins
 2. Sample audio files - Two types of processes take place here, firstly just the audio files themselves...just convert from .mp3 to .wav and process them...and secondly, combining the audio files speaking out the same transcription into bigger files with intervals of silence in between them.
 
 For more information go to "./Speech_Processing/accuracy_check"
+[Documentation](./Speech_Processing/description.md)
+
 * Game Launcher - Code for voice-launching the games. For more information go to "./Game/Game_launcher"
+[Documentation](./Game/Game_launcher/launcher.md)
+
 * Games - Code for the games themselves. There are four games made for this project.
 
-1. Spell It!
-2. Hangman
-3. Encrypter
-4. Crossword
+1. Spell It!	[Documentation](./Game/Games/Spell_It!/instructions.md)
+2. Hangman	[Documentation](./Game/Games/Hangman/instructions.md)
+3. Encrypter	[Documentation](./Game/Games/Encrypter/instructions.md)
+4. Crossword	[Documentation](./Game/Games/Crossword/instructions.md)
 
 For more information go to "./Game/Games"
 
