@@ -2632,3 +2632,211 @@ TOTAL Words: 47 Correct: 0 Errors: 47
 TOTAL Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
 TOTAL Insertions: 0 Deletions: 2 Substitutions: 45
 
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X   X    (X)
+F   H   I   F   N   S   A   S   D   A   S   H   N   S   H   S   H   S   N   S   B   S   H   S   S   A   A   S   F   A   D   C   F   H   C   H   S   I   S   H   S   E   S   H   E   S   S   P   L   F   G   H   M   S   H   S   E   A   F   A   B   T   G   C   S   F   B   Q   A   S    (X)
+Words: 47 Correct: 0 Errors: 70 Percent correct = 0.00% Error = 148.94% Accuracy = -48.94%
+Insertions: 23 Deletions: 0 Substitutions: 47
+TOTAL Words: 47 Correct: 0 Errors: 70
+TOTAL Percent correct = 0.00% Error = 148.94% Accuracy = -48.94%
+TOTAL Insertions: 23 Deletions: 0 Substitutions: 47
+
+*** s   *** s   s   s   *** s   *** *** *** *** s   s   *** *** s   s   s   *** *** S   s   S   s   S   S   S   S   s   S   S   s   s   s   s   s   S   S   s   S   S   S   S   s   s   S   s   s   S   s   S   S   s   S   s   S   s    (S)
+F   s   F   s   s   s   A   s   O   F   B   C   s   s   B   C   s   s   s   F   N   C   s   N   s   F   F   A   C   s   N   C   s   s   s   s   s   A   C   s   J   A   F   A   s   s   F   s   s   A   s   A   C   s   F   s   A   s    (S)
+Words: 47 Correct: 27 Errors: 31 Percent correct = 57.45% Error = 65.96% Accuracy = 34.04%
+Insertions: 11 Deletions: 0 Substitutions: 20
+TOTAL Words: 47 Correct: 27 Errors: 31
+TOTAL Percent correct = 57.45% Error = 65.96% Accuracy = 34.04%
+TOTAL Insertions: 11 Deletions: 0 Substitutions: 20
+
+q   *** q   *** *** q   q   *** Q   Q   Q   q   q   Q   Q   q   Q   Q   q   Q   Q   Q   Q   Q   Q   Q   Q   q   q   Q   Q   Q   Q   Q   Q   Q   q   q   Q   q   Q   q   Q   q   q   Q   Q   Q   q   Q   q    (Q)
+q   A   q   K   O   q   q   O   T   R   O   q   q   O   O   q   K   N   q   O   O   G   K   A   T   O   O   q   q   T   K   O   O   O   O   K   q   q   K   q   M   q   O   q   q   O   K   T   q   O   q    (Q)
+Words: 47 Correct: 18 Errors: 33 Percent correct = 38.30% Error = 70.21% Accuracy = 29.79%
+Insertions: 4 Deletions: 0 Substitutions: 29
+TOTAL Words: 47 Correct: 18 Errors: 33
+TOTAL Percent correct = 38.30% Error = 70.21% Accuracy = 29.79%
+TOTAL Insertions: 4 Deletions: 0 Substitutions: 29
+
+h   h   h   h   *** *** *** *** *** h   h   *** *** *** *** *** *** *** H   H   h   h   H   h   H   H   H   h   h   H   H   h   H   H   H   H   h   H   h   H   H   H   h   H   H   H   H   H   h   H   H   H   H   H   h   h   H   H   h    (H)
+h   h   h   h   I   O   O   T   O   h   h   R   G   O   O   O   R   R   K   R   h   h   C   h   I   T   I   h   h   C   S   h   R   R   I   J   h   K   h   A   D   I   h   R   R   R   I   S   h   E   R   R   D   R   h   h   A   F   h    (H)
+Words: 47 Correct: 19 Errors: 40 Percent correct = 40.43% Error = 85.11% Accuracy = 14.89%
+Insertions: 12 Deletions: 0 Substitutions: 28
+TOTAL Words: 47 Correct: 19 Errors: 40
+TOTAL Percent correct = 40.43% Error = 85.11% Accuracy = 14.89%
+TOTAL Insertions: 12 Deletions: 0 Substitutions: 28
+
+r   *** *** r   r   *** R   r   R   R   R   R   R   R   R   R   R   R   R   R   r   R   R   R   R   R   R   r   R   R   R   R   R   R   r   R   r   R   R   R   R   R   R   R   r   R   R   R   R   r    (R)
+r   H   O   r   r   A   N   r   N   L   O   A   F   I   N   A   A   N   I   D   r   N   A   J   S   O   N   r   N   N   N   A   O   J   r   F   r   N   N   N   N   I   L   A   r   O   A   N   A   r    (R)
+Words: 47 Correct: 10 Errors: 40 Percent correct = 21.28% Error = 85.11% Accuracy = 14.89%
+Insertions: 3 Deletions: 0 Substitutions: 37
+TOTAL Words: 47 Correct: 10 Errors: 40
+TOTAL Percent correct = 21.28% Error = 85.11% Accuracy = 14.89%
+TOTAL Insertions: 3 Deletions: 0 Substitutions: 37
+
+*** *** *** *** *** *** *** *** *** V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V   V    (V)
+B   J   B   P   B   B   F   O   H   B   D   R   B   K   A   N   L   F   R   O   D   B   C   L   O   K   P   P   F   A   B   L   F   L   O   O   I   B   F   B   A   B   G   R   F   R   O   A   B   R   F   A   N   C   O   B    (V)
+Words: 47 Correct: 0 Errors: 56 Percent correct = 0.00% Error = 119.15% Accuracy = -19.15%
+Insertions: 9 Deletions: 0 Substitutions: 47
+TOTAL Words: 47 Correct: 0 Errors: 56
+TOTAL Percent correct = 0.00% Error = 119.15% Accuracy = -19.15%
+TOTAL Insertions: 9 Deletions: 0 Substitutions: 47
+
+n   n   n   n   n   n   n   *** n   *** n   n   n   n   *** n   n   n   n   n   *** *** n   *** n   n   n   n   n   n   n   n   N   n   N   N   n   n   n   n   n   n   N   n   N   n   n   N   n   n   n   n   n    (N)
+n   n   n   n   n   n   n   O   n   M   n   n   n   n   M   n   n   n   n   n   L   M   n   E   n   n   n   n   n   n   n   n   E   n   M   A   n   n   n   n   n   n   A   n   A   n   n   E   n   n   n   n   n    (N)
+Words: 47 Correct: 41 Errors: 12 Percent correct = 87.23% Error = 25.53% Accuracy = 74.47%
+Insertions: 6 Deletions: 0 Substitutions: 6
+TOTAL Words: 47 Correct: 41 Errors: 12
+TOTAL Percent correct = 87.23% Error = 25.53% Accuracy = 74.47%
+TOTAL Insertions: 6 Deletions: 0 Substitutions: 6
+
+*** *** b   *** b   b   b   *** b   b   b   b   *** b   *** B   b   B   B   b   B   B   b   B   B   B   b   B   B   b   B   b   B   B   B   b   B   b   b   B   b   b   B   b   B   B   b   B   b   B   b   b   B    (B)
+D   K   b   D   b   b   b   O   b   b   b   b   A   b   D   F   b   N   M   b   A   A   b   O   A   K   b   P   A   b   A   b   R   R   J   b   K   b   b   A   b   b   R   b   R   F   b   D   b   L   b   b   A    (B)
+Words: 47 Correct: 25 Errors: 28 Percent correct = 53.19% Error = 59.57% Accuracy = 40.43%
+Insertions: 6 Deletions: 0 Substitutions: 22
+TOTAL Words: 47 Correct: 25 Errors: 28
+TOTAL Percent correct = 53.19% Error = 59.57% Accuracy = 40.43%
+TOTAL Insertions: 6 Deletions: 0 Substitutions: 22
+
+*** G   g   g   g   G   G   G   G   G   g   G   G   G   G   G   G   g   G   G   G   G   G   G   G   G   g   G   G   G   G   G   G   g   G   g   G   G   G   G   G   G   G   G   G   g   g   g    (G)
+T   K   g   g   g   P   J   C   L   K   g   T   K   T   J   A   M   g   B   J   C   J   K   N   C   J   g   K   J   J   K   C   J   g   J   g   K   D   R   J   J   T   T   J   L   g   g   g    (G)
+Words: 47 Correct: 11 Errors: 37 Percent correct = 23.40% Error = 78.72% Accuracy = 21.28%
+Insertions: 1 Deletions: 0 Substitutions: 36
+TOTAL Words: 47 Correct: 11 Errors: 37
+TOTAL Percent correct = 23.40% Error = 78.72% Accuracy = 21.28%
+TOTAL Insertions: 1 Deletions: 0 Substitutions: 36
+
+P   P   P   p   p   P   P   P   p   p   P   P   p   P   P   p   P   P   p   p   p   p   P   P   p   p   P   p   P   P   P   P   p   P   P   P   p   P   P   P   P   P   P   P   p   p   p    (P)
+K   H   B   p   p   B   Q   O   p   p   T   A   p   K   I   p   M   B   p   p   p   p   R   A   p   p   A   p   K   R   R   A   p   M   B   A   p   D   R   R   D   K   B   O   p   p   p    (P)
+Words: 47 Correct: 18 Errors: 29 Percent correct = 38.30% Error = 61.70% Accuracy = 38.30%
+Insertions: 0 Deletions: 0 Substitutions: 29
+TOTAL Words: 47 Correct: 18 Errors: 29
+TOTAL Percent correct = 38.30% Error = 61.70% Accuracy = 38.30%
+TOTAL Insertions: 0 Deletions: 0 Substitutions: 29
+
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y   Y    (Y)
+I   I   L   I   L   I   R   G   I   Q   S   M   A   R   L   B   I   I   B   B   B   D   H   C   M   H   C   N   L   I   I   I   N   B   N   I   E   J   L   I   S   N   B   K   H   N   B   I   J   O   I   D   G   R   A   D   A   I   H   A   H   R   L   I   L   I   B   T   A   I    (Y)
+Words: 47 Correct: 0 Errors: 70 Percent correct = 0.00% Error = 148.94% Accuracy = -48.94%
+Insertions: 23 Deletions: 0 Substitutions: 47
+TOTAL Words: 47 Correct: 0 Errors: 70
+TOTAL Percent correct = 0.00% Error = 148.94% Accuracy = -48.94%
+TOTAL Insertions: 23 Deletions: 0 Substitutions: 47
+
+U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U   U    (U)
+*** *** Q   N   Q   J   O   Q   R   B   M   Q   O   B   K   O   O   O   J   Q   Q   O   B   Q   A   J   O   O   O   O   O   N   O   Q   A   O   Q   O   O   A   Q   O   O   A   Q   O   Q    (U)
+Words: 47 Correct: 0 Errors: 47 Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
+Insertions: 0 Deletions: 2 Substitutions: 45
+TOTAL Words: 47 Correct: 0 Errors: 47
+TOTAL Percent correct = 0.00% Error = 100.00% Accuracy = 0.00%
+TOTAL Insertions: 0 Deletions: 2 Substitutions: 45
+
+A   A   A   A   A   A   a   A   A   A   a   A   A   a   a   a   A   a   A   A   A   A   A   A   a   a   A   A   A   A   a   A   A   a   A   a   A   A   A   A   a   A   A   A   a   a   A    (A)
+*** *** *** *** *** K   a   E   K   E   a   R   O   a   a   a   R   a   O   O   R   M   R   K   a   a   R   R   I   E   a   I   R   a   R   a   R   K   R   R   a   R   R   E   a   a   R    (A)
+Words: 47 Correct: 14 Errors: 33 Percent correct = 29.79% Error = 70.21% Accuracy = 29.79%
+Insertions: 0 Deletions: 5 Substitutions: 28
+TOTAL Words: 47 Correct: 14 Errors: 33
+TOTAL Percent correct = 29.79% Error = 70.21% Accuracy = 29.79%
+TOTAL Insertions: 0 Deletions: 5 Substitutions: 28
+
+m   m   *** *** m   m   m   *** *** m   M   M   m   M   m   m   M   M   M   M   M   M   M   M   M   M   m   M   m   m   M   M   M   m   M   m   m   m   M   m   m   m   M   m   m   M   M   m   M   M   m    (M)
+m   m   N   N   m   m   m   R   N   m   N   N   m   N   m   m   N   N   N   N   N   A   K   N   N   N   m   N   m   m   N   A   N   m   N   m   m   m   N   m   m   m   A   m   m   E   N   m   N   N   m    (M)
+Words: 47 Correct: 23 Errors: 28 Percent correct = 48.94% Error = 59.57% Accuracy = 40.43%
+Insertions: 4 Deletions: 0 Substitutions: 24
+TOTAL Words: 47 Correct: 23 Errors: 28
+TOTAL Percent correct = 48.94% Error = 59.57% Accuracy = 40.43%
+TOTAL Insertions: 4 Deletions: 0 Substitutions: 24
+
+l   l   *** l   l   L   L   L   L   l   l   L   L   L   L   L   L   L   l   L   l   L   L   L   l   L   L   l   L   L   L   L   l   L   L   L   L   l   l   L   L   L   L   L   L   l   L   l    (L)
+l   l   N   l   l   N   A   R   E   l   l   T   H   A   N   E   A   N   l   A   l   N   K   J   l   A   A   l   N   N   N   A   l   J   N   B   O   l   l   A   A   A   N   A   M   l   A   l    (L)
+Words: 47 Correct: 15 Errors: 33 Percent correct = 31.91% Error = 70.21% Accuracy = 29.79%
+Insertions: 1 Deletions: 0 Substitutions: 32
+TOTAL Words: 47 Correct: 15 Errors: 33
+TOTAL Percent correct = 31.91% Error = 70.21% Accuracy = 29.79%
+TOTAL Insertions: 1 Deletions: 0 Substitutions: 32
+
+f   f   f   f   f   *** f   *** f   *** f   f   f   *** *** f   *** f   f   *** f   f   F   f   F   F   F   F   F   F   f   f   F   f   f   F   F   F   f   f   f   f   f   F   f   F   f   f   F   f   f   f   F   f    (F)
+f   f   f   f   f   A   f   R   f   H   f   f   f   A   A   f   S   f   f   A   f   f   H   f   N   H   A   N   T   A   f   f   S   f   f   A   S   J   f   f   f   f   f   S   f   A   f   f   E   f   f   f   A   f    (F)
+Words: 47 Correct: 32 Errors: 22 Percent correct = 68.09% Error = 46.81% Accuracy = 53.19%
+Insertions: 7 Deletions: 0 Substitutions: 15
+TOTAL Words: 47 Correct: 32 Errors: 22
+TOTAL Percent correct = 68.09% Error = 46.81% Accuracy = 53.19%
+TOTAL Insertions: 7 Deletions: 0 Substitutions: 15
+
+j   j   *** j   j   *** *** *** *** *** *** j   j   *** *** *** *** *** *** *** *** J   J   J   j   J   J   J   J   J   J   j   J   J   J   J   J   J   J   J   j   j   j   J   j   J   J   J   J   j   j   J   J   J   J   j   j   J   J   J   J   j    (J)
+j   j   G   j   j   G   Q   L   O   P   R   j   j   R   L   L   D   C   N   Q   A   N   B   R   j   T   K   L   G   C   C   j   G   I   T   L   B   O   A   M   j   j   j   R   j   G   B   R   Q   j   j   B   A   R   A   j   j   B   O   B   F   j    (J)
+Words: 47 Correct: 17 Errors: 45 Percent correct = 36.17% Error = 95.74% Accuracy = 4.26%
+Insertions: 15 Deletions: 0 Substitutions: 30
+TOTAL Words: 47 Correct: 17 Errors: 45
+TOTAL Percent correct = 36.17% Error = 95.74% Accuracy = 4.26%
+TOTAL Insertions: 15 Deletions: 0 Substitutions: 30
+
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W    (W)
+F   A   D   D   O   L   E   L   L   E   M   Q   B   P   F   F   R   L   R   L   D   T   L   Q   L   D   A   O   A   R   L   B   T   L   D   K   D   N   L   Q   A   Q   B   L   D   F   I   Q   M   Q   L   O   N   L   J   O   L   K   L   F   A   D   L   E   L   B   O   O   A   L   A   L   D   L   D   Q   D   O   A   Q   L   Q   C   M   Q   O   L   J   L   D   B   R   Q   L   D   L   E   Q   L   Q   O   L   E    (W)
+Words: 47 Correct: 0 Errors: 103 Percent correct = 0.00% Error = 219.15% Accuracy = -119.15%
+Insertions: 56 Deletions: 0 Substitutions: 47
+TOTAL Words: 47 Correct: 0 Errors: 103
+TOTAL Percent correct = 0.00% Error = 219.15% Accuracy = -119.15%
+TOTAL Insertions: 56 Deletions: 0 Substitutions: 47
+
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z   Z    (Z)
+C   S   J   D   C   C   A   D   C   R   L   C   H   N   T   J   D   C   H   S   F   C   N   A   M   C   I   J   D   O   O   K   M   C   S   N   C   T   H   A   S   A   D   S   S   S   N   D   C   C   G   F   J   S   F   A   K   L   A   C   N   E   J   A   G    (Z)
+Words: 47 Correct: 0 Errors: 65 Percent correct = 0.00% Error = 138.30% Accuracy = -38.30%
+Insertions: 18 Deletions: 0 Substitutions: 47
+TOTAL Words: 47 Correct: 0 Errors: 65
+TOTAL Percent correct = 0.00% Error = 138.30% Accuracy = -38.30%
+TOTAL Insertions: 18 Deletions: 0 Substitutions: 47
+
+E   E   E   e   E   e   E   E   E   E   E   E   E   E   E   E   E   E   E   E   E   e   e   E   E   e   E   e   E   E   E   E   E   E   e   E   E   E   E   E   e   E   E   E   E   E   E    (E)
+*** *** *** e   A   e   B   A   S   O   B   B   B   A   B   A   C   M   A   A   A   e   e   A   S   e   S   e   A   R   R   N   N   K   e   B   B   B   B   R   e   A   S   L   L   A   B    (E)
+Words: 47 Correct: 8 Errors: 39 Percent correct = 17.02% Error = 82.98% Accuracy = 17.02%
+Insertions: 0 Deletions: 3 Substitutions: 36
+TOTAL Words: 47 Correct: 8 Errors: 39
+TOTAL Percent correct = 17.02% Error = 82.98% Accuracy = 17.02%
+TOTAL Insertions: 0 Deletions: 3 Substitutions: 36
+
+c   *** c   c   c   c   c   *** *** c   c   c   c   c   c   c   *** *** C   C   c   C   c   c   C   C   C   c   c   c   c   C   C   C   c   C   c   c   C   c   c   C   C   C   c   C   c   c   C   c   C   c    (C)
+c   J   c   c   c   c   c   I   O   c   c   c   c   c   c   c   M   S   N   T   c   A   c   c   R   A   I   c   c   c   c   T   A   K   c   J   c   c   A   c   c   S   O   J   c   J   c   c   O   c   T   c    (C)
+Words: 47 Correct: 30 Errors: 22 Percent correct = 63.83% Error = 46.81% Accuracy = 53.19%
+Insertions: 5 Deletions: 0 Substitutions: 17
+TOTAL Words: 47 Correct: 30 Errors: 22
+TOTAL Percent correct = 63.83% Error = 46.81% Accuracy = 53.19%
+TOTAL Insertions: 5 Deletions: 0 Substitutions: 17
+
+K   K   K   k   K   K   k   k   K   K   K   K   k   k   K   K   K   K   K   K   K   K   k   k   k   K   k   K   K   k   K   k   k   K   K   K   k   k   K   K   K   k   K   k   K   K   k    (K)
+*** *** *** k   S   T   k   k   A   L   O   O   k   k   L   Q   O   O   R   M   M   R   k   k   k   M   k   P   S   k   R   k   k   J   T   A   k   k   J   R   R   k   E   k   F   F   k    (K)
+Words: 47 Correct: 17 Errors: 30 Percent correct = 36.17% Error = 63.83% Accuracy = 36.17%
+Insertions: 0 Deletions: 3 Substitutions: 27
+TOTAL Words: 47 Correct: 17 Errors: 30
+TOTAL Percent correct = 36.17% Error = 63.83% Accuracy = 36.17%
+TOTAL Insertions: 0 Deletions: 3 Substitutions: 27
+
+t   *** T   t   t   T   t   T   T   T   t   t   T   t   T   T   T   T   t   t   t   T   T   T   t   t   T   t   t   T   T   T   t   T   t   T   t   T   T   T   T   t   t   T   T   T   t   t    (T)
+t   K   P   t   t   D   t   I   L   C   t   t   K   t   K   K   M   P   t   t   t   C   S   K   t   t   A   t   t   S   R   A   t   K   t   D   t   D   R   A   A   t   t   D   L   C   t   t    (T)
+Words: 47 Correct: 21 Errors: 27 Percent correct = 44.68% Error = 57.45% Accuracy = 42.55%
+Insertions: 1 Deletions: 0 Substitutions: 26
+TOTAL Words: 47 Correct: 21 Errors: 27
+TOTAL Percent correct = 44.68% Error = 57.45% Accuracy = 42.55%
+TOTAL Insertions: 1 Deletions: 0 Substitutions: 26
+
+D   D   D   D   d   d   d   d   D   D   D   d   d   D   D   d   D   D   D   d   D   d   D   D   D   D   D   d   d   D   D   D   D   D   d   D   d   D   D   D   D   d   D   D   D   D   d    (D)
+*** *** E   J   d   d   d   d   J   O   B   d   d   J   H   d   I   A   N   d   B   d   B   K   E   T   A   d   d   J   A   A   E   K   d   J   d   J   B   R   B   d   K   L   E   B   d    (D)
+Words: 47 Correct: 15 Errors: 32 Percent correct = 31.91% Error = 68.09% Accuracy = 31.91%
+Insertions: 0 Deletions: 2 Substitutions: 30
+TOTAL Words: 47 Correct: 15 Errors: 32
+TOTAL Percent correct = 31.91% Error = 68.09% Accuracy = 31.91%
+TOTAL Insertions: 0 Deletions: 2 Substitutions: 30
+
+O   O   O   O   O   o   o   o   o   o   o   O   O   o   O   O   o   o   o   o   O   o   o   o   O   o   o   o   o   o   o   O   o   o   O   o   O   O   O   o   O   O   O   O   O   O   O    (O)
+*** *** *** *** *** o   o   o   o   o   o   M   N   o   N   N   o   o   o   o   I   o   o   o   N   o   o   o   o   o   o   N   o   o   R   o   N   N   A   o   N   A   D   M   L   A   R    (O)
+Words: 47 Correct: 24 Errors: 23 Percent correct = 51.06% Error = 48.94% Accuracy = 51.06%
+Insertions: 0 Deletions: 5 Substitutions: 18
+TOTAL Words: 47 Correct: 24 Errors: 23
+TOTAL Percent correct = 51.06% Error = 48.94% Accuracy = 51.06%
+TOTAL Insertions: 0 Deletions: 5 Substitutions: 18
+
+I   I   I   i   I   i   i   I   I   I   I   I   i   I   I   I   I   I   I   i   i   i   I   I   i   I   I   i   I   I   I   I   i   I   i   I   I   I   I   I   i   I   I   i   i   I   i    (I)
+*** *** *** i   B   i   i   R   P   D   R   L   i   R   E   B   E   B   E   i   i   i   P   E   i   E   E   i   E   B   D   E   i   N   i   E   R   D   A   B   i   B   B   i   i   B   i    (I)
+Words: 47 Correct: 15 Errors: 32 Percent correct = 31.91% Error = 68.09% Accuracy = 31.91%
+Insertions: 0 Deletions: 3 Substitutions: 29
+TOTAL Words: 47 Correct: 15 Errors: 32
+TOTAL Percent correct = 31.91% Error = 68.09% Accuracy = 31.91%
+TOTAL Insertions: 0 Deletions: 3 Substitutions: 29
+

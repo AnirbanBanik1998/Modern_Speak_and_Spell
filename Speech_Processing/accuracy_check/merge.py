@@ -1,5 +1,5 @@
 import wave, os
-f=open("b.txt", "r+")
+f=open("c.txt", "r+")
 words=f.read().split("\n")
 directory=os.listdir()
 for word in words:
@@ -19,7 +19,7 @@ for word in words:
 	details.close()
 	details=open("details.txt", "r+")
 	waves=details.read().split(" ")
-	os.system("sox -n -r 22050 -c 1 silence.wav trim 0.0 2")
+	os.system("sox -n -r 22050 -c 1 silence.wav trim 0.0 1")
 	string=""
 	for wave in waves:
 		string=string+" "+wave+" "+"silence.wav"
