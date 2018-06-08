@@ -1,4 +1,4 @@
-
+python3 record.py 16000 1024 1600
 # Generating acoustic feature files.
 
 sphinx_fe -argfile en-us/feat.params -samprate 16000 -c test.fileids -di . -do . -ei wav -eo mfc -mswav yes
@@ -12,6 +12,8 @@ sphinx_fe -argfile en-us/feat.params -samprate 16000 -c test.fileids -di . -do .
 
 ./bw -hmmdir en-us -moddeffn en-us/mdef.txt -ts2cbfn .ptm. -feat 1s_c_d_dd -svspec 0-12/13-25/26-38 -cmn current -agc none -dictfn cmudict-en-us.dict -ctlfn test.fileids -lsnfn test.transcription -accumdir .
 
+cp -a en-us en-us-adapt
+
 # Updating the acoustic model
 
 ./map_adapt -moddeffn en-us/mdef -ts2cbfn .ptm. -meanfn en-us/means -varfn en-us/variances -mixwfn en-us/mixture_weights -tmatfn en-us/transition_matrices -accumdir . -mapmeanfn en-us-adapt/variances -mapmixwfn en-us-adapt/mixture_weights -maptmatfn en-us-adapt/transition_matrices
@@ -20,3 +22,9 @@ sphinx_fe -argfile en-us/feat.params -samprate 16000 -c test.fileids -di . -do .
 
 ./mk_s2sendump -pocketsphinx yes -moddeffn en-us-adapt/mdef -mixwfn en-us-adapt/mixture_weights -sendumpfn en-us-adapt/sendump
 
+rm *.wav
+rm *.mfc
+cd en-us-adapt
+rm mixture_weights
+rm mdef
+cd ..
