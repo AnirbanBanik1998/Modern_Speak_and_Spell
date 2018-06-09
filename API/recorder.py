@@ -42,7 +42,7 @@ class Recorder:
 		self.q=Queue()
 		self.listen_t=threading.Thread(target=self.listen, args=(self.stopped, self.q))
 		self.listen_t.start()
-		self.record_t=threading.Thread(target=self.record, args=(self.stopped, self.q, self.silence_time, self.trials))
+		self.record_t=threading.Thread(target=self.record, args=(self.stopped, self.q))
 		self.record_t.start()
 	
 		try:
@@ -54,7 +54,7 @@ class Recorder:
 			self.listen_t.join()
 			self.record_t.join()
 
-	def record(self, stopped, q, silence_time, trials):
+	def record(self, stopped, q):
 		self.start=0
 		self.t=self.start
 		self.k=0
@@ -83,7 +83,7 @@ class Recorder:
 			
 			#If silence duration is more than input seconds... writes the frames to an audio file.
 			
-				if(int(self.t-self.start)>=int(silence_time)) and self.start>0:
+				if(int(self.t-self.start)>=int(self.silence_time)) and self.start>0:
 					self.string=self.WAVE_OUTPUT+"/test"+str(self.i+1)+".wav"
 					self.waveFile = wave.open(self.string, 'wb')
 					self.waveFile.setnchannels(self.CHANNELS)
@@ -100,7 +100,7 @@ class Recorder:
 					if self.decode==True:
 						with self.lock:
 							self.decoder(str(self.RATE), str(self.CHUNK_SIZE))
-					if trials is not None and trials==self.i:
+					if self.trials is not None and trials==self.i:
 						stopped.set()
 						self.flag=1
 					else:

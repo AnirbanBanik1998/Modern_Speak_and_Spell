@@ -30,5 +30,6 @@ For more information go to "./Game/Games"
 
 ### Further Improvements to be done
 
+* Building a centralized recording script which can be utilised in every games...and the game_launcher...thereby improving reusability.
 * Generating scoreboard after completion of every game.
 * Generating UI using pygame.
