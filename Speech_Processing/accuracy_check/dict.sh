@@ -14,6 +14,7 @@ then
 	python3 add.py
 else 
 	python3 make.py
+	python3 add.py
 fi
 
 rm generate.py

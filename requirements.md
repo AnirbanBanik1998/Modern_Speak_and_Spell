@@ -2,7 +2,11 @@
 
 * Python3
 * Espeak
-
+* Sphinxtrain
+```
+sudo apt-get update
+sudo apt-get install sphinxtrain
+```
 #### Python-libraries:
 
 * PyAudio
