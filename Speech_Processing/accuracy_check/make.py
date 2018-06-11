@@ -21,11 +21,11 @@ for di in d:
 					#dictionary.write(filename+"("+str(k)+")	"+ words[i]+"\n")
 					#k=k+1
 					for j in range(len(words)-1):
-						dictionary.write(words[j])
+						dictionary.write(words[j]+" ")
 					dictionary.write(",")
 				elif filename in words[:]:
 					for j in range(len(words)-1):
-						dictionary.write(words[j])
+						dictionary.write(words[j]+" ")
 					dictionary.write(",")
 			dictionary.write("\n")
 dictionary.close()

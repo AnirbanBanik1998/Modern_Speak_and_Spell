@@ -15,13 +15,13 @@ with open('phonetic.csv', 'r') as r:
 					#dictionary.write(filename+"("+str(k)+")	"+ words[i]+"\n")
 					#k=k+1
 						for j in range(len(arr)-1):
-							string=string+arr[j]
+							string=string+arr[j]+" "
 						if string not in words:
 							words.append(string)
 				
 					elif words[0] in arr[:]:
 						for j in range(len(arr)-1):
-							string=string+arr[j]
+							string=string+arr[j]+" "
 						if string not in words:
 							words.append(string)
 				for j in range(len(words)):
