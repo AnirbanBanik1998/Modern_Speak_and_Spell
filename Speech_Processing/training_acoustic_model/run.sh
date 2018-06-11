@@ -28,3 +28,4 @@ cd en-us-adapt
 rm mixture_weights
 rm mdef
 cd ..
+cp -a en-us-adapt ../../Language_Models/en-us-adapt
