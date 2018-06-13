@@ -9,7 +9,7 @@ import os
 import edit
 
 class Recorder:
-	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LAUNCHER=False):
+	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LAUNCHER=False, TRANSCRIBE=False):
 		self.dlp = DEFAULT_LIB_PATH
 		self.audio = pyaudio.PyAudio()
 		self.FORMAT = pyaudio.paInt16
@@ -25,13 +25,14 @@ class Recorder:
 		self.multi=MULTI
 		self.decode=DECODE
 		self.l=LAUNCHER
+		self.transcribe=TRANSCRIBE
 		self.lang=""
 		self.dic =""
-		#self.hmm="../Language_Models/en-us"
 		if self.WAVE_OUTPUT not in os.listdir():
 			os.system("mkdir "+self.WAVE_OUTPUT)
 		self.set_library(self.dlp)
 		self.i=0
+		self.counter=0
 		self.flag=0
 		
 	def set_library(self, path):
@@ -96,15 +97,16 @@ class Recorder:
 					self.waveFile.setframerate(self.RATE)
 					self.waveFile.writeframes(b''.join(self.frames))
 					self.waveFile.close()
-					if self.multi==True:
+					if self.multi:
 						self.i += 1
+					self.counter += 1
 					del self.frames[:]
 					self.k=0
 				
 				#Pauses the recording process for further operations on the audio file generated
-					if self.decode==True:
+					if self.decode:
 						with self.lock:
-							self.decoder(str(self.RATE), str(self.CHUNK_SIZE))
+							self.decoder()
 					if self.trials is not None and trials==self.i:
 						stopped.set()
 						self.flag=1
@@ -122,8 +124,13 @@ class Recorder:
 				q.put(array('h', self.stream.read(self.CHUNK_SIZE)))
 			except Full:
 				pass
-	def decoder(self, rate, chunk):
-		edit.fileids(str(self.i))
+	def decoder(self):
+		if self.transcribe:
+			edit.fileids(str(self.counter))
+			edit.transcription(str(self.counter))
+		else:
+			edit.fileids(str(self.counter))
 		os.system("pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm "+str(self.lang)+" -dict "+str(self.dic)+" -samprate "+str(self.RATE)+" -nfft "+str(self.CHUNK_SIZE)+" -hyp test.hyp")
 				
-
+obj=Recorder(DEFAULT_LIB_PATH="../Language_Models/", LAUNCHER=True, DECODE=True, TRANSCRIBE=True)
+obj.start()
