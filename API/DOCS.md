@@ -7,6 +7,7 @@ This is under construction...will be updated as the main decoder script soon.
 ## Documentation
 
 * `recorder`: Class which contains the inner functions of the recorder script.
+* `set_library(path)`: Function which sets the library paths in order to make it easy for every user to use.
 * `start()`: Main function which starts the entire process.
 * `record(stopped, q)`: Function which records when volume of a chunk is greater than a particular threshold value.
 * `listen(stopped, q)`: Function which listens to the audio stream and puts the chunks in a queue to be operated later on.

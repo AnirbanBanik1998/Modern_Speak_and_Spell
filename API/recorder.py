@@ -9,7 +9,8 @@ import os
 import edit
 
 class Recorder:
-	def __init__(self, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LAUNCHER=False):
+	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LAUNCHER=False):
+		self.dlp = DEFAULT_LIB_PATH
 		self.audio = pyaudio.PyAudio()
 		self.FORMAT = pyaudio.paInt16
 		self.CHANNELS = CHANNELS
@@ -29,14 +30,18 @@ class Recorder:
 		#self.hmm="../Language_Models/en-us"
 		if self.WAVE_OUTPUT not in os.listdir():
 			os.system("mkdir "+self.WAVE_OUTPUT)
-		if self.l==True:
-			self.lang="home/anirban/Github_repos/Modern_Speak_and_Spell/Language_Models/commands.lm"
-			self.dic="home/anirban/Github_repos/Modern_Speak_and_Spell/Language_Models/commands.dic"
-		else:
-			self.lang="home/anirban/Github_repos/Modern_Speak_and_Spell/Language_Models/characters.lm"
-			self.dic="home/anirban/Github_repos/Modern_Speak_and_Spell/Language_Models/characters.dic"
+		self.set_library(self.dlp)
 		self.i=0
 		self.flag=0
+		
+	def set_library(self, path):
+		if self.l:
+			self.lang = path + "commands.lm"
+			self.dic = path + "commands.dic"
+		else:
+			self.lang = path + "characters.lm"
+			self.dic = path + "characters.dic"
+			
 	def start(self):
 		self.stopped=threading.Event()
 		self.q=Queue()
