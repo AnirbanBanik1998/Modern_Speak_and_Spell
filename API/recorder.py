@@ -131,6 +131,4 @@ class Recorder:
 		else:
 			edit.fileids(str(self.counter))
 		os.system("pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm "+str(self.lang)+" -dict "+str(self.dic)+" -samprate "+str(self.RATE)+" -nfft "+str(self.CHUNK_SIZE)+" -hyp test.hyp")
-				
-obj=Recorder(DEFAULT_LIB_PATH="../Language_Models/", LAUNCHER=True, DECODE=True, TRANSCRIBE=True)
-obj.start()
+
