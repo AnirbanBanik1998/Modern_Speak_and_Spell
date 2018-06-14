@@ -4,18 +4,18 @@ This a voice launcher for the games to be made. According to the input provided 
 
 ## Run
 ```
-$./run_launcher.sh
+python3 run_launcher.py
 ```
-## To automate the decoder and running launcher.py
+## To automate the running of launcher.py
 ```
 $./launch.sh
 ```
 
 ## Documentation
 
-### `record_launch.py`
+### `run_launcher.py`
 
-Same function as that of the recording script in the accuracy detector.
+Script to initiate the game_launcher.
 
 ### `launcher.py`
 

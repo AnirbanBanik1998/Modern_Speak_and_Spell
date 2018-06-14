@@ -9,7 +9,7 @@ import os
 import edit
 
 class Recorder:
-	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LAUNCHER=False, TRANSCRIBE=False):
+	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LAUNCHER=False, TRANSCRIBE=False, OUTPUT_SHELL=None):
 		self.dlp = DEFAULT_LIB_PATH
 		self.audio = pyaudio.PyAudio()
 		self.FORMAT = pyaudio.paInt16
@@ -26,6 +26,7 @@ class Recorder:
 		self.decode=DECODE
 		self.l=LAUNCHER
 		self.transcribe=TRANSCRIBE
+		self.shell=OUTPUT_SHELL
 		self.lang=""
 		self.dic =""
 		if self.WAVE_OUTPUT not in os.listdir():
@@ -107,6 +108,8 @@ class Recorder:
 					if self.decode:
 						with self.lock:
 							self.decoder()
+							if self.shell is not None:
+								os.system(self.shell)
 					if self.trials is not None and trials==self.i:
 						stopped.set()
 						self.flag=1
