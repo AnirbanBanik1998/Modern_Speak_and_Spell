@@ -131,6 +131,10 @@ class Recorder:
 		if self.transcribe:
 			edit.fileids(str(self.counter))
 			edit.transcription(str(self.counter))
+			self.lang=input("Enter Language Model")
+			type(self.lang)
+			self.dic=input("Emter Dictionary")
+			type(self.dic)
 		else:
 			edit.fileids(str(self.counter))
 		os.system("pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm "+str(self.lang)+" -dict "+str(self.dic)+" -samprate "+str(self.RATE)+" -nfft "+str(self.CHUNK_SIZE)+" -hyp test.hyp")

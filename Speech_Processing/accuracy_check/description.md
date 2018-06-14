@@ -28,20 +28,9 @@ $./merge.sh
 
 ## Documentation
 
-### `record_lock.py`
-
-Used to record the audio input from the microphone efficiently and store it into audio files. The process is stopped only through a keyboard interrupt. The program waits till some audio input is there and then starts recording. After each recording, the audio file is processed to generate statistics...and then deleted...so there is upto only one **.wav** file in the wav folder. 
-
-* `record(event, queue)`: Records the audio input if it's volume is higher than a threshold value.
-* `listen(event, queue)`: Listens to the audio stream and pushes the chunks into a queue.
-
 ### `stat.py`
 
 Generates the audio accuracy statistics file.
-
-### `edit.py`
-
-Generates the **test.fileids** and **test.transcription** files for use in decoding the text.
 
 ### `word_align.pl`
 
