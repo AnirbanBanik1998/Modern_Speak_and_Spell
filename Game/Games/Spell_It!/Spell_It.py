@@ -3,6 +3,7 @@ import threading
 import subprocess
 import time
 import os
+from API import recorder, edit
 lock=threading.Lock()
 f= open("../Wordlist.csv",'r')
 rows=f.read().split("\n")
@@ -18,7 +19,7 @@ randcolumn=random.sample(range(0, (len(column)-1)), 1)
 column[randcolumn[0]]=column[randcolumn[0]].strip()
 subprocess.call(["espeak","-s","100"," Spell "+column[randcolumn[0]]])
 with lock:
-	os.system("./echo.sh "+str(len(column[randcolumn[0]])))
+	record=recorder.Recorder("../../../Language_Models/", SILENCE=1, TRIALS=len(column[randcolumn[0]]), DECODE=True, OUTPUT_SHELL="./decoder.sh")
 r=open("./file.txt", "r+")
 word=r.read().split(" ")
 string = ""
