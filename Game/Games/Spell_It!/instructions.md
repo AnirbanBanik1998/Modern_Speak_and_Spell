@@ -19,17 +19,9 @@ python3 Spell_It.py
 
 Main program...takes out words at random from the wordlist and asks to spell them out.
 
-### `echo.sh`
-
-Automating the recording script.
-
-### `record_cont.py`
-
-Records the letters till the length of the word given
-
 ### `decoder.sh`
 
-Automating the decoding process and running file.py
+Automating the running of file.py
 
 ### `file.py`
 

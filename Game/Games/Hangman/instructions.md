@@ -20,16 +20,3 @@ python3 Hangman.py
 Main program...the user has to decipher the entire word in a limited amount of trials.
 * `check(str1,l)`: Checks if the input letter matches with any letter of the word or not.
 
-### `input.sh`
-
-Automating the recording script.
-
-### `record_once.py`
-
-Records the letters till the length of the word given
-
-### `decode.sh`
-
-Automating the decoding process and running file.py
-
-
