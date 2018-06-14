@@ -3,6 +3,7 @@ import subprocess
 import time
 import os
 import threading
+from API import recorder, edit
 lock=threading.Lock()
 f= open("../Wordlist.csv",'r')
 rows=f.read().split("\n")
@@ -35,7 +36,8 @@ while k<20:
 	letter=""
 	print("Enter letter: ")
 	with lock:
-		os.system("./input.sh")
+		record=recorder.Recorder("../../../Language_Models/", SILENCE=1, TRIALS=1, DECODE=True)
+		record.start()
 	r=open('./test.hyp','r')					
 	arr=r.read().split(" ")
 	letter=arr[0]

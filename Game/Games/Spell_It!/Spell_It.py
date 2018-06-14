@@ -20,6 +20,7 @@ column[randcolumn[0]]=column[randcolumn[0]].strip()
 subprocess.call(["espeak","-s","100"," Spell "+column[randcolumn[0]]])
 with lock:
 	record=recorder.Recorder("../../../Language_Models/", SILENCE=1, TRIALS=len(column[randcolumn[0]]), DECODE=True, OUTPUT_SHELL="./decoder.sh")
+	record.start()
 r=open("./file.txt", "r+")
 word=r.read().split(" ")
 string = ""
