@@ -6,7 +6,7 @@ from array import array
 from queue import Queue, Full
 import pyaudio
 import os
-import edit
+from API import edit
 
 class Recorder:
 	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LIB_FILE=None, TRANSCRIBE=False, OUTPUT_SHELL=None):

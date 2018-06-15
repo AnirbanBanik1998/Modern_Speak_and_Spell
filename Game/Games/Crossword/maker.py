@@ -1,4 +1,6 @@
 import sys
+sys.path.insert(0, "../../../")
+import sys
 import os
 import time
 import subprocess
