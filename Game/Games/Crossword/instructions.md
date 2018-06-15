@@ -33,15 +33,6 @@ This is the main script...takes the four generated words and the row and column 
 * `formation(w,q)`: Here the q argument is mainly aimed at specifying the word number such that the meaning of it can be displayed as a hint. The main task of this function is to run a sequence like the Hangman game to complete each of the four words. If the number of trials exceed 15 for each word...it shifts to the next word...and again back to it if time permits...in order to strive towards the solution. However, if the time of game-running exceeds 3 minutes...the game stops.
 * `display()`: This function displays the crossword matrix at each stage of the game.
 
-#### `input.sh`
-This shell script starts the record_once.py script.
-
-#### `decode.sh`
-This shell script runs the pocketsphinx_batch to decode the recorded file.
-
-#### `record_once.py`
-A recording script. Due to it being used to take the inputs of the letters for the respective words...it records the user's voice only once.
-
 ## Development
 
 This game is currently under development...the improvements will be updated soon.

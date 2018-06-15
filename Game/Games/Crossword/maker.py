@@ -3,6 +3,7 @@ import os
 import time
 import subprocess
 import threading
+from API import recorder, edit
 lock=threading.Lock()
 start=round(time.time())
 
@@ -48,7 +49,8 @@ def formation(w, q):
 		letter=""
 		print("Enter letter: ")
 		with lock:
-			os.system("./input.sh")
+			record=recorder.Recorder("../../../Language_Models/", DECODE=True, TRIALS=1, SILENCE=1)
+			record.start()
 		r=open('./test.hyp','r')					
 		arr=r.read().split(" ")
 		letter=arr[0]
