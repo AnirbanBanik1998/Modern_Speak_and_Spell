@@ -36,7 +36,7 @@ while k<20:
 	letter=""
 	print("Enter letter: ")
 	with lock:
-		record=recorder.Recorder("../../../Language_Models/", SILENCE=1, TRIALS=1, DECODE=True)
+		record=recorder.Recorder("../../../Language_Models/", LIB_FILE="characters", SILENCE=1, TRIALS=1, DECODE=True)
 		record.start()
 	r=open('./test.hyp','r')					
 	arr=r.read().split(" ")

@@ -9,7 +9,7 @@ import os
 import edit
 
 class Recorder:
-	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LAUNCHER=False, TRANSCRIBE=False, OUTPUT_SHELL=None):
+	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LIB_FILE=None, TRANSCRIBE=False, OUTPUT_SHELL=None):
 		self.dlp = DEFAULT_LIB_PATH
 		self.audio = pyaudio.PyAudio()
 		self.FORMAT = pyaudio.paInt16
@@ -24,7 +24,7 @@ class Recorder:
 		self.trials=TRIALS
 		self.multi=MULTI
 		self.decode=DECODE
-		self.l=LAUNCHER
+		self.l=LIB_FILE
 		self.transcribe=TRANSCRIBE
 		self.shell=OUTPUT_SHELL
 		self.lang=""
@@ -37,12 +37,22 @@ class Recorder:
 		self.flag=0
 		
 	def set_library(self, path):
-		if self.l:
+		if self.l in ["commands", "Commands", "COMMANDS"]:
 			self.lang = path + "commands.lm"
 			self.dic = path + "commands.dic"
-		else:
+		elif self.l in ["characters", "Characters", "COMMANDS"]:
 			self.lang = path + "characters.lm"
 			self.dic = path + "characters.dic"
+		elif self.l in ["num", "Num", "NUM"]:
+			self.lang = path + "num.lm"
+			self.dic = path + "num.dic"
+		elif self.l is None:
+			self.x=input("Enter Language Model")
+			type(self.x)
+			self.y=input("Enter Dictionary")
+			type(self.y)
+			self.lang = path + self.x
+			self.dic = path + self.y
 			
 	def start(self):
 		self.stopped=threading.Event()
@@ -131,10 +141,6 @@ class Recorder:
 		if self.transcribe:
 			edit.fileids(str(self.counter))
 			edit.transcription(str(self.counter))
-			self.lang=input("Enter Language Model")
-			type(self.lang)
-			self.dic=input("Emter Dictionary")
-			type(self.dic)
 		else:
 			edit.fileids(str(self.counter))
 		os.system("pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm "+str(self.lang)+" -dict "+str(self.dic)+" -samprate "+str(self.RATE)+" -nfft "+str(self.CHUNK_SIZE)+" -hyp test.hyp")

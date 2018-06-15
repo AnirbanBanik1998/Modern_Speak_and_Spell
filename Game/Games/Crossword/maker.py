@@ -49,7 +49,7 @@ def formation(w, q):
 		letter=""
 		print("Enter letter: ")
 		with lock:
-			record=recorder.Recorder("../../../Language_Models/", DECODE=True, TRIALS=1, SILENCE=1)
+			record=recorder.Recorder("../../../Language_Models/", LIB_FILE="characters", DECODE=True, TRIALS=1, SILENCE=1)
 			record.start()
 		r=open('./test.hyp','r')					
 		arr=r.read().split(" ")
