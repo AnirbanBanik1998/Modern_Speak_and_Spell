@@ -2,6 +2,7 @@ import threading
 import os
 import subprocess
 import random
+from API import recorder, edit
 lock=threading.Lock()
 f= open("../Wordlist.csv",'r')
 rows=f.read().split("\n")
@@ -9,15 +10,16 @@ my_randoms=random.sample(range(0, len(rows)), 1)
 column=rows[my_randoms[0]].split(",")
 randcolumn=random.sample(range(0, (len(column)-1)), 1)
 column[randcolumn[0]]=column[randcolumn[0]].strip()
-subprocess.call(["espeak"," Choose your option A Encode B Decode C Guess "])
+subprocess.call(["espeak"," Choose your option 1 Encode 2 Decode 3 Guess "])
 with lock:
-	os.system("./choose.sh")
+	record=recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True, SILENCE=1)
+	record.start()
 r=open('./test.hyp','r')					
 arr=r.read().split(" ")
 letter=arr[0]
 r.close()
 print(letter)
-if letter=="A":
+if letter=="1":
 	s=rand()
 	hint=shift("Anirban", s)
 	with lock:
@@ -28,9 +30,10 @@ if letter=="A":
 		subprocess.call(["espeak"," Then encode "+column[randcolumn[0]]])
 	print(column[randcolumn[0]]+ " ->" +" ?")
 	with lock:
-		os.system("./endec.sh "+str(len(column[randcolumn[0]])))
+		rec=recorder.Recorder("../../../Language_Models/", LIB_FILE="characters", TRIALS=len(column[randcolumn[0]]), DECODE=True, SILENCE=1, OUTPUT_SHELL="./decoder.sh")
+		rec.start()
 	files(encode)
-elif letter=="B":
+elif letter=="2":
 	s=rand()
 	hint=shift("Anirban", s)
 	with lock:
@@ -41,7 +44,8 @@ elif letter=="B":
 		subprocess.call(["espeak"," Then decode "+encode])
 	print(encode+ " ->" +" ?")
 	with lock:
-		os.system("./endec.sh "+str(len(column[randcolumn[0]])))
+		rec=recorder.Recorder("../../../Language_Models/", LIB_FILE="characters", TRIALS=len(column[randcolumn[0]]), DECODE=True, SILENCE=1, OUTPUT_SHELL="./decoder.sh")
+		rec.start()
 	files(column[randcolumn[0]])
 	
 	
@@ -52,7 +56,8 @@ elif letter=="3":
 	for k in range(10):
 		subprocess.call(["espeak"," Enter shifting key"])
 		with lock:
-			os.system("./key.sh")
+			rec=recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True, SILENCE=1)
+			rec.start()
 		r=open('./test.hyp','r')					
 		arr=r.read().split(" ")
 		num=arr[0]
