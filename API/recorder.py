@@ -10,6 +10,9 @@ from API import edit
 
 class Recorder:
 	def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav", 			SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LIB_FILE=None, TRANSCRIBE=False, OUTPUT_SHELL=None):
+		
+		"""Class which contains the inner functions of the recorder script."""
+		
 		self.dlp = DEFAULT_LIB_PATH
 		self.audio = pyaudio.PyAudio()
 		self.FORMAT = pyaudio.paInt16
@@ -37,6 +40,11 @@ class Recorder:
 		self.flag=0
 		
 	def set_library(self, path):
+		"""Function which sets the library paths in order to make it easy for every user to use.
+		
+		:param path: It contains the default library path.
+		
+		"""
 		if self.l in ["commands", "Commands", "COMMANDS"]:
 			self.lang = path + "commands.lm"
 			self.dic = path + "commands.dic"
@@ -55,6 +63,9 @@ class Recorder:
 			self.dic = path + self.y
 			
 	def start(self):
+		"""
+		Main function which starts the entire process.
+		"""
 		self.stopped=threading.Event()
 		self.q=Queue()
 		self.listen_t=threading.Thread(target=self.listen, args=(self.stopped, self.q))
@@ -72,6 +83,13 @@ class Recorder:
 			self.record_t.join()
 
 	def record(self, stopped, q):
+		"""
+		Function which records when volume of a chunk is greater than a particular threshold value.
+		
+		:param stopped: Same as in listen()
+		:param q: Same as in listen()
+		
+		""" 
 		self.start=0
 		self.t=self.start
 		self.k=0
@@ -127,6 +145,13 @@ class Recorder:
 						print("You may again start recording...")
 
 	def listen(self, stopped, q):
+		"""
+		Function which listens to the audio stream and puts the chunks in a queue to be operated later on.
+		
+		:param stopped: The threading event flag.
+		:param q: A queue to put all the required chunks into so that they can be processed later.
+		
+		"""
 		self.stream = self.audio.open(format=self.FORMAT, channels=self.CHANNELS,
                 	rate=self.RATE, input=True,
                 	frames_per_buffer=self.CHUNK_SIZE)
@@ -138,6 +163,9 @@ class Recorder:
 			except Full:
 				pass
 	def decoder(self):
+		"""
+		Function to decode using the pocketsphinx batch command.
+		"""
 		if self.transcribe:
 			edit.fileids(str(self.counter))
 			edit.transcription(str(self.counter))
