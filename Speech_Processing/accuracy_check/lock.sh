@@ -8,6 +8,7 @@ then
 		python3 add.py
 	else
 		python3 make.py
+		python3 add.py
 	fi
 else
 	echo "Test hypothesis file is present"
