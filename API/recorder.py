@@ -138,7 +138,7 @@ class Recorder:
 							self.decoder()
 							if self.shell is not None:
 								os.system(self.shell)
-					if self.trials is not None and trials==self.i:
+					if self.trials is not None and self.trials==self.counter:
 						stopped.set()
 						self.flag=1
 					else:
@@ -167,9 +167,9 @@ class Recorder:
 		Function to decode using the pocketsphinx batch command.
 		"""
 		if self.transcribe:
-			edit.fileids(str(self.counter))
-			edit.transcription(str(self.counter))
+			edit.fileids(str(self.i +1))
+			edit.transcription(str(self.i +1))
 		else:
-			edit.fileids(str(self.counter))
+			edit.fileids(str(self.i +1))
 		os.system("pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm "+str(self.lang)+" -dict "+str(self.dic)+" -samprate "+str(self.RATE)+" -nfft "+str(self.CHUNK_SIZE)+" -hyp test.hyp")
 
