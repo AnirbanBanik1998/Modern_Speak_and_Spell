@@ -27,7 +27,7 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="Spell It 1.0 documentation" href="Spell.html" />
     <link rel="up" title="Spell_It!" href="modules.html" />
-    <link rel="next" title="file module" href="file.html" />
+    <link rel="next" title="Spell_gui module" href="Spell_gui.html" />
     <link rel="prev" title="Spell_It!" href="modules.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -46,7 +46,55 @@
             
   <div class="section" id="spell-it-module">
 <h1>Spell_It module<a class="headerlink" href="#spell-it-module" title="Permalink to this headline">¶</a></h1>
-<p>Main program...takes out words at random from the wordlist and asks to spell them out.</p>
+<p>Main program...takes out words at random from the wordlist and asks to spell them out. It can be used to play the terminal version of the game.</p>
+<span class="target" id="module-Spell_It"></span><p>This is the improvised Spell_It game</p>
+<dl class="class">
+<dt id="Spell_It.Spell">
+<em class="property">class </em><code class="descclassname">Spell_It.</code><code class="descname">Spell</code><a class="headerlink" href="#Spell_It.Spell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="Spell_It.Spell.rand">
+<code class="descname">rand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Spell_It.Spell.rand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a random word from Wordlist.csv</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Spell_It.Spell.terminal">
+<code class="descname">terminal</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#Spell_It.Spell.terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to take care of the whole process</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>word</strong> &#8211; Takes the randomly generated word from rand() as input parameter.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Spell_It.Spell.test">
+<code class="descname">test</code><span class="sig-paren">(</span><em>string</em>, <em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#Spell_It.Spell.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to take the recording and check if it matches with the letters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>string</strong> &#8211; The string to be formed as the result.</li>
+<li><strong>w</strong> &#8211; The specific letter to be checked.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Returns string, improvised by the function itself.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -60,7 +108,7 @@
   <li><a href="Spell.html">Documentation overview</a><ul>
   <li><a href="modules.html">Spell_It!</a><ul>
       <li>Previous: <a href="modules.html" title="previous chapter">Spell_It!</a></li>
-      <li>Next: <a href="file.html" title="next chapter">file module</a></li>
+      <li>Next: <a href="Spell_gui.html" title="next chapter">Spell_gui module</a></li>
   </ul></li>
   </ul></li>
 </ul>
