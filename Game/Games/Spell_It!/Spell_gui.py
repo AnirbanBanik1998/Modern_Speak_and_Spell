@@ -14,7 +14,6 @@ def message(msg, color, width, height, font_size):
 	font=pygame.font.SysFont(None, font_size)
 	screen_text=font.render(msg, True, color)
 	gameDisplay.blit(screen_text, [width, height])
-	m=msg	
 def main():
 	'''
 	The main block of the program which runs the entire display.
@@ -36,9 +35,6 @@ def main():
 	gameExit= False
 	random_word=spell.rand()
 	while not gameExit:
-		for events in pygame.event.get():
-			if events.type==pygame.QUIT:
-				gameExit=True
 		message("Spell It...", red, display_width/4, display_height/4, 50)
 		pygame.display.update()
 		w=""
@@ -46,19 +42,19 @@ def main():
 		while i<len(random_word) and spell.counter<=20:
 			
 			w1=spell.test(w, random_word[i])
-			
-			# Clearing the previously displayed text
 			message(m, black, display_width/2, display_height/2, 45)
 			pygame.display.update()
 			
 			if w1 is not "-":
 				w=w1
-				message(w, white, display_width/2, display_height/2, 45)
+				message(w.upper(), white, display_width/2, display_height/2, 45)
 				pygame.display.update()
+				m=w.upper()
 				i+=1
 			else:
-				message((w+w1), white, display_width/2, display_height/2, 45)
+				message((w+w1).upper(), white, display_width/2, display_height/2, 45)
 				pygame.display.update()
+				m=(w+w1).upper()
 			if w==random_word:
 				subprocess.call(["espeak","-s","125"," Good!"])
 				gameExit=True

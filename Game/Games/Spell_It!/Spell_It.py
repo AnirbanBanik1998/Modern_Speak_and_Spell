@@ -70,9 +70,9 @@ class Spell:
 			w1=self.test(w, word[i])
 			if w1 is not "-":
 				w=w1
-				print(w)
+				print(w.upper())
 			else:
-				print(w+w1)
+				print((w+w1).upper())
 			if w==word:
 				subprocess.call(["espeak","-s","125"," Good!"])
 				break
