@@ -22,7 +22,7 @@ if start==1:
 			with lock:
 				cwd=os.getcwd()
 				os.chdir("../Games/Spell_It!/")
-				os.system("python3 Spell_It.py")
+				os.system("python3 Spell_gui.py")
 				os.chdir(cwd)
 			break
 		elif arr[i] in ("HANGMAN", "hangman"):
