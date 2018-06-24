@@ -1,6 +1,4 @@
-output="$(perl word_align.pl test.transcription test.hyp)"
-python3 stat.py "$output"
-python3 rename.py
+python3 final.py
 if ! [ -e test.hyp ]
 then
 	if [ -e phonetic.csv ]
@@ -14,4 +12,4 @@ else
 	echo "Test hypothesis file is present"
 fi
 rm -rf ./wav/*
-#rm *.dic
+rm *.dic
