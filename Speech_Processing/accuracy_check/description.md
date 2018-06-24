@@ -5,7 +5,7 @@ This process is aimed at keeping a check on the accuracy of decoding the words. 
 ## Running the process
 
 ```
-$./run.sh
+$./live_speech_processing.sh
 ```
 
 ## For automating the decoder
@@ -14,10 +14,22 @@ $./run.sh
 $./lock.sh
 ```
 
+## For automating the dictionary formation after live speech recording
+
+```
+$./makerscript.sh
+```
+
 ## For automating the process for the audio files in the samples
 
 ```
-$./dict.sh
+$./sample_audio_processing.sh
+```
+
+## For making the new updated dictionary and transporting it to the language models directory after all the processing has been done
+
+```
+$./transport.sh
 ```
 
 ## For merging all the audio files with same name and then running the accuracy scripts....automating the whole process.
