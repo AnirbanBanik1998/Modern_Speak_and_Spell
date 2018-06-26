@@ -83,6 +83,10 @@ To make the final phonetic dictionary based on the results obtained, if not alre
 
 To append to the already made final phonetic dictionary.
 
+### `modify.py`
+
+To change the structure of the dictionary...like if D was hypothesized as D A then it will get changed into D AH and D EY.
+
 ### `new_dict.py`
 
 Script to make a new dictionary merging data from phonetic.csv and the old dictionary.

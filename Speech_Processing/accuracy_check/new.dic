@@ -7,40 +7,47 @@ B	B IY
 B(2)	B M
 B(3)	B N
 C	S IY
-C(2)	C I
-C(3)	C M
+C(2)	S IY AY
+C(3)	S IY M
 D	D IY
-D(2)	D A
+D(2)	D AH
+D(3)	D EY
 E	IY
 F	EH F
-F(2)	A F
-F(3)	F A
-F(4)	F E
-F(5)	M F
+F(2)	AH F
+F(3)	EY F
+F(4)	F AH
+F(5)	F EY
+F(6)	F IY
+F(7)	M F
 G	JH IY
 H	EY CH
-H(2)	H C
-H(3)	I H
+H(2)	EY CH S IY
+H(3)	AY EY CH
 I	AY
-I(2)	I E
+I(2)	AY IY
 J	JH EY
-J(2)	J R A
+J(2)	JH EY R AH
+J(3)	JH EY R EY
 K	K EY
 L	EH L
 M	EH M
-M(2)	M A
-M(3)	M E
+M(2)	M AH
+M(3)	M EY
+M(4)	M IY
 N	EH N
 O	OW
 P	P IY
-P(2)	P A
+P(2)	P AH
+P(3)	P EY
 Q	K Y UW
 R	AA R
 S	EH S
-S(2)	A S
+S(2)	AH S
+S(3)	EY S
 T	T IY
 W(2)	L D
-W(3)	L Q
-X(2)	H S
+W(3)	L K Y UW
+X(2)	EY CH S
 X(3)	N S
-Y(2)	L I
+Y(2)	L AY
