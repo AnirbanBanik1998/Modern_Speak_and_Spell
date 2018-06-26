@@ -1,3 +1,6 @@
+'''
+Updated Version of Hangman Game
+'''
 import sys
 sys.path.insert(0, "../../../")
 import random
@@ -29,6 +32,11 @@ class Hangman:
 		return self.column[self.randcolumn[0]]
 	
 	def initialize(self, r):
+		'''
+		Displays the word in form of dashes.
+		
+		:param r: Random word generated.
+		'''
 		str1=""
 		for i in range(0, len(r)):
 			self.string=self.string+"-"
@@ -37,6 +45,15 @@ class Hangman:
 		return(str1)
 		
 	def check(self, str1, l, r):
+		'''
+		Function to check if input letter is present anywhere in the word
+		
+		:param str1: To compute the updated string.
+		:param l: The input letter.
+		:param r: The word generated using rand().
+		
+		:return: The updated word after insertion of the input letter, if present in the actual word.
+		'''
 		print(" Input is "+l)
 		for j in range(0, len(self.string)):
 			if l==r[j] and self.string[j]=="-":
@@ -46,6 +63,11 @@ class Hangman:
 		return str1
 		
 	def terminal(self, word):
+		'''
+		Calls the other functions to run the entire terminal version of the game.
+		
+		:param word: The word which is generated randomly using function rand()
+		'''
 		self.str1=self.initialize(word)
 		print(self.str1)
 		self.str1=""
