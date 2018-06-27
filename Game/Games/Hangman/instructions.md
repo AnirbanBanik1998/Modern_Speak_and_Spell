@@ -7,16 +7,24 @@ This is a very simple game...a game in which the user has to fill in the blanks 
 ### How to Play
 
 * Open a terminal and move to this directory.
-* Run the entire process:
+* Run the entire process in the terminal:
 ```
 python3 Hangman.py
 ```
+* To run the GUI:
+```
+python3 Hangman_gui.py
+```
 * Strategy -> Start by spelling the vowels first...they are almost indispensible in every word...and can help in guessing the given word.
 
-## Documentation
+### Code
 
-### `Hangman.py`
+#### Hangman.py
 
-Main program...the user has to decipher the entire word in a limited amount of trials.
-* `check(str1,l)`: Checks if the input letter matches with any letter of the word or not.
+* Contains the core functionalities of the Hangman Game.
+* We can run the terminal version of the game using this script.
+
+#### Hangman_gui.py
+
+* The script takes the functionalities from Hangman.py and generates a GUI using pygame library. The GUI has to be worked out upon...to increase its overall look...but as of now...it is working correctly.
 
