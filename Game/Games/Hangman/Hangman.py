@@ -104,6 +104,3 @@ class Hangman:
 					subprocess.call(["espeak","The answer is "+word])
 				print(" Answer is: "+word)
 				
-obj=Hangman()
-random=obj.rand()
-obj.terminal(random)
