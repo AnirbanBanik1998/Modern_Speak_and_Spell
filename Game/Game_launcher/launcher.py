@@ -20,6 +20,9 @@ if start==1:
 		g.close()
 		if arr[i] in ("SPELL", "spell"):
 			with lock:
+				'''
+				Starts Spell_It! game
+				'''
 				cwd=os.getcwd()
 				os.chdir("../Games/Spell_It!/")
 				os.system("python3 Spell_gui.py")
@@ -27,13 +30,19 @@ if start==1:
 			break
 		elif arr[i] in ("HANGMAN", "hangman"):
 			with lock:
+				'''
+				Starts Hangman game
+				'''
 				cwd=os.getcwd()
 				os.chdir("../Games/Hangman/")
-				os.system("python3 Hangman.py")
+				os.system("python3 Hangman_gui.py")
 				os.chdir(cwd)
 			break
 		elif arr[i] in ("ENCRYPTER", "encrypter"):
 			with lock:
+				'''
+				Starts Encrypter game
+				'''
 				cwd=os.getcwd()
 				os.chdir("../Games/Encrypter/")
 				os.system("python3 Enrypter.py")
@@ -41,6 +50,9 @@ if start==1:
 			break
 		elif arr[i] in ("CROSSWORD", "crossword"):
 			with lock:
+				'''
+				Starts Crossword game
+				'''
 				cwd=os.getcwd()
 				os.chdir("../Games/Crossword/")
 				os.system("python3 Crossword.py")
