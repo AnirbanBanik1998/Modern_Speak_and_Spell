@@ -1,5 +1,5 @@
-Spell_gui module
-================
+Spell_gui
+==========
 
 Generates GUI using pygame, for Spell It!, using core functionality from Spell_It.py script.
 
