@@ -33,7 +33,12 @@ def main():
 	pygame.display.update()	#Update the specific modification
 	clock=pygame.time.Clock()
 	gameExit= False
-	random_word=spell.rand()
+	while True:
+		try:
+			random_word=spell.rand()
+			break
+		except Exception as e:
+			print(e)
 	while not gameExit:
 		message("Spell It...", red, display_width/4, display_height/4, 50)
 		pygame.display.update()
