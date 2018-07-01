@@ -5,101 +5,173 @@ import os
 import subprocess
 import random
 from API import recorder, edit
-lock=threading.Lock()
-f= open("../Wordlist.csv",'r')
-rows=f.read().split("\n")
-my_randoms=random.sample(range(0, len(rows)), 1)
-column=rows[my_randoms[0]].split(",")
-randcolumn=random.sample(range(0, (len(column)-1)), 1)
-column[randcolumn[0]]=column[randcolumn[0]].strip()
-subprocess.call(["espeak"," Choose your option 1 Encode 2 Decode 3 Guess "])
-with lock:
-	record=recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True, SILENCE=1)
-	record.start()
-r=open('./test.hyp','r')					
-arr=r.read().split(" ")
-letter=arr[0]
-r.close()
-print(letter)
-if letter=="1":
-	s=rand()
-	hint=shift("Anirban", s)
-	with lock:
-		subprocess.call(["espeak"," If Anirban is encoded as "+hint])
-	print("Anirban -> "+hint)
-	encode=shift(column[randcolumn[0]], s)
-	with lock:
-		subprocess.call(["espeak"," Then encode "+column[randcolumn[0]]])
-	print(column[randcolumn[0]]+ " ->" +" ?")
-	with lock:
-		rec=recorder.Recorder("../../../Language_Models/", LIB_FILE="characters", TRIALS=len(column[randcolumn[0]]), DECODE=True, SILENCE=1, OUTPUT_SHELL="./decoder.sh")
-		rec.start()
-	files(encode)
-elif letter=="2":
-	s=rand()
-	hint=shift("Anirban", s)
-	with lock:
-		subprocess.call(["espeak"," If "+hint+ "is decoded as Anirban"])
-	print(hint+" -> Anirban")
-	encode=shift(column[randcolumn[0]], s)
-	with lock:
-		subprocess.call(["espeak"," Then decode "+encode])
-	print(encode+ " ->" +" ?")
-	with lock:
-		rec=recorder.Recorder("../../../Language_Models/", LIB_FILE="characters", TRIALS=len(column[randcolumn[0]]), DECODE=True, SILENCE=1, OUTPUT_SHELL="./decoder.sh")
-		rec.start()
-	files(column[randcolumn[0]])
-	
-	
-	
-elif letter=="3":
-	s=rand()
-	encode=shift(column[randcolumn[0]], s)
-	for k in range(10):
-		subprocess.call(["espeak"," Enter shifting key"])
-		with lock:
-			rec=recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True, SILENCE=1)
-			rec.start()
+
+class Encrypter:
+	def __init__(self):
+		self.lock=threading.Lock()
+		self.f= open("../Wordlist.csv",'r')
+		self.rows=self.f.read().split("\n")
+		self.f.close()
+		self.counter=0
+		
+	def rand_word(self):
+		'''
+		Generates a random word from Wordlist.csv
+		'''
+		self.my_randoms=random.sample(range(0, len(self.rows)), 1)
+		self.column=self.rows[self.my_randoms[0]].split(",")
+		self.randcolumn=random.sample(range(0, (len(self.column)-1)), 1)
+		self.column[self.randcolumn[0]]=self.column[self.randcolumn[0]].strip()
+		return self.column[self.randcolumn[0]]
+		
+	def choose(self):
+		'''
+		Module to help take the user input for the chosen option. The valid inputs are 1, 2 and 3.
+		'''
+		subprocess.call(["espeak"," Choose your option 1 Encode 2 Decode 3 Guess "])
+		with self.lock:
+			record=recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True, SILENCE=1)
+			record.start()
 		r=open('./test.hyp','r')					
 		arr=r.read().split(" ")
-		num=arr[0]
+		letter=arr[0]
 		r.close()
-		e=shift(encode, num)
-		print(e)
-		if e==column[randcolumn[0]]:
-			subprocess.call(["espeak","-s","120"," Good!"])
-		elif k==9:
-			subprocess.call(["espeak","-s","120"," No you are wrong...the answer will be "])
-			for j in range(0, len(column[randcolumn[0]])):
-				subprocess.call(["espeak","-s","100", column[randcolumn[0]][i]])
-
-else:
-	subprocess.call(["espeak"," Wrong choice"])
-def shift(word, n):
-	f = ["" for x in range(len(word))]
-	for i in range(0,len(word)):
-		if ord(word[i])+n > 122:
-			f[i]=chr(97+ord(word[i])+n-122)
+		return letter
+		
+	def shift(self, word, n):
+		'''
+		Used to shift each letter in a word by n...in order to encrypt or decrypt the word...the sequence is cyclic...that is a to z and then back to a.
+		
+		:param word: The word to be encrypted or decrypted.
+		:param n: The shifting key.
+		
+		:return: The word with all the letters shifted, as a list type value.
+		'''
+		f = ["" for x in range(len(word))]
+		for i in range(0,len(word)):
+			if ord(word[i])+n > 122:
+				f[i]=chr(97+ord(word[i])+n-122)
+			else:
+				f[i]=chr(ord(word[i])+n)
+		return f
+		
+	def rand_int(self):
+		'''
+		Picks up a random integer between 1 and 25, including both.
+		'''
+		ran=random.randint(1,26)
+		return ran
+		
+	def test(self, string, w):
+		'''
+		Function to take the recording and check if it matches with the letters.
+		
+		:param string: The string to be formed as the result.
+		:param w: The specific letter to be checked.
+		
+		:return: Returns string, improvised by the function itself.
+		'''
+		self.counter+=1
+		with self.lock:
+			record=recorder.Recorder("../../../Language_Models/", SILENCE=1, TRIALS=1, DECODE=True, LIB_FILE="characters", OUTPUT_SHELL="./decoder.sh")
+			record.start()
+		f=open("./file.txt", "r")
+		letter=f.read().strip()
+		if letter.lower()==w:
+			string=string+w
+			return string
 		else:
-			f[i]=chr(ord(word[i])+n)
-	return f
-
-def rand():
-	ran=random.randint(1,26)
-	return ran
+			return "-"
 			
+	def check(self, word):
+		'''
+		The number of trials being 20, the user is allowed to try to encrypt or decrypt the given word correctly.
+		
+		:param word: Takes the randomly generated word from rand_word() as input parameter.
+		'''
+		w=""
+		i=0
+		while i<len(word) and self.counter<=20:
+			w1=self.test(w, word[i])
+			if w1 is not "-":
+				w=w1
+				print(w.upper())
+				i+=1
+			else:
+				print((w+w1).upper())
+			if w==word:
+				subprocess.call(["espeak","-s","125"," Good!"])
+				break
+			if self.counter>20:
+				subprocess.call(["espeak","-s","125"," No you are wrong...the answer will be "])
+				for j in word:
+					subprocess.call(["espeak","-s","100", j])
+					
+	def terminal(self, choice, random_word):
+		'''
+		Main module to run the entire game in terminal
+		
+		:param choice: Choice 1, 2 or 3 as user input.
+		:param random_word: Random word generated using rand_word()
+		'''
+		if choice=="1":
+			s=self.rand_int()
+			hint=self.shift("anirban", s)
+			with self.lock:
+				subprocess.call(["espeak"," If anirban is encoded as "+str(hint)])
+			hint_str=""
+			for h in hint:
+				hint_str=hint_str+h
+			print("anirban -> "+hint_str)
+			encode=self.shift(random_word, s)
+			with self.lock:
+				subprocess.call(["espeak"," Then encode "+random_word])
+			print(random_word+ " ->" +" ?")
+			self.check(encode)
 			
-def files(w):
-	f=open("./file.txt", "r+")
-	word=f.read().split(" ")
-	string = ""
-	for i in range(0, len(word)):
-		string=string + word[i]
-	if string==w:
-		subprocess.call(["espeak","-s","150"," Good!"])
-
-	else:
-		subprocess.call(["espeak","-s","150"," No you are wrong...the answer will be "])
-		for i in range(0, len(w)):
-			subprocess.call(["espeak","-s","100", w[i]])
-	f.close()
+		elif choice=="2":
+			s=self.rand_int()
+			hint=self.shift("anirban", s)
+			hint_str=""
+			for h in hint:
+				hint_str=hint_str+h
+			with self.lock:
+				subprocess.call(["espeak"," If "+str(hint)+ "is decoded as anirban"])
+			print(hint_str+" -> anirban")
+			encode=self.shift(random_word, s)
+			with self.lock:
+				subprocess.call(["espeak"," Then decode "+str(encode)])
+			encode_str=""
+			for h in encode:
+				encode_str=encode_str+h
+			print(encode_str+ " ->" +" ?")
+			self.check(random_word)
+			
+		elif choice=="3":
+			s=self.rand_int()
+			encode=self.shift(random_word, s)
+			for k in range(10):
+				subprocess.call(["espeak"," Enter shifting key"])
+				with self.lock:
+					rec=recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True, SILENCE=1)
+					rec.start()
+				r=open('./test.hyp','r')					
+				arr=r.read().split(" ")
+				num=arr[0]
+				r.close()
+				e=self.shift(encode, num)
+				print(e)
+				if e==random_word:
+					subprocess.call(["espeak","-s","120"," Good!"])
+				elif k==9:
+					subprocess.call(["espeak","-s","120"," No you are wrong...the answer will be "])
+					for j in random_word:
+						subprocess.call(["espeak","-s","100", j])
+						
+		else:
+			subprocess.call(["espeak"," Wrong choice"])
+			
+ob=Encrypter()
+random_word=ob.rand_word()
+choice=ob.choose()
+ob.terminal(choice, random_word)
