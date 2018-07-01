@@ -2,6 +2,8 @@
 
 A repository for the Google Summer of Code 2018 for Beagleboard.org
 
+[Link for documentation](https://anirbanbanik1998.github.io/Modern_Speak_and_Spell/)
+
 ### Introduction
 
 This is besically a project to rebrain the original Speak and Spell by Texas Instruments, first introduced in 1978. The main improvement over its predecessor is the addition of Speech to Text functionalities in addition to Text to Speech. This project will be deployed on a PocketBeagle as a part of GSoC-2018.
@@ -21,15 +23,15 @@ For more information go to "./Speech_Processing/accuracy_check"
 
 * Games - Code for the games themselves. There are four games made for this project.
 
-1. Spell It!	[Documentation](./Game/Games/Spell_It!/instructions.md)
-2. Hangman	[Documentation](./Game/Games/Hangman/instructions.md)
-3. Encrypter	[Documentation](./Game/Games/Encrypter/instructions.md)
-4. Crossword	[Documentation](./Game/Games/Crossword/instructions.md)
-
+1. Spell It!	
+2. Hangman	
+3. Encrypter	
+4. Crossword	
 For more information go to "./Game/Games"
+
+* An Updated Speech Processing API to help in easier recording and decoding...so that the games can be made more easily.
 
 ### Further Improvements to be done
 
-* Building a centralized recording script which can be utilised in every games...and the game_launcher...thereby improving reusability.
 * Generating scoreboard after completion of every game.
-* Generating UI using pygame.
+
