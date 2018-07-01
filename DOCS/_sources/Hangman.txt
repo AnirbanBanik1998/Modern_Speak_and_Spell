@@ -1,0 +1,7 @@
+Hangman module
+==============
+
+.. automodule:: Hangman
+    :members:
+    :undoc-members:
+    :show-inheritance:

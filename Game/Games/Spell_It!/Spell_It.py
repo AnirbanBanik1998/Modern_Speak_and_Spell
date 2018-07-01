@@ -71,6 +71,7 @@ class Spell:
 			if w1 is not "-":
 				w=w1
 				print(w.upper())
+				i+=1
 			else:
 				print((w+w1).upper())
 			if w==word:

@@ -1,0 +1,20 @@
+.. API documentation master file, created by
+   sphinx-quickstart on Sun Jul  1 12:22:45 2018.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Speech Procesing API documentation!
+==================================================
+
+This script can be used and the functions can be imported and used in almost any game and game_launcher so that if anything has to changed in this script...no change has to be done in the game code.
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+   
+   API
+
+
+
+
