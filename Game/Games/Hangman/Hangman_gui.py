@@ -4,7 +4,7 @@ import subprocess
 import sys
 sys.path.insert(0, "../../../")
 from API import recorder, edit
-def message(msg, color, width, height, font_size):
+def message(msg, color, width, height, font_size, center=False):
 	'''
 	Function to display a specific message in a specific position with a specific color.
 	
@@ -13,10 +13,15 @@ def message(msg, color, width, height, font_size):
 	:param width: The horizontal position of the text on the screen.
 	:param height: The vertical position of the text on the screen.
 	:param font_size: The font size of the text.
+	:param center: Boolean value to determine if text will be aligned to the center or not.
 	'''
 	font=pygame.font.SysFont(None, font_size)
 	screen_text=font.render(msg, True, color)
-	gameDisplay.blit(screen_text, [width, height])
+	if center==True:
+		text_rect=screen_text.get_rect(center=(width, height))
+		gameDisplay.blit(screen_text, text_rect)
+	else:
+		gameDisplay.blit(screen_text, [width, height])
 	
 def main():
 	'''
@@ -46,10 +51,12 @@ def main():
 	clock=pygame.time.Clock()
 	gameExit= False
 	while not gameExit:
-		message("Deduce the word...", blue, display_width/4, display_height/4, 50)
+		message("Hangman", blue, display_width/7, display_height/7, 50)
+		pygame.display.update()
+		message("Deduce the word...", white, display_width/4, display_height/4, 30)
 		pygame.display.update()
 		hangman.str1=hangman.initialize(random_word)
-		message(hangman.str1, white, display_width/2, display_height/2, 45)
+		message(hangman.str1, white, display_width/2, display_height/2, 40, True)
 		pygame.display.update()
 		m=hangman.str1
 		hangman.str1=""
@@ -68,7 +75,7 @@ def main():
 			lt=letter.lower()
 			r.close()				
 			try:
-				hangman.string=str(hangman.check(hangman.str1,lt, random_word))
+				hangman.string=str(hangman.check(hangman.str1, lt, random_word))
 						
 			except Exception as e:
 				print(e)
@@ -76,13 +83,13 @@ def main():
 			hangman.str1=""
 			for j in range(0, len(hangman.string)):
 				hangman.str1=hangman.str1+hangman.string[j]+" "
-			message(m, black, display_width/2, display_height/2, 45)
+			message(m, black, display_width/2, display_height/2, 40, True)
 			pygame.display.update()
-			message(hangman.str1, white, display_width/2, display_height/2, 45)
+			message(hangman.str1, white, display_width/2, display_height/2, 40, True)
 			pygame.display.update()
 			m=hangman.str1
 			if hangman.string==random_word:
-				message("You Win", green, display_width/4, (3*display_height)/4, 45)
+				message("You Win", green, display_width/2, (3*display_height)/4, 45, True)
 				pygame.display.update()
 				subprocess.call(["espeak","You win"])
 				break
@@ -90,7 +97,7 @@ def main():
 				subprocess.call(["espeak","You lose"])
 				with hangman.lock:
 					subprocess.call(["espeak","The answer is "+random_word])
-				message("You Lose...Answer is: "+random_word, red, display_width/4, (3*display_height)/4, 45)
+				message("You Lose...Answer is: "+random_word, red, display_width/2, (3*display_height)/4, 45, True)
 				pygame.display.update()
 				gameExit=True
 		clock.tick(20)
