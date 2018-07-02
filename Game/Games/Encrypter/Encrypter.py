@@ -106,7 +106,6 @@ class Encrypter:
 				subprocess.call(["espeak","-s","125"," No you are wrong...the answer will be "])
 				for j in word:
 					subprocess.call(["espeak","-s","100", j])
-					
 	def terminal(self, choice, random_word):
 		'''
 		Main module to run the entire game in terminal
@@ -159,9 +158,15 @@ class Encrypter:
 				arr=r.read().split(" ")
 				num=arr[0]
 				r.close()
-				e=self.shift(encode, num)
-				print(e)
-				if e==random_word:
+				try:
+					e=encrypter.shift(encode, int(num))
+				except Exception as z:
+					print(z)
+				e_str=""
+				for p in e:
+					e_str=e_str+p
+				print(e_str)
+				if e_str==random_word:
 					subprocess.call(["espeak","-s","120"," Good!"])
 				elif k==9:
 					subprocess.call(["espeak","-s","120"," No you are wrong...the answer will be "])
@@ -171,7 +176,4 @@ class Encrypter:
 		else:
 			subprocess.call(["espeak"," Wrong choice"])
 			
-ob=Encrypter()
-random_word=ob.rand_word()
-choice=ob.choose()
-ob.terminal(choice, random_word)
+
