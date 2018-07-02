@@ -9,12 +9,12 @@ Welcome to Modern Speak and Spell's documentation!
 Contents:
 
 .. toctree::
-   :caption: Table of Contents
    :maxdepth: 2
    
    Api_Master
    Spell
    Hangmain
+   Encrypt
 
 
 
