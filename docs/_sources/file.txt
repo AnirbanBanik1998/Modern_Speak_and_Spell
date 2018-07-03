@@ -1,6 +1,8 @@
 file module
 ===========
 
+Does some file handling operations to efficiently store the voice inputs
+
 .. automodule:: file
     :members:
     :undoc-members:

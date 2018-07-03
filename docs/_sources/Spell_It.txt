@@ -1,9 +1,9 @@
-Spell_It module
-===============
+Spell_gui module
+================
 
-Main program...takes out words at random from the wordlist and asks to spell them out. It can be used to play the terminal version of the game.
+Generates GUI using pygame, for Spell It!, using core functionality from Spell_It.py script.
 
-.. automodule:: Spell_It
+.. automodule:: Spell_gui
     :members:
     :undoc-members:
     :show-inheritance:

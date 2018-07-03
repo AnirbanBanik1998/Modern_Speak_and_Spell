@@ -1,0 +1,38 @@
+Examples
+=========
+
+The basic examples are mainly to show how to play the game.
+
+A Note on the Caeser Cipher
+----------------------------
+
+This is a very simple cipher used in encryptions in which the letters are shifted each by a specific value.
+
+Let us for example shift "ABXY" by 4:
+
+A -> E, B -> F, X -> B, Y -> C, the encrypted word is "EFBC".
+
+
+Encode
+^^^^^^
+The game is basically to encrypt a given word.
+
+Suppose "anirban" is encrypted as "bojscbo", so the shifting key is +1.
+Therefore suppose we have been given to encrypt "google", so the encryption will be "hpphmf".
+We just have to guess the encrypted word and spell it properly within 20 trials.
+
+Decode
+^^^^^^
+This game is basically to decrypt a given encoded word.
+
+Suppose "cpktdcp" is decoded as "anirban", the shifting key for decoding is -2.
+Therefore suppose we have been given to decode "eqy", the answer will be "cow".
+Just guess the word, and spell it out within 20 trials.
+
+Guess
+^^^^^
+This is a rather interesting game, here we have to guess the shifting key.
+We will be provided the encoded word, the original word, and just guess the shifting key.
+Suppose the words given are "anirban" and "cpktdcp", the shifting key for encoding is 2.
+So just enter the correct shifting key within 10 trials.
+

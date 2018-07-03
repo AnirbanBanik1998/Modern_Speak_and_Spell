@@ -1,0 +1,15 @@
+Music
+=====
+
+.. toctree::
+   :maxdepth: 4
+
+   API
+   Encrypter
+   Encrypter_gui
+   Hangman
+   Hangman_gui
+   Spell_It
+   Spell_gui
+   conf
+   file

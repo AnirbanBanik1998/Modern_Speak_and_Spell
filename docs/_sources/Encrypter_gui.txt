@@ -1,0 +1,9 @@
+Encrypter_gui module
+====================
+
+Generates Pygame GUI for the Encrypter game.
+
+.. automodule:: Encrypter_gui
+    :members:
+    :undoc-members:
+    :show-inheritance:
