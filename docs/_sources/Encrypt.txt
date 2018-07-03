@@ -3,8 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+<<<<<<< HEAD
 Encrypter
 ==========
+=======
+Welcome to Encrypter documentation!
+==================================================
+>>>>>>> bcc0d509e1c312fb688b9ba0cd6cdb74bd38bae7
 
 This is a game in which the user will be given three choices.
 1.Encode
@@ -19,7 +24,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
    
+<<<<<<< HEAD
    encrypter_examples
+=======
+>>>>>>> bcc0d509e1c312fb688b9ba0cd6cdb74bd38bae7
    Encrypter
    Encrypter_gui
 
