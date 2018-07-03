@@ -1,6 +1,23 @@
-import sys
-sys.path.insert(0, "../../")
-from API import recorder, edit
+# Game Launcher
 
-record=recorder.Recorder("../../Language_Models/", LIB_FILE="commands", DECODE=True, OUTPUT_SHELL="./launch.sh")
-record.start()
+This a voice launcher for the games to be made. According to the input provided by the user, the games are launched.
+
+## Run
+```
+python3 run_launcher.py
+```
+## To automate the running of launcher.py
+```
+$./launch.sh
+```
+
+## Documentation
+
+### `run_launcher.py`
+
+Script to initiate the game_launcher.
+
+### `launcher.py`
+
+Script to launch the games based on the audio input. Launches the previous game if **RESUME** is entered.
+ 
