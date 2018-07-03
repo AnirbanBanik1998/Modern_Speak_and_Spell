@@ -1,6 +1,0 @@
-f=open("file.txt", "w+")
-g=open("test.hyp", "r")
-arr=g.read().split(" ")
-f.write(arr[0]+ " ")
-f.close()
-g.close()
