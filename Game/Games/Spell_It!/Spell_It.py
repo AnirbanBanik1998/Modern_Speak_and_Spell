@@ -67,15 +67,7 @@ class Spell:
 		
 		:return: The user's score out of 10
 		'''
-		i=0
-		if output is "":
-			return 0
-		for j in word:
-			if j is not output[i]:
-				break
-			else:
-				i+=1
-		score=((i+1)/len(word))*10
+		score=(len(output)/len(word))*10
 		return score
 			
 	def terminal(self, word):

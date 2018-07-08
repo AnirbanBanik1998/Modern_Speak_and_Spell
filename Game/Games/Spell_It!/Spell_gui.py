@@ -30,6 +30,8 @@ def main():
 	white=(255,255,255)
 	red=(255,0,0)
 	black=(0,0,0)
+	green=(0,255,0)
+	blue=(0,0,255)
 	global gameDisplay
 	gameDisplay=pygame.display.set_mode((800,600)) #Pass a tuple as a parameter
 	display_width=800
@@ -71,10 +73,12 @@ def main():
 				break
 			if spell.counter>20:
 				subprocess.call(["espeak","-s","125"," No you are wrong...the answer will be "])
+				message("You Lose...Answer is: "+random_word, red, display_width/2, (3*display_height)/4, 45, True)
+				pygame.display.update()
 				for j in random_word:
 					subprocess.call(["espeak","-s","100", j])
 				gameExit=True
-		message("Score out of 10: "+str(spell.score(w, random_word)), red, display_width/2, (3*display_height)/4, 40, True)
+		message("Score out of 10: "+str(spell.score(w, random_word)), green, display_width/2, (5*display_height)/6, 40, True)
 		pygame.display.update()
 		clock.tick(20)
 	subprocess.call(["espeak","-s","125"," Options are 1: Resume and 2: Start another game"])

@@ -100,6 +100,8 @@ def main():
 				message("You Lose...Answer is: "+random_word, red, display_width/2, (3*display_height)/4, 45, True)
 				pygame.display.update()
 				gameExit=True
+		message("Score out of 10: "+str(hangman.score(hangman.string, random_word)), green, display_width/2, (5*display_height)/6, 40, True)
+		pygame.display.update()
 		clock.tick(20)
 	subprocess.call(["espeak","-s","125"," Options are 1: Resume and 2: Start another game"])
 	pygame.quit()

@@ -62,6 +62,24 @@ class Hangman:
 				str1=str1+self.string[j]
 		return str1
 		
+	def score(self, output, word):
+		'''
+		Finds out the user's score after comparing with the original word.
+		
+		:param output: The part of the word formed due to user input.
+		:param word: The original word.
+		
+		:return: The user's score out of 10
+		'''
+		i=0
+		k=0
+		for j in word:
+			if j==output[i]:
+				k+=1
+			i+=1
+		score=(k/len(word))*10
+		return score
+		
 	def terminal(self, word):
 		'''
 		Calls the other functions to run the entire terminal version of the game.
