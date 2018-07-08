@@ -113,6 +113,7 @@ class Encrypter:
 		
 		:param output: The part of the word formed due to user input.
 		:param word: The original word.
+		:param trials: The number of trials taken to get to the right answer.
 		:param choice: The gaming option chosen as user-input.
 		
 		:return: The user's score out of 10
