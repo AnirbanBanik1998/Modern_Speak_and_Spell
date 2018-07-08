@@ -57,7 +57,27 @@ class Spell:
 			return string
 		else:
 			return "-"
+			
+	def score(self, output, word):
+		'''
+		Finds out the user's score after comparing with the original word.
 		
+		:param output: The part of the word formed due to user input.
+		:param word: The original word.
+		
+		:return: The user's score out of 10
+		'''
+		i=0
+		if output is "":
+			return 0
+		for j in word:
+			if j is not output[i]:
+				break
+			else:
+				i+=1
+		score=((i+1)/len(word))*10
+		return score
+			
 	def terminal(self, word):
 		'''
 		Main function to take care of the whole process
@@ -81,4 +101,5 @@ class Spell:
 				subprocess.call(["espeak","-s","125"," No you are wrong...the answer will be "])
 				for j in word:
 					subprocess.call(["espeak","-s","100", j])
+		print("Score: "+self.score(w, word))
 		subprocess.call(["espeak","-s","125"," Options are 1: Resume and 2: Start another game"])
