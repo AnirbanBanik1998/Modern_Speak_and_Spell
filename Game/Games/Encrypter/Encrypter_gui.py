@@ -23,7 +23,7 @@ def message(msg, color, width, height, font_size, center=False):
 	else:
 		gameDisplay.blit(screen_text, [width, height])
 	
-def check(word):
+def check(word, choice):
 	'''
 	Performs the same function as that of check() function of class Encrypter..except that the messages are displayed to the GUI rather than being printed out to the console.
 	
@@ -57,6 +57,8 @@ def check(word):
 				subprocess.call(["espeak","-s","100", j])
 			message("Answer-> "+word, red, display_width/2, (3*display_height)/4, 45, True)
 			pygame.display.update()
+	message("Score out of 10: "+str(encrypter.score(w, word, choice=choice)), green, display_width/2, (5*display_height)/6, 40, True)
+	pygame.display.update()
 					
 def main():	
 	'''
@@ -115,7 +117,7 @@ def main():
 			encode_str=""
 			for h in encode:
 				encode_str=encode_str+h
-			check(encode_str)
+			check(encode_str, choice)
 						
 		elif choice=="2":
 		
@@ -138,7 +140,7 @@ def main():
 				encode_str=encode_str+h
 			message(encode_str+ " ->" +" ?", white, display_width/4, display_height/3, 30)
 			pygame.display.update()
-			check(random_word)
+			check(random_word, choice)
 			
 		elif choice=="3":
 		
@@ -182,6 +184,9 @@ def main():
 					subprocess.call(["espeak","-s","120"," No you are wrong...the answer will be "+str(s)])
 					message("Answer-> "+str(s), red, display_width/2, (3*display_height)/4, 45, True)
 					pygame.display.update()
+					k+=1
+			message("Score out of 10: "+str(encrypter.score(trials=k, choice=choice)), green, display_width/2, (5*display_height)/6, 40, True)
+			pygame.display.update()
 		else:
 			message("Wrong Choice", red, display_width/2, display_height/2, 45, True)
 			pygame.display.update()

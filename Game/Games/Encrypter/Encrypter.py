@@ -106,6 +106,24 @@ class Encrypter:
 				subprocess.call(["espeak","-s","125"," No you are wrong...the answer will be "])
 				for j in word:
 					subprocess.call(["espeak","-s","100", j])
+					
+	def score(self, output=None, word=None, trials=0, choice=None):
+		'''
+		Finds out the user's score after comparing with the original word.
+		
+		:param output: The part of the word formed due to user input.
+		:param word: The original word.
+		:param choice: The gaming option chosen as user-input.
+		
+		:return: The user's score out of 10
+		'''
+		if choice in {"1","2"}:
+			score=(len(output)/len(word))*10
+			return score
+		else:
+			score=10-trials
+			return score
+		
 	def terminal(self, choice, random_word):
 		'''
 		Main module to run the entire game in terminal
