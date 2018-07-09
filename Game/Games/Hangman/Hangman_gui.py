@@ -92,6 +92,7 @@ def main():
 				message("You Win", green, display_width/2, (3*display_height)/4, 45, True)
 				pygame.display.update()
 				subprocess.call(["espeak","You win"])
+				gameExit=True
 				break
 			elif hangman.counter==20:
 				subprocess.call(["espeak","You lose"])
