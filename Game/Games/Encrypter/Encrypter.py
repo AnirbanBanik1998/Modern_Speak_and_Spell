@@ -50,7 +50,7 @@ class Encrypter:
 		f = ["" for x in range(len(word))]
 		for i in range(0,len(word)):
 			if ord(word[i])+n > 122:
-				f[i]=chr(97+ord(word[i])+n-122)
+				f[i]=chr(97+ord(word[i])+n-123)
 			else:
 				f[i]=chr(ord(word[i])+n)
 		return f
