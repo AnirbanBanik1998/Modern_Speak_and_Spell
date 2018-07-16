@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>maker1 module &#8212; Modern Speak and Spell 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Modern Speak and Spell 1.0 documentation" href="index.html" />
+    <link rel="up" title="Crossword" href="Crossword_main.html" />
+    <link rel="next" title="Design of the game structure" href="Game_Structure.html" />
+    <link rel="prev" title="Crossword module" href="Crossword.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-maker1">
+<span id="maker1-module"></span><h1>maker1 module<a class="headerlink" href="#module-maker1" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="maker1.Crossword">
+<em class="property">class </em><code class="descclassname">maker1.</code><code class="descname">Crossword</code><a class="headerlink" href="#maker1.Crossword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="maker1.Crossword.assign_meaning">
+<code class="descname">assign_meaning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.assign_meaning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends the meanings to a list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.check">
+<code class="descname">check</code><span class="sig-paren">(</span><em>str1</em>, <em>l</em>, <em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if letter is present in word or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>str1</strong> &#8211; Variable to return the updated string.</li>
+<li><strong>l</strong> &#8211; The letter itself...as user-input.</li>
+<li><strong>w</strong> &#8211; The string to be checked.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The updated string.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.display">
+<code class="descname">display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function displays the crossword matrix at each stage of the game, on the pygame window.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.formation">
+<code class="descname">formation</code><span class="sig-paren">(</span><em>w</em>, <em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.formation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function, which just like in hangman, forms the string taking the user-input at every time.</p>
+<p>Here the q argument is mainly aimed at specifying the word number such that the meaning of it can be displayed as a hint. The main task of this function is to run a sequence like the Hangman game to complete each of the four words. If the number of trials exceed 15 for each word...it shifts to the next word...and again back to it if time permits...in order to strive towards the solution. However, if the time of game-running exceeds 3 minutes...the game stops.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>w</strong> &#8211; The qth word generated from Crossword script.</li>
+<li><strong>q</strong> &#8211; The index of the word.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The updated string if within game-running time, or else returns &#8220;END&#8221;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.meaning">
+<code class="descname">meaning</code><span class="sig-paren">(</span><em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.meaning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the meaning out of the line containing the word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>w</strong> &#8211; The word for which meaning has to be found out.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The meaning of the word concerned.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.message">
+<code class="descname">message</code><span class="sig-paren">(</span><em>msg</em>, <em>color</em>, <em>width</em>, <em>height</em>, <em>font_size</em>, <em>center=False</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to display a specific message in a specific position with a specific color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> &#8211; The text to be displayed.</li>
+<li><strong>color</strong> &#8211; The font color.</li>
+<li><strong>width</strong> &#8211; The horizontal position of the text on the screen.</li>
+<li><strong>height</strong> &#8211; The vertical position of the text on the screen.</li>
+<li><strong>font_size</strong> &#8211; The font size of the text.</li>
+<li><strong>center</strong> &#8211; Boolean value to determine if text will be aligned to the center or not.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="maker1.main">
+<code class="descclassname">maker1.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maker1.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to launch the pygame GUI, and use the other functions to build the game sequence.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="Crossword_main.html">Crossword</a><ul>
+      <li>Previous: <a href="Crossword.html" title="previous chapter">Crossword module</a></li>
+      <li>Next: <a href="Game_Structure.html" title="next chapter">Design of the game structure</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/maker1.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, AnirbanBanik1998.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/maker1.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

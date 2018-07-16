@@ -1,0 +1,7 @@
+maker1 module
+=============
+
+.. automodule:: maker1
+    :members:
+    :undoc-members:
+    :show-inheritance:

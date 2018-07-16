@@ -15,6 +15,7 @@ Contents:
    Spell
    Hangmain
    Encrypt
+   Crossword_main
 
 
 
