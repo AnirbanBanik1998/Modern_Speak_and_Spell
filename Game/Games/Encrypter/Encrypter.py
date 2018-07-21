@@ -59,7 +59,7 @@ class Encrypter:
 		'''
 		Picks up a random integer between 1 and 25, including both.
 		'''
-		ran=random.randint(1,26)
+		ran=random.randint(1,25)
 		return ran
 		
 	def test(self, string, w):

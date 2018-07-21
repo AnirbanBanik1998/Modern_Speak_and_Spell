@@ -151,13 +151,14 @@ def main():
 			encode_str=""
 			for p in encode:
 				encode_str=encode_str+p
-			message(random_word+"->"+encode_str, white, display_width/4, display_height/4, 30)
+			subprocess.call(["espeak"," Guess the shifting key if "+random_word+" is encoded as "+encode_str])
+			message(random_word+"->"+encode_str, white, display_width/4, display_height/4, 40)
 			pygame.display.update()
-			message(random_word.upper(), white, display_width/2, display_height/2, 40, True)
+			message("SHIFTED WORD "+random_word.upper(), white, display_width/2, display_height/2, 40, True)
 			pygame.display.update()
-			m=random_word
+			m="SHIFTED WORD "+random_word.upper()
 			for k in range(10):
-				subprocess.call(["espeak"," Enter shifting key"])
+				subprocess.call(["espeak",str(10-k)+" trials left"])
 				with encrypter.lock:
 					rec=recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True, SILENCE=1)
 					rec.start()
@@ -174,9 +175,9 @@ def main():
 				e_str=""
 				for p in e:
 					e_str=e_str+p
-				message(e_str.upper(), white, display_width/2, display_height/2, 40, True)
+				message("SHIFTED WORD "+e_str.upper(), white, display_width/2, display_height/2, 40, True)
 				pygame.display.update()
-				m=e_str
+				m="SHIFTED WORD "+e_str.upper()
 				if e_str==encode_str:
 					subprocess.call(["espeak","-s","120"," Good!"])
 					break
