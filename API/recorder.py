@@ -45,16 +45,10 @@ class Recorder:
 		:param path: It contains the default library path.
 		
 		"""
-		if self.l in ["commands", "Commands", "COMMANDS"]:
-			self.lang = path + "commands.lm"
-			self.dic = path + "commands.dic"
-		elif self.l in ["characters", "Characters", "COMMANDS"]:
-			self.lang = path + "characters.lm"
-			self.dic = path + "characters.dic"
-		elif self.l in ["num", "Num", "NUM"]:
-			self.lang = path + "num.lm"
-			self.dic = path + "num.dic"
-		elif self.l is None:
+		if self.l is not None:
+			self.lang = path + (self.l).lower() +".lm"
+			self.dic = path + (self.l).lower() +".dic"
+		else:
 			self.x=input("Enter Language Model")
 			type(self.x)
 			self.y=input("Enter Dictionary")
