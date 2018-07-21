@@ -1,8 +1,9 @@
-unzip samples.zip
-prev="./samples"
+z="$1.zip"
+unzip $z
+prev="./$1"
 new="."
 mv $prev/* $new
-rm -rf "./samples"
+rm -rf $prev
 
 python3 convert.py
 python3 dictionary.py
