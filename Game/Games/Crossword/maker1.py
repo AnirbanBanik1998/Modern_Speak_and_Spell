@@ -46,6 +46,33 @@ class Crossword:
 		else:
 			self.gameDisplay.blit(screen_text, [width, height])
 			
+	def multi_line_text(self, surface, text, pos, font_size, color):
+		'''
+		Used to display multi_line text.
+		
+		:param surface: The game display surface or window.
+		:param text: The single(or multi-line)text to be displayed.
+		:param pos: The width and height positions of the text, to be entered in tuple format.
+		:param font_size: The display font_size of the text.
+		:param color: The color of the text to be displayed on screen.
+		'''
+		words = [word.split(' ') for word in text.splitlines()]
+		font=pygame.font.SysFont(None, font_size)
+		space = font.size(' ')[0]
+		max_width, max_height = surface.get_size()
+		x, y = pos
+		for line in words:
+			for word in line:
+				word_surface=font.render(word,True,color)
+				word_width, word_height=word_surface.get_size()
+				if x+word_width >= max_width:
+					x=pos[0]
+					y+=word_height
+				surface.blit(word_surface, (x,y))
+				x +=word_width+space
+			x=pos[0]
+			y+=word_height
+			
 	def meaning(self, w):
 		'''
 		Extracts the meaning out of the line containing the word.
@@ -96,11 +123,21 @@ class Crossword:
 		
 		:return: The updated string if within game-running time, or else returns "END".
 		'''
-		self.message(self.n, self.white, 0, self.display_height/4, 30)
+		string1=""
+		mean_string="Meaning of the word is :"
+		f=pygame.font.SysFont(None, 25)
+		word_surf=f.render(mean_string, True, self.green)
+		word_wid, word_hei=word_surf.get_size()
+		self.multi_line_text(self.gameDisplay, mean_string, (0, self.display_height/10), 25, self.green)
 		pygame.display.update()
-		self.message("Meaning of the word is "+str(self.mean[q]), self.white, 0, self.display_height/4, 30)
+		self.multi_line_text(self.gameDisplay, self.n, (word_wid, self.display_height/8), 25, self.black)
 		pygame.display.update()
-		self.n="Meaning of the word is "+str(self.mean[q])
+		for meaning in self.mean[q]:
+			print(meaning)
+			string1=string1+meaning+"\n"
+		self.multi_line_text(self.gameDisplay, string1, (word_wid, self.display_height/8), 25, self.white)
+		pygame.display.update()
+		self.n=string1
 		
 		k=0
 		str1=""
@@ -114,11 +151,11 @@ class Crossword:
 		else:
 			string=w
 			str1=w
-		self.message(self.m, self.black, self.display_width/3, self.display_height/3, 30, True)
+		self.message(self.m, self.black, self.display_width/2, self.display_height/3, 30, True)
 		pygame.display.update()
-		self.message(str1, self.white, self.display_width/3, self.display_height/3, 30, True)
+		self.message("Output: "+str1, self.white, self.display_width/2, self.display_height/3, 30, True)
 		pygame.display.update()
-		self.m=str1
+		self.m="Output: "+str1
 		str1=""
 		while k<15:
 			k=k+1
@@ -143,11 +180,11 @@ class Crossword:
 			str1=""
 			for j in range(0, len(string)):
 				str1=str1+string[j]+" "
-			self.message(self.m, self.black, self.display_width/3, self.display_height/3, 30, True)
+			self.message(self.m, self.black, self.display_width/2, self.display_height/3, 30, True)
 			pygame.display.update()
-			self.message(str1, self.white, self.display_width/3, self.display_height/3, 30, True)
+			self.message("Output: "+str1, self.white, self.display_width/2, self.display_height/3, 30, True)
 			pygame.display.update()
-			self.m=str1
+			self.m="Output: "+str1
 			if string==q or k==15:
 				return string
 			elif int(round(time.time())-self.start)>=180:
@@ -202,7 +239,7 @@ def main():
 	gameExit=False
 	clock=pygame.time.Clock()
 	while not gameExit:
-		c.message("Crossword", c.blue, c.display_width/7, c.display_height/7, 50)
+		c.message("Crossword", c.blue, c.display_width/20, c.display_height/20, 50)
 		pygame.display.update()
 		n=0
 		s=0

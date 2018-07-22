@@ -9,7 +9,6 @@ word1=""
 word2=""
 word3=""
 word4=""
-k=1
 def find(w, c, r):
 	'''
 	This function helps to find if there is an intersection between the c'th letter of a word and the r'th letter of another word given in the file.
@@ -44,6 +43,7 @@ def main():
 	'''
 	Uses the functions to generate 4 4-letter words for a 4 X 4 crossword.
 	'''
+	k=1
 	while k:
 		wordlist = []
 		my_randoms=random.randint(0,len(lines)-1)
