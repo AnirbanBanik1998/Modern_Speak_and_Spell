@@ -157,11 +157,13 @@ class Crossword:
 		pygame.display.update()
 		self.m="Output: "+str1
 		str1=""
+		subprocess.call(["espeak", "Guess the word"])
 		while k<15:
 			k=k+1
 			str1=""
 			letter=""
 			print("Enter letter: ")
+			subprocess.call(["espeak", "Trials left "+str(16-k)])
 			with self.lock:
 				record=recorder.Recorder("../../../Language_Models/", LIB_FILE="characters", DECODE=True, TRIALS=1, SILENCE=1)
 				record.start()
@@ -262,6 +264,10 @@ def main():
 			if c.output[n%4]=="End":
 				gameExit=True
 				z=0
+				# After game ends...display all the the original words in the crossword.
+				for p in range(4):
+					c.output[p]=sys.argv[p+1]
+				c.display()
 			else:
 				c.display()
 			n=n+1
