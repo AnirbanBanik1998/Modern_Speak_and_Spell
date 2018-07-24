@@ -196,9 +196,11 @@ class Crossword:
 
 	
 	 
-	def display(self):
+	def display(self, color):
 		'''
 		This function displays the crossword matrix at each stage of the game, on the pygame window.
+		
+		:param color: The color to be displayed.
 		'''
 		text="|"
 		x=self.display_width/2
@@ -225,7 +227,7 @@ class Crossword:
 				else:
 					text=text+self.matrix[i][j]+"| "
 			self.mat[i]=text
-			self.message(text, self.white, x, y, 30, True)
+			self.message(text, color, x, y, 30, True)
 			pygame.display.update()
 			y=y+40
 			text=""
@@ -267,9 +269,9 @@ def main():
 				# After game ends...display all the the original words in the crossword.
 				for p in range(4):
 					c.output[p]=sys.argv[p+1]
-				c.display()
+				c.display(c.red)
 			else:
-				c.display()
+				c.display(c.white)
 			n=n+1
 		clock.tick(20)
 	subprocess.call(["espeak","-s","125"," Options are 1: Resume and 2: Start another game"])

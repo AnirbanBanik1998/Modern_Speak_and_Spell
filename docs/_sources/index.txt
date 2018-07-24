@@ -2,7 +2,6 @@
    sphinx-quickstart on Sun Jul  1 12:22:45 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-
 Welcome to Modern Speak and Spell's documentation!
 ==================================================
 
