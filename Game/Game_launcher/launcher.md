@@ -22,3 +22,7 @@ Script to initiate the game_launcher.
 
 Script to launch the games based on the audio input. Launches the previous game if **RESUME** is entered. We don't need to run this script..this is automatically called by run_launcher.py through the shell script.
  
+## Commands
+
+1. **START** or **GENERATE** Game_Name to start a new game.
+2. **RESUME** to resume the previously run game.
