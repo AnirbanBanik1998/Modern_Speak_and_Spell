@@ -1,3 +1,3 @@
-python3 launcher.py
+python3 main.py
 rm -rf ./wav/*
 
