@@ -31,6 +31,13 @@ For more information go to "./Game/Games"
 
 * An Updated Speech Processing API to help in easier recording and decoding...so that the games can be made more easily.
 
+#### Dependencies
+
+To install all the dependencies for the project run:
+```
+sudo bash setup.sh
+```
+
 ### Further Improvements to be done
 
 * Generating scoreboard after completion of every game.
