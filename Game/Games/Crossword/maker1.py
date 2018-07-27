@@ -25,6 +25,7 @@ class Crossword:
 		self.mat = ["" for j in range(4)]
 		self.matrix = [["" for x in range(4)] for y in range(4)]
 		self.mean = []
+		self.dummy = ""
 		self.assign_meaning()
 
 	def message(self, msg, color, width, height, font_size, center=False):
@@ -190,7 +191,7 @@ class Crossword:
 			if string==q or k==15:
 				return string
 			elif int(round(time.time())-self.start)>=180:
-				subprocess.call(["espeak","You lose"])
+				subprocess.call(["espeak","Time is up You lose"])
 				break
 		return "End"
 
@@ -202,7 +203,10 @@ class Crossword:
 		
 		:param color: The color to be displayed.
 		'''
+		self.message(self.dummy, self.black, self.display_width/2, 5*self.display_height/6, 40, True)
+		pygame.display.update()
 		text="|"
+		addition=0
 		x=self.display_width/2
 		y=self.display_height/2
 		
@@ -226,11 +230,15 @@ class Crossword:
 					text=text+"#"+"| "
 				else:
 					text=text+self.matrix[i][j]+"| "
+					addition+=1
 			self.mat[i]=text
 			self.message(text, color, x, y, 30, True)
 			pygame.display.update()
 			y=y+40
 			text=""
+		self.message("Score: "+str(addition*10/16), self.green, self.display_width/2, 5*self.display_height/6, 40, True)
+		pygame.display.update()
+		self.dummy="Score: "+str(addition*10/16)
 
 def main():
 	'''
