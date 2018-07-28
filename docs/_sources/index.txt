@@ -2,19 +2,227 @@
    sphinx-quickstart on Sun Jul  1 12:22:45 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+   
 Welcome to Modern Speak and Spell's documentation!
 ==================================================
 
-Contents:
+.. contents::
 
-.. toctree::
-   :maxdepth: 2
-   
-   Api_Master
-   Spell
-   Hangmain
-   Encrypt
-   Crossword_main
+Speech Procesing API 
+---------------------
+
+This script can be used and the functions can be imported and used in almost any game and game_launcher so that if anything has to changed in this script...no change has to be done in the game code.
+
+API package
+^^^^^^^^^^^^
+
+Submodules
+""""""""""
+
+API.edit module
+""""""""""""""""
+
+Helps in editing the fileids and transcription files for decoding of recorded speech.
+
+.. automodule:: API.edit
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+API.recorder module
+""""""""""""""""""""
+
+This basically is a generalized recording and decoding module which can be used in all the game launching, gaming, as well as for testing speech and processing.
+
+.. automodule:: API.recorder
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Spell It
+---------
+
+This is a very simple game...a game in which the user has to spell a word given out and based on whether the word is spelt correct or wrong the results are generated accordingly.
+
+
+Spell_It module
+^^^^^^^^^^^^^^^^
+
+Main program...takes out words at random from the wordlist and asks to spell them out. It can be used to play the terminal version of the game.
+
+.. automodule:: Spell_It
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+    
+Spell_gui module
+^^^^^^^^^^^^^^^^^
+
+Generates GUI using pygame, for Spell It!, using core functionality from Spell_It.py script.
+
+.. automodule:: Spell_gui
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ 
+Hangman 
+--------
+
+This is a very simple game...a game in which the user has to fill in the blanks given to generate a specific word in a limited number of trials.
+
+Hangman-Examples
+^^^^^^^^^^^^^^^^
+
+This basic example is mainly to show how to play the game.
+Suppose the word is "ANIRBAN"
+
+.. list-table:: STEPS:
+   :widths: 25 25 50 
+   :header-rows: 1
+
+   * - INPUT
+     - OUTPUT
+     - REASON
+   * - A
+     - A----A-
+     - A is there two times
+   * - B
+     - A---BA-
+     - B is there one time
+   * - C
+     - A---BA-
+     - C is not present there
+   * - I
+     - A-I-BA-
+     - I is there one time
+   * - N
+     - ANI-BAN
+     - N is there two times
+   * - R
+     - ANIRBAN
+     - R is there one time
+
+Strategy -> Start by spelling the vowels first...they are almost indispensible in every word...and can help in guessing the given word.
+
+Hangman module
+^^^^^^^^^^^^^^^
+
+.. automodule:: Hangman
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+Hangman_gui module
+^^^^^^^^^^^^^^^^^^^
+
+.. automodule:: Hangman_gui
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+    
+Encrypter
+----------
+
+This is a game in which the user will be given three choices.
+1.Encode
+2.Decode
+3.Guess
+
+In the first two games the user will be given to encode or decode some words based on a hint provided. In the third game, the user has to guess the actual word from the encrypted one using some shift operations.
+
+Encrypter-Examples
+^^^^^^^^^^^^^^^^^^^
+
+The basic examples are mainly to show how to play the game.
+
+A Note on the Caeser Cipher
+""""""""""""""""""""""""""""
+
+This is a very simple cipher used in encryptions in which the letters are shifted each by a specific value.
+
+Let us for example shift "ABXY" by 4:
+
+A -> E, B -> F, X -> B, Y -> C, the encrypted word is "EFBC".
+
+
+Encode
+"""""""
+The game is basically to encrypt a given word.
+
+Suppose "anirban" is encrypted as "bojscbo", so the shifting key is +1.
+Therefore suppose we have been given to encrypt "google", so the encryption will be "hpphmf".
+We just have to guess the encrypted word and spell it properly within 20 trials.
+
+Decode
+"""""""
+This game is basically to decrypt a given encoded word.
+
+Suppose "cpktdcp" is decoded as "anirban", the shifting key for decoding is -2.
+Therefore suppose we have been given to decode "eqy", the answer will be "cow".
+Just guess the word, and spell it out within 20 trials.
+
+Guess
+""""""
+This is a rather interesting game, here we have to guess the shifting key.
+We will be provided the encoded word, the original word, and just guess the shifting key.
+Suppose the words given are "anirban" and "cpktdcp", the shifting key for encoding is 2.
+So just enter the correct shifting key within 10 trials.
+
+Encrypter module
+^^^^^^^^^^^^^^^^^
+
+.. automodule:: Encrypter
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+Encrypter_gui module
+^^^^^^^^^^^^^^^^^^^^^
+
+Generates Pygame GUI for the Encrypter game.
+
+.. automodule:: Encrypter_gui
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Crossword 
+----------
+
+This game has been built as an extension of Hangman. The game has only been designed to fit for 4x4 matrices with 4 words, randomly generated from the wordlist. It can be extended to other general cases in the future. 
+
+Crossword module
+^^^^^^^^^^^^^^^^^
+
+.. automodule:: Crossword
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+maker1 module
+^^^^^^^^^^^^^^
+
+.. automodule:: maker1
+    :members:
+    :undoc-members:
+    :show-inheritance:
+    
+Design of the game structure
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The positions of the words in the rows and columns can be 1-3 and 2-4 respectively, and words are designed to be fitted in the crossword alternately, means if a word is at the first row, then the next word will be at the third row, and same logic for the columns. 
+
+The matrix is displayed according to the following logic. |#| for the blank cells, and |A| for the cell with letter A.
+
+The 4-letter words have been scraped out of the wordlist. Then using PyDictionary, it's meanings, in noun, verb, adjective, and adverb forms have been formed, and combined list is in words.csv.
+
+The game has been designed to give the user a hint, by displaying the meaning of the word, before he guesses the word.
+
 
 
 

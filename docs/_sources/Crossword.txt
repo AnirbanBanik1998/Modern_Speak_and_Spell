@@ -1,7 +1,0 @@
-Crossword module
-================
-
-.. automodule:: Crossword
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-Hangman_gui module
-==================
-
-.. automodule:: Hangman_gui
-    :members:
-    :undoc-members:
-    :show-inheritance:

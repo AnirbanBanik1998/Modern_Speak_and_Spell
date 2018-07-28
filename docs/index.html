@@ -26,7 +26,6 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="Modern Speak and Spell 1.0 documentation" href="#" />
-    <link rel="next" title="Speech Procesing API" href="Api_Master.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -43,43 +42,842 @@
           <div class="body" role="main">
             
   <div class="section" id="welcome-to-modern-speak-and-spell-s-documentation">
-<h1>Welcome to Modern Speak and Spell&#8217;s documentation!<a class="headerlink" href="#welcome-to-modern-speak-and-spell-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Api_Master.html">Speech Procesing API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="API.html">API package</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Spell.html">Spell It</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Spell_It.html">Spell_It module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Spell_gui.html">Spell_gui module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file.html">file module</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Hangmain.html">Hangman</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Hangman.html">Hangman module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Hangman_gui.html">Hangman_gui module</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Encrypt.html">Encrypter</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="encrypter_examples.html">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Encrypter.html">Encrypter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Encrypter_gui.html">Encrypter_gui module</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Crossword_main.html">Crossword</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Crossword.html">Crossword module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="maker1.html">maker1 module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Game_Structure.html">Design of the game structure</a></li>
+<h1><a class="toc-backref" href="#id6">Welcome to Modern Speak and Spell&#8217;s documentation!</a><a class="headerlink" href="#welcome-to-modern-speak-and-spell-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#welcome-to-modern-speak-and-spell-s-documentation" id="id6">Welcome to Modern Speak and Spell&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#speech-procesing-api" id="id7">Speech Procesing API</a><ul>
+<li><a class="reference internal" href="#api-package" id="id8">API package</a><ul>
+<li><a class="reference internal" href="#submodules" id="id9">Submodules</a></li>
+<li><a class="reference internal" href="#api-edit-module" id="id10">API.edit module</a></li>
+<li><a class="reference internal" href="#api-recorder-module" id="id11">API.recorder module</a></li>
 </ul>
 </li>
 </ul>
+</li>
+<li><a class="reference internal" href="#spell-it" id="id12">Spell It</a><ul>
+<li><a class="reference internal" href="#spell-it-module" id="id13">Spell_It module</a></li>
+<li><a class="reference internal" href="#spell-gui-module" id="id14">Spell_gui module</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hangman" id="id15">Hangman</a><ul>
+<li><a class="reference internal" href="#hangman-examples" id="id16">Hangman-Examples</a></li>
+<li><a class="reference internal" href="#module-Hangman" id="id17">Hangman module</a></li>
+<li><a class="reference internal" href="#module-Hangman_gui" id="id18">Hangman_gui module</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#encrypter" id="id19">Encrypter</a><ul>
+<li><a class="reference internal" href="#encrypter-examples" id="id20">Encrypter-Examples</a><ul>
+<li><a class="reference internal" href="#a-note-on-the-caeser-cipher" id="id21">A Note on the Caeser Cipher</a></li>
+<li><a class="reference internal" href="#encode" id="id22">Encode</a></li>
+<li><a class="reference internal" href="#decode" id="id23">Decode</a></li>
+<li><a class="reference internal" href="#guess" id="id24">Guess</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-Encrypter" id="id25">Encrypter module</a></li>
+<li><a class="reference internal" href="#encrypter-gui-module" id="id26">Encrypter_gui module</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#crossword" id="id27">Crossword</a><ul>
+<li><a class="reference internal" href="#module-Crossword" id="id28">Crossword module</a></li>
+<li><a class="reference internal" href="#module-maker1" id="id29">maker1 module</a></li>
+<li><a class="reference internal" href="#design-of-the-game-structure" id="id30">Design of the game structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables" id="id31">Indices and tables</a></li>
+</ul>
+</div>
+<div class="section" id="speech-procesing-api">
+<h2><a class="toc-backref" href="#id7">Speech Procesing API</a><a class="headerlink" href="#speech-procesing-api" title="Permalink to this headline">¶</a></h2>
+<p>This script can be used and the functions can be imported and used in almost any game and game_launcher so that if anything has to changed in this script...no change has to be done in the game code.</p>
+<div class="section" id="api-package">
+<h3><a class="toc-backref" href="#id8">API package</a><a class="headerlink" href="#api-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="submodules">
+<h4><a class="toc-backref" href="#id9">Submodules</a><a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="api-edit-module">
+<h4><a class="toc-backref" href="#id10">API.edit module</a><a class="headerlink" href="#api-edit-module" title="Permalink to this headline">¶</a></h4>
+<p>Helps in editing the fileids and transcription files for decoding of recorded speech.</p>
+<span class="target" id="module-API.edit"></span><dl class="function">
+<dt id="API.edit.fileids">
+<code class="descclassname">API.edit.</code><code class="descname">fileids</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#API.edit.fileids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to edit test.fileids.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="API.edit.transcription">
+<code class="descclassname">API.edit.</code><code class="descname">transcription</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#API.edit.transcription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to edit test.transcription.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="api-recorder-module">
+<h4><a class="toc-backref" href="#id11">API.recorder module</a><a class="headerlink" href="#api-recorder-module" title="Permalink to this headline">¶</a></h4>
+<p>This basically is a generalized recording and decoding module which can be used in all the game launching, gaming, as well as for testing speech and processing.</p>
+<span class="target" id="module-API.recorder"></span><dl class="class">
+<dt id="API.recorder.Recorder">
+<em class="property">class </em><code class="descclassname">API.recorder.</code><code class="descname">Recorder</code><span class="sig-paren">(</span><em>DEFAULT_LIB_PATH</em>, <em>CHANNELS=1</em>, <em>RATE=16000</em>, <em>CHUNK_SIZE=1024</em>, <em>MIN_VOLUME=1600</em>, <em>OUTPUT_DIR='wav'</em>, <em>SILENCE=3</em>, <em>TRIALS=None</em>, <em>MULTI=False</em>, <em>DECODE=False</em>, <em>LIB_FILE=None</em>, <em>TRANSCRIBE=False</em>, <em>OUTPUT_SHELL=None</em><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="API.recorder.Recorder.decoder">
+<code class="descname">decoder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder.decoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to decode using the pocketsphinx batch command.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="API.recorder.Recorder.listen">
+<code class="descname">listen</code><span class="sig-paren">(</span><em>stopped</em>, <em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder.listen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function which listens to the audio stream and puts the chunks in a queue to be operated later on.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stopped</strong> &#8211; The threading event flag.</li>
+<li><strong>q</strong> &#8211; A queue to put all the required chunks into so that they can be processed later.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="API.recorder.Recorder.record">
+<code class="descname">record</code><span class="sig-paren">(</span><em>stopped</em>, <em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder.record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function which records when volume of a chunk is greater than a particular threshold value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stopped</strong> &#8211; Same as in listen()</li>
+<li><strong>q</strong> &#8211; Same as in listen()</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="API.recorder.Recorder.set_library">
+<code class="descname">set_library</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder.set_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function which sets the library paths in order to make it easy for every user to use.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> &#8211; It contains the default library path.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="API.recorder.Recorder.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function which starts the entire process.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+<div class="section" id="spell-it">
+<h2><a class="toc-backref" href="#id12">Spell It</a><a class="headerlink" href="#spell-it" title="Permalink to this headline">¶</a></h2>
+<p>This is a very simple game...a game in which the user has to spell a word given out and based on whether the word is spelt correct or wrong the results are generated accordingly.</p>
+<div class="section" id="spell-it-module">
+<h3><a class="toc-backref" href="#id13">Spell_It module</a><a class="headerlink" href="#spell-it-module" title="Permalink to this headline">¶</a></h3>
+<p>Main program...takes out words at random from the wordlist and asks to spell them out. It can be used to play the terminal version of the game.</p>
+<span class="target" id="module-Spell_It"></span><p>This is the improvised Spell_It game</p>
+<dl class="class">
+<dt id="Spell_It.Spell">
+<em class="property">class </em><code class="descclassname">Spell_It.</code><code class="descname">Spell</code><a class="headerlink" href="#Spell_It.Spell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="Spell_It.Spell.rand">
+<code class="descname">rand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Spell_It.Spell.rand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a random word from Wordlist.csv</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Spell_It.Spell.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>output</em>, <em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#Spell_It.Spell.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds out the user&#8217;s score after comparing with the original word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>output</strong> &#8211; The part of the word formed due to user input.</li>
+<li><strong>word</strong> &#8211; The original word.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The user&#8217;s score out of 10</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Spell_It.Spell.terminal">
+<code class="descname">terminal</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#Spell_It.Spell.terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to take care of the whole process</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>word</strong> &#8211; Takes the randomly generated word from rand() as input parameter.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Spell_It.Spell.test">
+<code class="descname">test</code><span class="sig-paren">(</span><em>string</em>, <em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#Spell_It.Spell.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to take the recording and check if it matches with the letters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>string</strong> &#8211; The string to be formed as the result.</li>
+<li><strong>w</strong> &#8211; The specific letter to be checked.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Returns string, improvised by the function itself.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="spell-gui-module">
+<h3><a class="toc-backref" href="#id14">Spell_gui module</a><a class="headerlink" href="#spell-gui-module" title="Permalink to this headline">¶</a></h3>
+<p>Generates GUI using pygame, for Spell It!, using core functionality from Spell_It.py script.</p>
+<span class="target" id="module-Spell_gui"></span><dl class="function">
+<dt id="Spell_gui.main">
+<code class="descclassname">Spell_gui.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Spell_gui.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main block of the program which runs the entire display.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Spell_gui.message">
+<code class="descclassname">Spell_gui.</code><code class="descname">message</code><span class="sig-paren">(</span><em>msg</em>, <em>color</em>, <em>width</em>, <em>height</em>, <em>font_size</em>, <em>center=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Spell_gui.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to display a specific message in a specific position with a specific color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> &#8211; The text to be displayed.</li>
+<li><strong>color</strong> &#8211; The font color.</li>
+<li><strong>width</strong> &#8211; The horizontal position of the text on the screen.</li>
+<li><strong>height</strong> &#8211; The vertical position of the text on the screen.</li>
+<li><strong>font_size</strong> &#8211; The font size of the text.</li>
+<li><strong>center</strong> &#8211; Boolean value to determine if text will be aligned to the center or not.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="hangman">
+<h2><a class="toc-backref" href="#id15">Hangman</a><a class="headerlink" href="#hangman" title="Permalink to this headline">¶</a></h2>
+<p>This is a very simple game...a game in which the user has to fill in the blanks given to generate a specific word in a limited number of trials.</p>
+<div class="section" id="hangman-examples">
+<h3><a class="toc-backref" href="#id16">Hangman-Examples</a><a class="headerlink" href="#hangman-examples" title="Permalink to this headline">¶</a></h3>
+<p>This basic example is mainly to show how to play the game.
+Suppose the word is &#8220;ANIRBAN&#8221;</p>
+<table border="1" class="colwidths-given docutils" id="id1">
+<caption><span class="caption-text">STEPS:</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">INPUT</th>
+<th class="head">OUTPUT</th>
+<th class="head">REASON</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>A</td>
+<td>A&#8212;-A-</td>
+<td>A is there two times</td>
+</tr>
+<tr class="row-odd"><td>B</td>
+<td>A&#8212;BA-</td>
+<td>B is there one time</td>
+</tr>
+<tr class="row-even"><td>C</td>
+<td>A&#8212;BA-</td>
+<td>C is not present there</td>
+</tr>
+<tr class="row-odd"><td>I</td>
+<td>A-I-BA-</td>
+<td>I is there one time</td>
+</tr>
+<tr class="row-even"><td>N</td>
+<td>ANI-BAN</td>
+<td>N is there two times</td>
+</tr>
+<tr class="row-odd"><td>R</td>
+<td>ANIRBAN</td>
+<td>R is there one time</td>
+</tr>
+</tbody>
+</table>
+<p>Strategy -&gt; Start by spelling the vowels first...they are almost indispensible in every word...and can help in guessing the given word.</p>
+</div>
+<div class="section" id="module-Hangman">
+<span id="hangman-module"></span><h3><a class="toc-backref" href="#id17">Hangman module</a><a class="headerlink" href="#module-Hangman" title="Permalink to this headline">¶</a></h3>
+<p>Updated Version of Hangman Game</p>
+<dl class="class">
+<dt id="Hangman.Hangman">
+<em class="property">class </em><code class="descclassname">Hangman.</code><code class="descname">Hangman</code><a class="headerlink" href="#Hangman.Hangman" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="Hangman.Hangman.check">
+<code class="descname">check</code><span class="sig-paren">(</span><em>str1</em>, <em>l</em>, <em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#Hangman.Hangman.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to check if input letter is present anywhere in the word</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>str1</strong> &#8211; To compute the updated string.</li>
+<li><strong>l</strong> &#8211; The input letter.</li>
+<li><strong>r</strong> &#8211; The word generated using rand().</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The updated word after insertion of the input letter, if present in the actual word.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Hangman.Hangman.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#Hangman.Hangman.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays the word in form of dashes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r</strong> &#8211; Random word generated.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Hangman.Hangman.rand">
+<code class="descname">rand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Hangman.Hangman.rand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a random word from Wordlist.csv</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Hangman.Hangman.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>output</em>, <em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#Hangman.Hangman.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds out the user&#8217;s score after comparing with the original word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>output</strong> &#8211; The part of the word formed due to user input.</li>
+<li><strong>word</strong> &#8211; The original word.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The user&#8217;s score out of 10</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Hangman.Hangman.terminal">
+<code class="descname">terminal</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#Hangman.Hangman.terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls the other functions to run the entire terminal version of the game.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>word</strong> &#8211; The word which is generated randomly using function rand()</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Hangman_gui">
+<span id="hangman-gui-module"></span><h3><a class="toc-backref" href="#id18">Hangman_gui module</a><a class="headerlink" href="#module-Hangman_gui" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="Hangman_gui.main">
+<code class="descclassname">Hangman_gui.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Hangman_gui.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main block of the program which runs the entire display.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Hangman_gui.message">
+<code class="descclassname">Hangman_gui.</code><code class="descname">message</code><span class="sig-paren">(</span><em>msg</em>, <em>color</em>, <em>width</em>, <em>height</em>, <em>font_size</em>, <em>center=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Hangman_gui.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to display a specific message in a specific position with a specific color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> &#8211; The text to be displayed.</li>
+<li><strong>color</strong> &#8211; The font color.</li>
+<li><strong>width</strong> &#8211; The horizontal position of the text on the screen.</li>
+<li><strong>height</strong> &#8211; The vertical position of the text on the screen.</li>
+<li><strong>font_size</strong> &#8211; The font size of the text.</li>
+<li><strong>center</strong> &#8211; Boolean value to determine if text will be aligned to the center or not.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="encrypter">
+<h2><a class="toc-backref" href="#id19">Encrypter</a><a class="headerlink" href="#encrypter" title="Permalink to this headline">¶</a></h2>
+<p>This is a game in which the user will be given three choices.
+1.Encode
+2.Decode
+3.Guess</p>
+<p>In the first two games the user will be given to encode or decode some words based on a hint provided. In the third game, the user has to guess the actual word from the encrypted one using some shift operations.</p>
+<div class="section" id="encrypter-examples">
+<h3><a class="toc-backref" href="#id20">Encrypter-Examples</a><a class="headerlink" href="#encrypter-examples" title="Permalink to this headline">¶</a></h3>
+<p>The basic examples are mainly to show how to play the game.</p>
+<div class="section" id="a-note-on-the-caeser-cipher">
+<h4><a class="toc-backref" href="#id21">A Note on the Caeser Cipher</a><a class="headerlink" href="#a-note-on-the-caeser-cipher" title="Permalink to this headline">¶</a></h4>
+<p>This is a very simple cipher used in encryptions in which the letters are shifted each by a specific value.</p>
+<p>Let us for example shift &#8220;ABXY&#8221; by 4:</p>
+<p>A -&gt; E, B -&gt; F, X -&gt; B, Y -&gt; C, the encrypted word is &#8220;EFBC&#8221;.</p>
+</div>
+<div class="section" id="encode">
+<h4><a class="toc-backref" href="#id22">Encode</a><a class="headerlink" href="#encode" title="Permalink to this headline">¶</a></h4>
+<p>The game is basically to encrypt a given word.</p>
+<p>Suppose &#8220;anirban&#8221; is encrypted as &#8220;bojscbo&#8221;, so the shifting key is +1.
+Therefore suppose we have been given to encrypt &#8220;google&#8221;, so the encryption will be &#8220;hpphmf&#8221;.
+We just have to guess the encrypted word and spell it properly within 20 trials.</p>
+</div>
+<div class="section" id="decode">
+<h4><a class="toc-backref" href="#id23">Decode</a><a class="headerlink" href="#decode" title="Permalink to this headline">¶</a></h4>
+<p>This game is basically to decrypt a given encoded word.</p>
+<p>Suppose &#8220;cpktdcp&#8221; is decoded as &#8220;anirban&#8221;, the shifting key for decoding is -2.
+Therefore suppose we have been given to decode &#8220;eqy&#8221;, the answer will be &#8220;cow&#8221;.
+Just guess the word, and spell it out within 20 trials.</p>
+</div>
+<div class="section" id="guess">
+<h4><a class="toc-backref" href="#id24">Guess</a><a class="headerlink" href="#guess" title="Permalink to this headline">¶</a></h4>
+<p>This is a rather interesting game, here we have to guess the shifting key.
+We will be provided the encoded word, the original word, and just guess the shifting key.
+Suppose the words given are &#8220;anirban&#8221; and &#8220;cpktdcp&#8221;, the shifting key for encoding is 2.
+So just enter the correct shifting key within 10 trials.</p>
+</div>
+</div>
+<div class="section" id="module-Encrypter">
+<span id="encrypter-module"></span><h3><a class="toc-backref" href="#id25">Encrypter module</a><a class="headerlink" href="#module-Encrypter" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="Encrypter.Encrypter">
+<em class="property">class </em><code class="descclassname">Encrypter.</code><code class="descname">Encrypter</code><a class="headerlink" href="#Encrypter.Encrypter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="Encrypter.Encrypter.check">
+<code class="descname">check</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter.Encrypter.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of trials being 20, the user is allowed to try to encrypt or decrypt the given word correctly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>word</strong> &#8211; Takes the randomly generated word from rand_word() as input parameter.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Encrypter.Encrypter.choose">
+<code class="descname">choose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter.Encrypter.choose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Module to help take the user input for the chosen option. The valid inputs are 1, 2 and 3.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Encrypter.Encrypter.rand_int">
+<code class="descname">rand_int</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter.Encrypter.rand_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Picks up a random integer between 1 and 25, including both.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Encrypter.Encrypter.rand_word">
+<code class="descname">rand_word</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter.Encrypter.rand_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a random word from Wordlist.csv</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Encrypter.Encrypter.score">
+<code class="descname">score</code><span class="sig-paren">(</span><em>output=None</em>, <em>word=None</em>, <em>trials=0</em>, <em>choice=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter.Encrypter.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds out the user&#8217;s score after comparing with the original word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>output</strong> &#8211; The part of the word formed due to user input.</li>
+<li><strong>word</strong> &#8211; The original word.</li>
+<li><strong>trials</strong> &#8211; The number of trials taken to get to the right answer.</li>
+<li><strong>choice</strong> &#8211; The gaming option chosen as user-input.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The user&#8217;s score out of 10</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Encrypter.Encrypter.shift">
+<code class="descname">shift</code><span class="sig-paren">(</span><em>word</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter.Encrypter.shift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to shift each letter in a word by n...in order to encrypt or decrypt the word...the sequence is cyclic...that is a to z and then back to a.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>word</strong> &#8211; The word to be encrypted or decrypted.</li>
+<li><strong>n</strong> &#8211; The shifting key.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The word with all the letters shifted, as a list type value.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Encrypter.Encrypter.terminal">
+<code class="descname">terminal</code><span class="sig-paren">(</span><em>choice</em>, <em>random_word</em><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter.Encrypter.terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main module to run the entire game in terminal</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>choice</strong> &#8211; Choice 1, 2 or 3 as user input.</li>
+<li><strong>random_word</strong> &#8211; Random word generated using rand_word()</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Encrypter.Encrypter.test">
+<code class="descname">test</code><span class="sig-paren">(</span><em>string</em>, <em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter.Encrypter.test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to take the recording and check if it matches with the letters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>string</strong> &#8211; The string to be formed as the result.</li>
+<li><strong>w</strong> &#8211; The specific letter to be checked.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Returns string, improvised by the function itself.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="encrypter-gui-module">
+<h3><a class="toc-backref" href="#id26">Encrypter_gui module</a><a class="headerlink" href="#encrypter-gui-module" title="Permalink to this headline">¶</a></h3>
+<p>Generates Pygame GUI for the Encrypter game.</p>
+<span class="target" id="module-Encrypter_gui"></span><dl class="function">
+<dt id="Encrypter_gui.check">
+<code class="descclassname">Encrypter_gui.</code><code class="descname">check</code><span class="sig-paren">(</span><em>word</em>, <em>choice</em><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter_gui.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the same function as that of check() function of class Encrypter..except that the messages are displayed to the GUI rather than being printed out to the console.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>word</strong> &#8211; The input word to be operated on.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Encrypter_gui.main">
+<code class="descclassname">Encrypter_gui.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter_gui.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main block of the program which runs the entire display.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Encrypter_gui.message">
+<code class="descclassname">Encrypter_gui.</code><code class="descname">message</code><span class="sig-paren">(</span><em>msg</em>, <em>color</em>, <em>width</em>, <em>height</em>, <em>font_size</em>, <em>center=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Encrypter_gui.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to display a specific message in a specific position with a specific color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> &#8211; The text to be displayed.</li>
+<li><strong>color</strong> &#8211; The font color.</li>
+<li><strong>width</strong> &#8211; The horizontal position of the text on the screen.</li>
+<li><strong>height</strong> &#8211; The vertical position of the text on the screen.</li>
+<li><strong>font_size</strong> &#8211; The font size of the text.</li>
+<li><strong>center</strong> &#8211; Boolean value to determine if text will be aligned to the center or not.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="crossword">
+<h2><a class="toc-backref" href="#id27">Crossword</a><a class="headerlink" href="#crossword" title="Permalink to this headline">¶</a></h2>
+<p>This game has been built as an extension of Hangman. The game has only been designed to fit for 4x4 matrices with 4 words, randomly generated from the wordlist. It can be extended to other general cases in the future.</p>
+<div class="section" id="module-Crossword">
+<span id="crossword-module"></span><h3><a class="toc-backref" href="#id28">Crossword module</a><a class="headerlink" href="#module-Crossword" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="Crossword.find">
+<code class="descclassname">Crossword.</code><code class="descname">find</code><span class="sig-paren">(</span><em>w</em>, <em>c</em>, <em>r</em><span class="sig-paren">)</span><a class="headerlink" href="#Crossword.find" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function helps to find if there is an intersection between the c&#8217;th letter of a word and the r&#8217;th letter of another word given in the file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>w</strong> &#8211; The word provided.</li>
+<li><strong>c</strong> &#8211; The index of the letter of the required word.</li>
+<li><strong>r</strong> &#8211; The index of the letter of the given word.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The word whose letter matches with the letter of the given word.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Crossword.find_inv">
+<code class="descclassname">Crossword.</code><code class="descname">find_inv</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#Crossword.find_inv" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function helps to find out a word, whose two letters at two specified positions are x and y.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> &#8211; The letter at the beginning position.</li>
+<li><strong>y</strong> &#8211; The letter at the beginning position.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The word found out from the list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Crossword.main">
+<code class="descclassname">Crossword.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Crossword.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses the functions to generate 4 4-letter words for a 4 X 4 crossword.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-maker1">
+<span id="maker1-module"></span><h3><a class="toc-backref" href="#id29">maker1 module</a><a class="headerlink" href="#module-maker1" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="maker1.Crossword">
+<em class="property">class </em><code class="descclassname">maker1.</code><code class="descname">Crossword</code><a class="headerlink" href="#maker1.Crossword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="maker1.Crossword.assign_meaning">
+<code class="descname">assign_meaning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.assign_meaning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends the meanings to a list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.check">
+<code class="descname">check</code><span class="sig-paren">(</span><em>str1</em>, <em>l</em>, <em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if letter is present in word or not.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>str1</strong> &#8211; Variable to return the updated string.</li>
+<li><strong>l</strong> &#8211; The letter itself...as user-input.</li>
+<li><strong>w</strong> &#8211; The string to be checked.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The updated string.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.display">
+<code class="descname">display</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function displays the crossword matrix at each stage of the game, on the pygame window.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>color</strong> &#8211; The color to be displayed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.formation">
+<code class="descname">formation</code><span class="sig-paren">(</span><em>w</em>, <em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.formation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function, which just like in hangman, forms the string taking the user-input at every time.</p>
+<p>Here the q argument is mainly aimed at specifying the word number such that the meaning of it can be displayed as a hint. The main task of this function is to run a sequence like the Hangman game to complete each of the four words. If the number of trials exceed 15 for each word...it shifts to the next word...and again back to it if time permits...in order to strive towards the solution. However, if the time of game-running exceeds 3 minutes...the game stops.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>w</strong> &#8211; The qth word generated from Crossword script.</li>
+<li><strong>q</strong> &#8211; The index of the word.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The updated string if within game-running time, or else returns &#8220;END&#8221;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.meaning">
+<code class="descname">meaning</code><span class="sig-paren">(</span><em>w</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.meaning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the meaning out of the line containing the word.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>w</strong> &#8211; The word for which meaning has to be found out.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The meaning of the word concerned.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.message">
+<code class="descname">message</code><span class="sig-paren">(</span><em>msg</em>, <em>color</em>, <em>width</em>, <em>height</em>, <em>font_size</em>, <em>center=False</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to display a specific message in a specific position with a specific color.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>msg</strong> &#8211; The text to be displayed.</li>
+<li><strong>color</strong> &#8211; The font color.</li>
+<li><strong>width</strong> &#8211; The horizontal position of the text on the screen.</li>
+<li><strong>height</strong> &#8211; The vertical position of the text on the screen.</li>
+<li><strong>font_size</strong> &#8211; The font size of the text.</li>
+<li><strong>center</strong> &#8211; Boolean value to determine if text will be aligned to the center or not.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="maker1.Crossword.multi_line_text">
+<code class="descname">multi_line_text</code><span class="sig-paren">(</span><em>surface</em>, <em>text</em>, <em>pos</em>, <em>font_size</em>, <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#maker1.Crossword.multi_line_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to display multi_line text.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>surface</strong> &#8211; The game display surface or window.</li>
+<li><strong>text</strong> &#8211; The single(or multi-line)text to be displayed.</li>
+<li><strong>pos</strong> &#8211; The width and height positions of the text, to be entered in tuple format.</li>
+<li><strong>font_size</strong> &#8211; The display font_size of the text.</li>
+<li><strong>color</strong> &#8211; The color of the text to be displayed on screen.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="maker1.main">
+<code class="descclassname">maker1.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#maker1.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main function to launch the pygame GUI, and use the other functions to build the game sequence.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="design-of-the-game-structure">
+<h3><a class="toc-backref" href="#id30">Design of the game structure</a><a class="headerlink" href="#design-of-the-game-structure" title="Permalink to this headline">¶</a></h3>
+<p>The positions of the words in the rows and columns can be 1-3 and 2-4 respectively, and words are designed to be fitted in the crossword alternately, means if a word is at the first row, then the next word will be at the third row, and same logic for the columns.</p>
+<p>The matrix is displayed according to the following logic. <a href="#id2"><span class="problematic" id="id3">|#|</span></a> for the blank cells, and <a href="#id4"><span class="problematic" id="id5">|A|</span></a> for the cell with letter A.</p>
+<p>The 4-letter words have been scraped out of the wordlist. Then using PyDictionary, it&#8217;s meanings, in noun, verb, adjective, and adverb forms have been formed, and combined list is in words.csv.</p>
+<p>The game has been designed to give the user a hint, by displaying the meaning of the word, before he guesses the word.</p>
+</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id31">Indices and tables</a><a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
 <li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
@@ -95,14 +893,53 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to Modern Speak and Spell&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#">Welcome to Modern Speak and Spell&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#speech-procesing-api">Speech Procesing API</a><ul>
+<li><a class="reference internal" href="#api-package">API package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#api-edit-module">API.edit module</a></li>
+<li><a class="reference internal" href="#api-recorder-module">API.recorder module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#spell-it">Spell It</a><ul>
+<li><a class="reference internal" href="#spell-it-module">Spell_It module</a></li>
+<li><a class="reference internal" href="#spell-gui-module">Spell_gui module</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hangman">Hangman</a><ul>
+<li><a class="reference internal" href="#hangman-examples">Hangman-Examples</a></li>
+<li><a class="reference internal" href="#module-Hangman">Hangman module</a></li>
+<li><a class="reference internal" href="#module-Hangman_gui">Hangman_gui module</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#encrypter">Encrypter</a><ul>
+<li><a class="reference internal" href="#encrypter-examples">Encrypter-Examples</a><ul>
+<li><a class="reference internal" href="#a-note-on-the-caeser-cipher">A Note on the Caeser Cipher</a></li>
+<li><a class="reference internal" href="#encode">Encode</a></li>
+<li><a class="reference internal" href="#decode">Decode</a></li>
+<li><a class="reference internal" href="#guess">Guess</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-Encrypter">Encrypter module</a></li>
+<li><a class="reference internal" href="#encrypter-gui-module">Encrypter_gui module</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#crossword">Crossword</a><ul>
+<li><a class="reference internal" href="#module-Crossword">Crossword module</a></li>
+<li><a class="reference internal" href="#module-maker1">maker1 module</a></li>
+<li><a class="reference internal" href="#design-of-the-game-structure">Design of the game structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="Api_Master.html" title="next chapter">Speech Procesing API</a></li>
   </ul></li>
 </ul>
 </div>
