@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if [ -e ../words.csv ]
 then
 	echo "File already present"
