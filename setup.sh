@@ -23,7 +23,7 @@ sudo apt-get install libpulse-dev
 sudo pip install --upgrade pocketsphinx || sudo pip --no-cache-dir install --upgrade pocketsphinx
 
 # Installing pygame
-sudo pip install pygame
+python3 -m pip install -U pygame --user
 
 # Installing PyDictionary
 sudo pip install PyDictionary
