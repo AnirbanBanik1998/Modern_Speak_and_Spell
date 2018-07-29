@@ -19,10 +19,15 @@ python3 Encrypter.py
 
 This is a very simple cipher used in encryptions in which the letters are shifted each by a specific value.
 
-Let us for example shift **Anirban** by 4:
+Let us for example shift **ANIRBAN** by 4:
 
+So,
 A -> E
+N -> R
+I -> M
+R -> V
 B -> F
-Z -> D
-	etc.
+A -> E
+N -> R
 
+So the final encrypted result is -> ERMVFER.

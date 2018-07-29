@@ -16,10 +16,10 @@ This is besically a project to rebrain the original Speak and Spell by Texas Ins
 2. Sample audio files - Two types of processes take place here, firstly just the audio files themselves...just convert from .mp3 to .wav and process them...and secondly, combining the audio files speaking out the same transcription into bigger files with intervals of silence in between them.
 
 For more information go to "./Speech_Processing/accuracy_check"
-[Documentation](./Speech_Processing/accuracy_check/description.md)
+[Documentation](./Speech_Processing/accuracy_check/README.md)
 
 * Game Launcher - Code for voice-launching the games. For more information go to "./Game/Game_launcher"
-[Documentation](./Game/Game_launcher/launcher.md)
+[Documentation](./Game/Game_launcher/README.md)
 
 * Games - Code for the games themselves. There are four games made for this project.
 
