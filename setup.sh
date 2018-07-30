@@ -26,7 +26,7 @@ pip install Wave
 apt-get install -y swig
 pip install --upgrade pip setuptools wheel
 apt-get install -y libpulse-dev
-pip install --upgrade pocketsphinx || sudo pip --no-cache-dir install --upgrade pocketsphinx
+pip install --upgrade pocketsphinx || pip --no-cache-dir install --upgrade pocketsphinx
 
 # Installing pygame
 python3 -m pip install -U pygame --user

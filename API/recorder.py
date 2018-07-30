@@ -86,47 +86,47 @@ class Recorder:
 		:param q: Same as in listen()
 		
 		"""
-        self.start = 0
-        self.t = self.start
-        self.k = 0
+        start = 0
+        t = start
+        k = 0
         while True:
 
             if stopped.wait(timeout=0):
                 break
-            self.chunk = q.get()  # Extracts a chunk out of the queue
-            self.vol = max(self.chunk)
-            if self.vol >= self.MIN_VOLUME:
+            chunk = q.get()  # Extracts a chunk out of the queue
+            vol = max(chunk)
+            if vol >= self.MIN_VOLUME:
                 if len(self.frames) > 0:
-                    self.k = 0
-                self.start = int(round(time.time()))
-                self.t = self.start
+                    k = 0
+                start = int(round(time.time()))
+                t = start
                 print("O"),
-                self.frames.append(self.chunk)
+                self.frames.append(chunk)
             elif len(self.frames) > 0:
                 print("-"),
-                if self.k == 0:
-                    self.frames.append(self.chunk)
+                if k == 0:
+                    self.frames.append(chunk)
 
                     # Appends one chunk of silence to help recognize the words more clearly
 
-                    self.k = self.k + 1
-                self.t = int(round(time.time()))
+                    k = k + 1
+                t = int(round(time.time()))
 
                 # If silence duration is more than input seconds... writes the frames to an audio file.
 
-                if (int(self.t - self.start) >= int(self.silence_time)) and self.start > 0:
-                    self.string = self.WAVE_OUTPUT + "/test" + str(self.i + 1) + ".wav"
-                    self.waveFile = wave.open(self.string, 'wb')
-                    self.waveFile.setnchannels(self.CHANNELS)
-                    self.waveFile.setsampwidth(self.audio.get_sample_size(self.FORMAT))
-                    self.waveFile.setframerate(self.RATE)
-                    self.waveFile.writeframes(b''.join(self.frames))
-                    self.waveFile.close()
+                if (int(t - start) >= int(self.silence_time)) and start > 0:
+                    string = self.WAVE_OUTPUT + "/test" + str(self.i + 1) + ".wav"
+                    waveFile = wave.open(string, 'wb')
+                    waveFile.setnchannels(self.CHANNELS)
+                    waveFile.setsampwidth(self.audio.get_sample_size(self.FORMAT))
+                    waveFile.setframerate(self.RATE)
+                    waveFile.writeframes(b''.join(self.frames))
+                    waveFile.close()
                     if self.multi:
                         self.i += 1
                     self.counter += 1
                     del self.frames[:]
-                    self.k = 0
+                    k = 0
 
                     # Pauses the recording process for further operations on the audio file generated
                     if self.decode:
