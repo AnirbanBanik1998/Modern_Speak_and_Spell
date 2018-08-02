@@ -12,7 +12,7 @@ In the first two games the user will be given to encode or decode some words bas
 ### How to play
 
 ```
-python3 Encrypter.py
+python3 Encrypter_gui.py
 ```
 
 ### A note on the Ceasar Cipher

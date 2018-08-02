@@ -10,10 +10,6 @@ fi
 # Install espeak
 apt-get install -y espeak
 
-# Install Sphinxtrain
-apt-get update
-apt-get install -y sphinxtrain
-
 # Installing pyaudio
 apt-get install -y libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
 apt-get install -y ffmpeg libav-tools
@@ -21,12 +17,6 @@ pip install pyaudio
 
 # Installing Wave
 pip install Wave
-
-# Installing pocketsphinx
-apt-get install -y swig
-pip install --upgrade pip setuptools wheel
-apt-get install -y libpulse-dev
-pip install --upgrade pocketsphinx || pip --no-cache-dir install --upgrade pocketsphinx
 
 # Installing pygame
 python3 -m pip install -U pygame --user

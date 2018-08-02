@@ -6,11 +6,6 @@ This a voice launcher for the games to be made. According to the input provided 
 ```
 python3 run_launcher.py
 ```
-## To automate the running of launcher.py
-```
-$./launch.sh
-```
-This is just for info...we don't need to run this script...it is automatically called by the main program.
 
 ## Documentation
 

@@ -31,14 +31,46 @@ For more information go to "./Game/Games"
 
 * An Updated Speech Processing API to help in easier recording and decoding...so that the games can be made more easily.
 
+
+### Installation Procedure
+
+Edit /root/.bashrc file to include the following lines:
+```
+export LD_LIBRARY_PATH=/usr/local/lib
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
+```
+Clone various repositories needed to /root/ folder:
+```
+ git clone https://github.com/cmusphinx/sphinxbase.git
+ git clone https://github.com/cmusphinx/pocketsphinx.git
+ git clone https://github.com/AnirbanBanik1998/Modern_Speak_and_Spell.git
+```
+Install bison:
+```
+sudo apt-get install bison
+```
+In /root/sphinxbase Directory:
+```
+./autogen.sh
+make
+make install
+```
+In /root/pocketsphinx Directory:
+```
+./autogen.sh
+make
+make install
+```
+
 #### Dependencies
 
-To install all the dependencies for the project run:
+To install all the dependencies for the project, go to the main project directory and run:
 ```
-sudo bash setup.sh
+bash setup.sh
 ```
 
 ### Further Improvements to be done
 
-* Generating scoreboard after completion of every game.
+* Making the enire project run on the pocketbeagle with proper GUI functioning.
 

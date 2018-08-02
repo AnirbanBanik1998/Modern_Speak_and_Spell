@@ -1,2 +1,7 @@
 **/__pycache__
+*.fileids
+*.hyp
+phonetic.csv
+file.txt
+previous.txt
 .idea/
