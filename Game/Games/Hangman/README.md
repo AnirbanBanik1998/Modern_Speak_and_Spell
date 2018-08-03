@@ -7,11 +7,8 @@ This is a very simple game...a game in which the user has to fill in the blanks 
 ### How to Play
 
 * Open a terminal and move to this directory.
-* Run the entire process in the terminal:
-```
-python3 Hangman.py
-```
-* To run the GUI:
+
+* To run the game GUI:
 ```
 python3 Hangman_gui.py
 ```
