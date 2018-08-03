@@ -7,7 +7,7 @@ sys.path.insert(0, "../../../")
 from API import recorder, edit
 
 
-def message(msg, color, width, height, font_size, center=False):
+def message(msg, color, width, height, font_size, center=False, bg=None):
     '''
 	Function to display a specific message in a specific position with a specific color.
 	
@@ -17,6 +17,7 @@ def message(msg, color, width, height, font_size, center=False):
 	:param height: The vertical position of the text on the screen.
 	:param font_size: The font size of the text.
 	:param center: Boolean value to determine if text will be aligned to the center or not.
+	:param bg: Sets the backgroubd colour of the text on the window. Default value is None.
 	'''
     font = pygame.font.SysFont(None, font_size)
     screen_text = font.render(msg, True, color)
@@ -36,9 +37,10 @@ def check(word, choice):
     w = ""
     i = 0
     m = ""
-    while i < len(word) and encrypter.counter <= 20:
+    while i < len(word) and encrypter.counter < 20:
+        subprocess.call(["espeak", str(20-encrypter.counter)+" trials left"])
         w1 = encrypter.test(w, word[i])
-        message(m, black, display_width / 2, display_height / 2, 40, True)
+        message(m, black, display_width / 2, display_height / 2, 40, True, black)
         pygame.display.update()
         if w1 is not "-":
             w = w1
@@ -55,7 +57,7 @@ def check(word, choice):
             message("Good", green, display_width / 2, (3 * display_height) / 4, 45, True)
             pygame.display.update()
             break
-        if encrypter.counter > 20:
+        if encrypter.counter >= 20:
             subprocess.call(["espeak", "-s", "125", " No you are wrong...the answer will be "])
             for j in word:
                 subprocess.call(["espeak", "-s", "100", j])
@@ -177,7 +179,7 @@ def main():
                     e = encrypter.shift(random_word, int(num))
                 except Exception as z:
                     print(z)
-                message(m.upper(), black, display_width / 2, display_height / 2, 40, True)
+                message(m.upper(), black, display_width / 2, display_height / 2, 40, True, black)
                 pygame.display.update()
                 e_str = ""
                 for p in e:

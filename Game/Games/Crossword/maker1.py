@@ -31,7 +31,7 @@ class Crossword:
         self.dummy = ""
         self.assign_meaning()
 
-    def message(self, msg, color, width, height, font_size, center=False):
+    def message(self, msg, color, width, height, font_size, center=False, bg=None):
         '''
 		Function to display a specific message in a specific position with a specific color.
 	
@@ -41,16 +41,17 @@ class Crossword:
 		:param height: The vertical position of the text on the screen.
 		:param font_size: The font size of the text.
 		:param center: Boolean value to determine if text will be aligned to the center or not.
+		:param bg: The background colour of the text. Default value is None.
 		'''
         font = pygame.font.SysFont(None, font_size)
-        screen_text = font.render(msg, True, color)
+        screen_text = font.render(msg, True, color, bg)
         if center == True:
             text_rect = screen_text.get_rect(center=(width, height))
             self.gameDisplay.blit(screen_text, text_rect)
         else:
             self.gameDisplay.blit(screen_text, [width, height])
 
-    def multi_line_text(self, surface, text, pos, font_size, color):
+    def multi_line_text(self, surface, text, pos, font_size, color, bg=None):
         '''
 		Used to display multi_line text.
 		
@@ -59,6 +60,7 @@ class Crossword:
 		:param pos: The width and height positions of the text, to be entered in tuple format.
 		:param font_size: The display font_size of the text.
 		:param color: The color of the text to be displayed on screen.
+		:param bg: The background colour of the text. Default value is None.
 		'''
         words = [word.split(' ') for word in text.splitlines()]
         font = pygame.font.SysFont(None, font_size)
@@ -67,7 +69,7 @@ class Crossword:
         x, y = pos
         for line in words:
             for word in line:
-                word_surface = font.render(word, True, color)
+                word_surface = font.render(word, True, color, bg)
                 word_width, word_height = word_surface.get_size()
                 if x + word_width >= max_width:
                     x = pos[0]
@@ -133,9 +135,9 @@ class Crossword:
         f = pygame.font.SysFont(None, 25)
         word_surf = f.render(mean_string, True, self.green)
         word_wid, word_hei = word_surf.get_size()
-        self.multi_line_text(self.gameDisplay, mean_string, (0, self.display_height / 10), 25, self.green)
+        self.multi_line_text(self.gameDisplay, mean_string, (0, self.display_height / 10), 25, self.green, self.black)
         pygame.display.update()
-        self.multi_line_text(self.gameDisplay, self.n, (word_wid, self.display_height / 8), 25, self.black)
+        self.multi_line_text(self.gameDisplay, self.n, (word_wid, self.display_height / 8), 25, self.black, self.black)
         pygame.display.update()
         for meaning in self.mean[q]:
             print(meaning)
@@ -156,7 +158,7 @@ class Crossword:
         else:
             string = w
             str1 = w
-        self.message(self.m, self.black, self.display_width / 2, self.display_height / 3, 30, True)
+        self.message(self.m, self.black, self.display_width / 2, self.display_height / 3, 30, True, self.black)
         pygame.display.update()
         self.message("Output: " + str1, self.white, self.display_width / 2, self.display_height / 3, 30, True)
         pygame.display.update()
@@ -188,7 +190,7 @@ class Crossword:
             str1 = ""
             for j in range(0, len(string)):
                 str1 = str1 + string[j] + " "
-            self.message(self.m, self.black, self.display_width / 2, self.display_height / 3, 30, True)
+            self.message(self.m, self.black, self.display_width / 2, self.display_height / 3, 30, True, self.black)
             pygame.display.update()
             self.message("Output: " + str1, self.white, self.display_width / 2, self.display_height / 3, 30, True)
             pygame.display.update()
@@ -206,7 +208,7 @@ class Crossword:
 		
 		:param color: The color to be displayed.
 		'''
-        self.message(self.dummy, self.black, self.display_width / 2, 5 * self.display_height / 6, 40, True)
+        self.message(self.dummy, self.black, self.display_width / 2, 5 * self.display_height / 6, 40, True, self.black)
         pygame.display.update()
         text = "|"
         addition = 0

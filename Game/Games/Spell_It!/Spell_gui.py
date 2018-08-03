@@ -3,7 +3,7 @@ import Spell_It
 import subprocess
 
 
-def message(msg, color, width, height, font_size, center=False):
+def message(msg, color, width, height, font_size, center=False, bg=None):
     '''
 	Function to display a specific message in a specific position with a specific color.
 	
@@ -13,6 +13,7 @@ def message(msg, color, width, height, font_size, center=False):
 	:param height: The vertical position of the text on the screen.
 	:param font_size: The font size of the text.
 	:param center: Boolean value to determine if text will be aligned to the center or not.
+	:param bg: Sets the backgroubd colour of the text on the window. Default value is None.
 	'''
     font = pygame.font.SysFont(None, font_size)
     screen_text = font.render(msg, True, color)
@@ -55,10 +56,11 @@ def main():
         pygame.display.update()
         w = ""
         i = 0
-        while i < len(random_word) and spell.counter <= 20:
+        while i < len(random_word) and spell.counter < 20:
 
+            subprocess.call(["espeak", str(20-spell.counter)+" trials left"])
             w1 = spell.test(w, random_word[i])
-            message(m, black, display_width / 2, display_height / 2, 40, True)
+            message(m, black, display_width / 2, display_height / 2, 40, True, black)
             pygame.display.update()
 
             if w1 is not "-":
