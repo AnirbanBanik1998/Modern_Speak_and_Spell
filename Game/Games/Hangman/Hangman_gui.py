@@ -17,7 +17,7 @@ def message(msg, color, width, height, font_size, center=False, bg=None):
 	:param height: The vertical position of the text on the screen.
 	:param font_size: The font size of the text.
 	:param center: Boolean value to determine if text will be aligned to the center or not.
-	:param bg: Sets the backgroubd colour of the text on the window. Default value is None.
+	:param bg: Sets the background colour of the text on the window. Default value is None.
 	'''
     font = pygame.font.SysFont(None, font_size)
     screen_text = font.render(msg, True, color)
