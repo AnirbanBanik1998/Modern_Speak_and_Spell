@@ -172,7 +172,7 @@ class Crossword:
             print("Enter letter: ")
             subprocess.call(["espeak", "Trials left " + str(16 - k)])
             with self.lock:
-                record = recorder.Recorder("../../../Language_Models/", LIB_FILE="characters", DECODE=True, TRIALS=1,
+                record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="characters", A_LIB="en-us", DECODE=True, TRIALS=1,
                                            SILENCE=1)
                 record.start()
             r = open('./test.hyp', 'r')

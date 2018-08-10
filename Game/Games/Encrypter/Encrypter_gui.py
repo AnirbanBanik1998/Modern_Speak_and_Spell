@@ -168,7 +168,7 @@ def main():
             for k in range(10):
                 subprocess.call(["espeak", str(10 - k) + " trials left"])
                 with encrypter.lock:
-                    rec = recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True,
+                    rec = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="num", A_LIB="en-us", TRIALS=1, DECODE=True,
                                             SILENCE=1)
                     rec.start()
                 r = open('./test.hyp', 'r')

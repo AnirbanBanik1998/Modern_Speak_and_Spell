@@ -32,7 +32,7 @@ class Encrypter:
 		'''
         subprocess.call(["espeak", " Choose your option 1 Encode 2 Decode 3 Guess "])
         with self.lock:
-            record = recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True, SILENCE=1)
+            record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="num", A_LIB="en-us", TRIALS=1, DECODE=True, SILENCE=1)
             record.start()
         r = open('./test.hyp', 'r')
         arr = r.read().split(" ")
@@ -75,8 +75,8 @@ class Encrypter:
 		'''
         self.counter += 1
         with self.lock:
-            record = recorder.Recorder("../../../Language_Models/", SILENCE=1, TRIALS=1, DECODE=True,
-                                       LIB_FILE="characters", OUTPUT_SHELL="./decoder.sh")
+            record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", SILENCE=1, TRIALS=1, DECODE=True,
+                                       L_LIB="characters", A_LIB="en-us", OUTPUT_SHELL="./decoder.sh")
             record.start()
         f = open("./file.txt", "r")
         letter = f.read().strip()
@@ -179,7 +179,7 @@ class Encrypter:
             for k in range(10):
                 subprocess.call(["espeak", " Enter shifting key"])
                 with self.lock:
-                    rec = recorder.Recorder("../../../Language_Models/", LIB_FILE="num", TRIALS=1, DECODE=True,
+                    rec = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="num", A_LIB="en-us", TRIALS=1, DECODE=True,
                                             SILENCE=1)
                     rec.start()
                 r = open('./test.hyp', 'r')

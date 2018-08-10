@@ -10,12 +10,13 @@ from API import edit
 
 
 class Recorder:
-    def __init__(self, DEFAULT_LIB_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav",
-                 SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, LIB_FILE=None, TRANSCRIBE=False, OUTPUT_SHELL=None):
+    def __init__(self, DEFAULT_LM_PATH, DEFAULT_AM_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav",
+                 SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, L_LIB=None, A_LIB=None, TRANSCRIBE=False, OUTPUT_SHELL=None):
 
         """Class which contains the inner functions of the recorder script."""
 
-        self.dlp = DEFAULT_LIB_PATH
+        self.dlp = DEFAULT_LM_PATH
+        self.dap = DEFAULT_AM_PATH
         self.audio = pyaudio.PyAudio()
         self.FORMAT = pyaudio.paInt16
         self.CHANNELS = CHANNELS
@@ -29,34 +30,41 @@ class Recorder:
         self.trials = TRIALS
         self.multi = MULTI
         self.decode = DECODE
-        self.l = LIB_FILE
+        self.l = L_LIB
+        self.ac = A_LIB
         self.transcribe = TRANSCRIBE
         self.shell = OUTPUT_SHELL
         self.lang = ""
         self.dic = ""
         if self.WAVE_OUTPUT not in os.listdir():
             os.system("mkdir " + self.WAVE_OUTPUT)
-        self.set_library(self.dlp)
+        self.set_library(self.dlp, self.dap)
         self.i = 0
         self.counter = 0
         self.flag = 0
 
-    def set_library(self, path):
+    def set_library(self, lmpath, ampath):
         """Function which sets the library paths in order to make it easy for every user to use.
 		
 		:param path: It contains the default library path.
 		
 		"""
         if self.l is not None:
-            self.lang = path + (self.l).lower() + ".lm"
-            self.dic = path + (self.l).lower() + ".dic"
+            self.lang = lmpath + (self.l).lower() + ".lm"
+            self.dic = lmpath + (self.l).lower() + ".dic"
         else:
-            self.x = input("Enter Language Model")
-            type(self.x)
-            self.y = input("Enter Dictionary")
-            type(self.y)
-            self.lang = path + self.x
-            self.dic = path + self.y
+            x = input("Enter Language Model")
+            type(x)
+            y = input("Enter Dictionary")
+            type(y)
+            self.lang = lmpath + x
+            self.dic = lmpath + y
+        if self.ac is not None:
+            self.acoustic = ampath + self.ac
+        else:
+            x = input("Enter Acoustic Model")
+            type(x)
+            self.acoustic = ampath + x
 
     def start(self):
         """
@@ -169,5 +177,5 @@ class Recorder:
         else:
             edit.fileids(str(self.i + 1))
         os.system("pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm " + str(
-            self.lang) + " -dict " + str(self.dic) + " -samprate " + str(self.RATE) + " -nfft " + str(
+            self.lang) + " -dict " + str(self.dic) + " -hmm " + str(self.acoustic) + " -samprate " + str(self.RATE) + " -nfft " + str(
             self.CHUNK_SIZE) + " -hyp test.hyp")
