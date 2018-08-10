@@ -18,6 +18,9 @@ pip install pyaudio
 # Installing Wave
 pip install Wave
 
+# Installing pocketsphinx
+apt-get install -y pocketsphinx
+
 # Installing pygame
 python3 -m pip install -U pygame --user
 
