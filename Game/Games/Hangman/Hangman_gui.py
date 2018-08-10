@@ -67,13 +67,14 @@ def main():
         m = hangman.str1
         hangman.str1 = ""
         while hangman.counter < 20:
-            subprocess.call(["espeak", str(20-hangman.counter)+" trials left"])
+            subprocess.call(["espeak", str(20 - hangman.counter) + " trials left"])
             hangman.counter = hangman.counter + 1
             hangman.str1 = ""
             letter = ""
             print("Enter letter: ")
             with hangman.lock:
-                record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="characters", A_LIB="en-us", SILENCE=1, TRIALS=1,
+                record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="characters",
+                                           A_LIB="en-us", SILENCE=1, TRIALS=1,
                                            DECODE=True)
                 record.start()
             r = open('./test.hyp', 'r')

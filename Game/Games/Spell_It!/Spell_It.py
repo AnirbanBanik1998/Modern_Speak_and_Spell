@@ -50,7 +50,8 @@ class Spell:
 		'''
         self.counter += 1
         with self.lock:
-            record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", SILENCE=1, TRIALS=1, DECODE=True,
+            record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", SILENCE=1, TRIALS=1,
+                                       DECODE=True,
                                        L_LIB="characters", A_LIB="en-us", OUTPUT_SHELL="./decoder.sh")
             record.start()
         f = open("./file.txt", "r")

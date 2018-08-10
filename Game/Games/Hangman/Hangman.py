@@ -97,7 +97,8 @@ class Hangman:
             letter = ""
             print("Enter letter: ")
             with self.lock:
-                record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="characters", A_LIB="en-us", SILENCE=1, TRIALS=1,
+                record = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="characters",
+                                           A_LIB="en-us", SILENCE=1, TRIALS=1,
                                            DECODE=True)
                 record.start()
             r = open('./test.hyp', 'r')

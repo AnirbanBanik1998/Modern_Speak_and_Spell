@@ -38,7 +38,7 @@ def check(word, choice):
     i = 0
     m = ""
     while i < len(word) and encrypter.counter < 20:
-        subprocess.call(["espeak", str(20-encrypter.counter)+" trials left"])
+        subprocess.call(["espeak", str(20 - encrypter.counter) + " trials left"])
         w1 = encrypter.test(w, word[i])
         message(m, black, display_width / 2, display_height / 2, 40, True, black)
         pygame.display.update()
@@ -168,7 +168,8 @@ def main():
             for k in range(10):
                 subprocess.call(["espeak", str(10 - k) + " trials left"])
                 with encrypter.lock:
-                    rec = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="num", A_LIB="en-us", TRIALS=1, DECODE=True,
+                    rec = recorder.Recorder("../../../Language_Models/", "../../../Acoustic_Models/", L_LIB="num",
+                                            A_LIB="en-us", TRIALS=1, DECODE=True,
                                             SILENCE=1)
                     rec.start()
                 r = open('./test.hyp', 'r')

@@ -6,5 +6,6 @@ import threading
 
 lock = threading.Lock()
 with lock:
-    record = recorder.Recorder("../../Language_Models/", DECODE=True, TRANSCRIBE=True, OUTPUT_SHELL="./lock.sh")
+    record = recorder.Recorder("../../Language_Models/", "../../Acoustic_Models/", DECODE=True, TRANSCRIBE=True,
+                               OUTPUT_SHELL="./lock.sh")
     record.start()

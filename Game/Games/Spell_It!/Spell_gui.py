@@ -58,7 +58,7 @@ def main():
         i = 0
         while i < len(random_word) and spell.counter < 20:
 
-            subprocess.call(["espeak", str(20-spell.counter)+" trials left"])
+            subprocess.call(["espeak", str(20 - spell.counter) + " trials left"])
             w1 = spell.test(w, random_word[i])
             message(m, black, display_width / 2, display_height / 2, 40, True, black)
             pygame.display.update()
