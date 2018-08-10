@@ -119,7 +119,7 @@
 <p>This basically is a generalized recording and decoding module which can be used in all the game launching, gaming, as well as for testing speech and processing.</p>
 <span class="target" id="module-API.recorder"></span><dl class="class">
 <dt id="API.recorder.Recorder">
-<em class="property">class </em><code class="descclassname">API.recorder.</code><code class="descname">Recorder</code><span class="sig-paren">(</span><em>DEFAULT_LIB_PATH</em>, <em>CHANNELS=1</em>, <em>RATE=16000</em>, <em>CHUNK_SIZE=1024</em>, <em>MIN_VOLUME=1600</em>, <em>OUTPUT_DIR='wav'</em>, <em>SILENCE=3</em>, <em>TRIALS=None</em>, <em>MULTI=False</em>, <em>DECODE=False</em>, <em>LIB_FILE=None</em>, <em>TRANSCRIBE=False</em>, <em>OUTPUT_SHELL=None</em><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">API.recorder.</code><code class="descname">Recorder</code><span class="sig-paren">(</span><em>DEFAULT_LM_PATH</em>, <em>DEFAULT_AM_PATH</em>, <em>CHANNELS=1</em>, <em>RATE=16000</em>, <em>CHUNK_SIZE=1024</em>, <em>MIN_VOLUME=1600</em>, <em>OUTPUT_DIR='wav'</em>, <em>SILENCE=3</em>, <em>TRIALS=None</em>, <em>MULTI=False</em>, <em>DECODE=False</em>, <em>L_LIB=None</em>, <em>A_LIB=None</em>, <em>TRANSCRIBE=False</em>, <em>OUTPUT_SHELL=None</em><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="API.recorder.Recorder.decoder">
@@ -165,13 +165,17 @@
 
 <dl class="method">
 <dt id="API.recorder.Recorder.set_library">
-<code class="descname">set_library</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder.set_library" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_library</code><span class="sig-paren">(</span><em>lmpath</em>, <em>ampath</em><span class="sig-paren">)</span><a class="headerlink" href="#API.recorder.Recorder.set_library" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function which sets the library paths in order to make it easy for every user to use.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> &#8211; It contains the default library path.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lmpath</strong> &#8211; It contains the default language model path.</li>
+<li><strong>ampath</strong> &#8211; It contains the default acoustic model path.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>

@@ -10,8 +10,9 @@ from API import edit
 
 
 class Recorder:
-    def __init__(self, DEFAULT_LM_PATH, DEFAULT_AM_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600, OUTPUT_DIR="wav",
-                 SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, L_LIB=None, A_LIB=None, TRANSCRIBE=False, OUTPUT_SHELL=None):
+    def __init__(self, DEFAULT_LM_PATH, DEFAULT_AM_PATH, CHANNELS=1, RATE=16000, CHUNK_SIZE=1024, MIN_VOLUME=1600,
+                 OUTPUT_DIR="wav", SILENCE=3, TRIALS=None, MULTI=False, DECODE=False, L_LIB=None, A_LIB=None,
+                 TRANSCRIBE=False, OUTPUT_SHELL=None):
 
         """Class which contains the inner functions of the recorder script."""
 
@@ -46,7 +47,8 @@ class Recorder:
     def set_library(self, lmpath, ampath):
         """Function which sets the library paths in order to make it easy for every user to use.
 		
-		:param path: It contains the default library path.
+		:param lmpath: It contains the default language model path.
+		:param ampath: It contains the default acoustic model path.
 		
 		"""
         if self.l is not None:
@@ -177,5 +179,5 @@ class Recorder:
         else:
             edit.fileids(str(self.i + 1))
         os.system("pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm " + str(
-            self.lang) + " -dict " + str(self.dic) + " -hmm " + str(self.acoustic) + " -samprate " + str(self.RATE) + " -nfft " + str(
-            self.CHUNK_SIZE) + " -hyp test.hyp")
+            self.lang) + " -dict " + str(self.dic) + " -hmm " + str(self.acoustic) + " -samprate " + str(self.RATE) +
+                  " -nfft " + str(self.CHUNK_SIZE) + " -hyp test.hyp")
