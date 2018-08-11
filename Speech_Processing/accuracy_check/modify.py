@@ -4,7 +4,11 @@ temp = open("./temp.csv", "w+")
 dic = {}
 alpha = [chr(i) for i in range(65, 91)]
 dictionary = {k: [] for k in alpha}
+
+# The results for the elements of this list will not be changed, as they have no further breakdown.
+
 a = {'B', 'P', 'D', 'T', 'G', 'K', 'F', 'V', 'S', 'Z', 'L', 'R', 'Y', 'W', 'M', 'N'}
+
 f = open("../../Language_Models/characters.dic", "r")
 lines = f.read().split("\n")
 for line in lines:

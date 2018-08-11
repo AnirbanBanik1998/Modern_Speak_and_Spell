@@ -18,6 +18,9 @@ pip install pyaudio
 # Installing Wave
 pip install Wave
 
+# Installing Sox
+apt-get install -y sox
+
 # Installing pocketsphinx
 apt-get install -y pocketsphinx
 
