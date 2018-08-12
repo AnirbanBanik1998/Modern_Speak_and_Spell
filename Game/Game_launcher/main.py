@@ -58,7 +58,7 @@ if start:
 				'''
                 cwd = os.getcwd()
                 os.chdir("../Games/Crossword/")
-                os.system("python3 Crossword.py")
+                os.system("python3 Crossword.py GUI")
                 os.chdir(cwd)
             break
 elif resume:
@@ -87,5 +87,5 @@ elif resume:
         with lock:
             cwd = os.getcwd()
             os.chdir("../Games/Crossword/")
-            os.system("python3 Crossword.py")
+            os.system("python3 Crossword.py GUI")
             os.chdir(cwd)
