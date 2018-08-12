@@ -12,6 +12,10 @@ This is a very simple game...a game in which the user has to fill in the blanks 
 ```
 python3 Hangman_gui.py
 ```
+To run the game in terminal mode:
+```
+python3 Hangman.py
+```
 * Strategy -> Start by spelling the vowels first...they are almost indispensible in every word...and can help in guessing the given word.
 
 ### Code

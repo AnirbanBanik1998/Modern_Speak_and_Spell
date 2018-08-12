@@ -125,3 +125,14 @@ class Hangman:
                 with self.lock:
                     subprocess.call(["espeak", "The answer is " + word])
                 print(" Answer is: " + word)
+
+
+# To run the terminal version of the game
+def main():
+    ob = Hangman()
+    random_word = ob.rand()
+    ob.terminal(random_word)
+
+
+if __name__ == "__main__":
+    main()

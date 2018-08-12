@@ -11,8 +11,13 @@ In the first two games the user will be given to encode or decode some words bas
 
 ### How to play
 
+To run the GUI mode of the game:
 ```
 python3 Encrypter_gui.py
+```
+To run the terminal mode of the game:
+```
+python3 Encrypter.py
 ```
 
 ### A note on the Ceasar Cipher

@@ -7,9 +7,13 @@ This is a very simple game...a game in which the user has to spell a word given 
 ## How to Play
 
 * Open a terminal and move to this directory.
-* Run the entire process:
+* Run the entire game in GUI mode:
 ```
 python3 Spell_gui.py
+```
+To run the game in terminal mode:
+```
+python3 Spell_It.py
 ```
 * Now the entire process is automated...spell out the word given to you and the results will be generated.
 

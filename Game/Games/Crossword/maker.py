@@ -37,7 +37,10 @@ def check(str1, l, w):
 
 
 def formation(w, q):
-    print("Meaning of the word is " + mean[q])
+    print("Meaning of the word is: ")
+    for meaning in mean[q]:
+        print(meaning)
+
     k = 0
     str1 = ""
     global string

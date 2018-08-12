@@ -1,10 +1,15 @@
 # Crossword
 
 This is a game in which the user has to guess the words as in hangman...but with a twist...one word would lead to another.
-To run the entire game type:
+To run the entire game type in terminal mode type:
 ```
-python3 Crossword.py
+python3 Crossword.py TERMINAL
 ```
+If in GUI mode then:
+```
+python3 Crossword.py GUI
+```
+
 ## Documentation
 
 ### `Maker_files`
@@ -33,6 +38,3 @@ This is the main script...takes the four generated words and the row and column 
 * `formation(w,q)`: Here the q argument is mainly aimed at specifying the word number such that the meaning of it can be displayed as a hint. The main task of this function is to run a sequence like the Hangman game to complete each of the four words. If the number of trials exceed 15 for each word...it shifts to the next word...and again back to it if time permits...in order to strive towards the solution. However, if the time of game-running exceeds 3 minutes...the game stops.
 * `display()`: This function displays the crossword matrix at each stage of the game.
 
-## Development
-
-This game is currently under development...the improvements will be updated soon.

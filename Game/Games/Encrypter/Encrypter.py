@@ -206,3 +206,15 @@ class Encrypter:
 
         else:
             subprocess.call(["espeak", " Wrong choice"])
+
+
+# Running terminal version of the game
+def main():
+    ob = Encrypter()
+    choice = ob.choose()
+    random_word = ob.rand_word()
+    ob.terminal(choice, random_word)
+
+
+if __name__ == "__main__":
+    main()

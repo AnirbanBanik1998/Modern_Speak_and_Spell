@@ -99,3 +99,14 @@ class Spell:
                     subprocess.call(["espeak", "-s", "100", j])
         print("Score: " + str(self.score(w, word)))
         subprocess.call(["espeak", "-s", "125", " Options are 1: Resume and 2: Start another game"])
+
+
+# To run the terminal version of the game
+def main():
+    ob = Spell()
+    random_word = ob.rand()
+    ob.terminal(random_word)
+
+
+if __name__ == "__main__":
+    main()

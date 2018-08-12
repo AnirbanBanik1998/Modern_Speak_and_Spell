@@ -1,5 +1,6 @@
 import random
 import os
+import sys
 
 f = open("./words.csv", "r")
 lines = f.read().split("\n")
@@ -83,8 +84,14 @@ def main():
 	print("Column "+str(column+1)+" " + word2)
 	print("Column "+str(column+3)+" " + word3)
 	'''
-    os.system(
-        "python3 maker1.py " + word1 + " " + word2 + " " + word3 + " " + word4 + " " + str(row) + " " + str(column))
+    if sys.argv[1] == "GUI":
+        # Runs the GUI script
+        os.system(
+            "python3 maker1.py " + word1 + " " + word2 + " " + word3 + " " + word4 + " " + str(row) + " " + str(column))
+    elif sys.argv[1] == "TERMINAL":
+        # Runs the terminal script
+        os.system(
+            "python3 maker.py " + word1 + " " + word2 + " " + word3 + " " + word4 + " " + str(row) + " " + str(column))
 
 
 if __name__ == "__main__":
