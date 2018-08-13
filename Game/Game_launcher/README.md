@@ -21,3 +21,26 @@ Script to launch the games based on the audio input. Launches the previous game 
 
 1. **START** or **GENERATE** Game_Name to start a new game.
 2. **RESUME** to resume the previously run game.
+
+**EXAMPLES**:
+
+* To start Spell It!:
+```
+GENERATE SPELL
+```
+* To start Hangman:
+```
+GENERATE HANGMAN
+```
+* To start Encrypter:
+```
+GENERATE ENCRYPTER
+```
+* To start Crossword:
+```
+GENERATE CROSSWORD
+```
+* To resume the previous game:
+```
+RESUME
+```
