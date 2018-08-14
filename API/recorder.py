@@ -179,5 +179,5 @@ class Recorder:
         else:
             edit.fileids(str(self.i + 1))
         os.system("pocketsphinx_batch -adcin yes -cepdir wav -cepext .wav -ctl test.fileids -lm " + str(
-            self.lang) + " -dict " + str(self.dic) + " -hmm " + str(self.acoustic) + " -cmn current" + " -samprate " + str(self.RATE) +
+            self.lang) + " -dict " + str(self.dic) + " -hmm " + str(self.acoustic) + " -samprate " + str(self.RATE) +
                   " -nfft " + str(self.CHUNK_SIZE) + " -hyp test.hyp")
